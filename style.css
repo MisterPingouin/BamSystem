@@ -1,85 +1,86 @@
 * {
-    margin : 0;
-    box-sizing: border-box;
+  margin: 0;
+  box-sizing: border-box;
 }
 
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
 
 nav {
-    background-color: #242423;
-    color: lightgrey;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+  background-color: #242423;
+  color: lightgrey;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
 }
 
-nav>h1>a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: lightgrey;
+nav > h1 > a {
+  font-size: 2rem;
+  text-decoration: none;
+  color: lightgrey;
 }
-nav>ul {
-    list-style: none;
-}
-
-nav>ul>li {
-    display: inline-block;
+nav > ul {
+  list-style: none;
 }
 
-nav>ul>li>a {
-    text-decoration: none;
-    color: lightgrey;
-    padding: .25rem;
-    padding-right: 1em;
+.menu a {
+  text-decoration: none;
+  color: lightgrey;
+  padding: 0.5em 1em;
 }
 
-nav>ul>li>a:hover {
-    color: #242423;
-    background-color: lightgrey;
-    padding: .25rem;
+.menu a:hover {
+  background-color: lightgray;
+  color: #242423;
+  border-radius: 15%;
+}
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logomenu {
-    height: 1em;
-    width: 1em;
+  height: 1em;
+  width: 1em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
 }
 
 .car {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 .rocket {
-    padding-left: 1em;
+  padding-left: 1em;
 }
 
 main {
-    height: 30em;
-
+  height: 30em;
 }
 
-
-
 .rights {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
 .image {
-    height: 1em;
-    width: 1em;
-    background-color: #242423;
+  height: 1em;
+  width: 1em;
+  background-color: #242423;
 }
 
 .address {
-padding-right: 1em;
+  padding-right: 1em;
 }
 
-
 .main-footer {
-    background-color: #242423;
-    color: lightgrey;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
-    padding: 23px;
+  background-color: #242423;
+  color: lightgrey;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 23px;
 }
