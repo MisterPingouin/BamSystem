@@ -5,8 +5,8 @@
 
 
 nav {
-    background-color: grey;
-    color: #fff;
+    background-color: #242423;
+    color: lightgrey;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,7 @@ nav {
 nav>h1>a {
     font-size: 2rem;
     text-decoration: none;
-    color: #fff;
+    color: lightgrey;
 }
 nav>ul {
     list-style: none;
@@ -28,14 +28,28 @@ nav>ul>li {
 
 nav>ul>li>a {
     text-decoration: none;
-    color: #fff;
+    color: lightgrey;
     padding: .25rem;
+    padding-right: 1em;
 }
 
 nav>ul>li>a:hover {
-    color: grey;
-    background-color: white;
+    color: #242423;
+    background-color: lightgrey;
     padding: .25rem;
+}
+
+.logomenu {
+    height: 1em;
+    width: 1em;
+}
+
+.car {
+    padding-left: 1em;
+}
+
+.rocket {
+    padding-left: 1em;
 }
 
 main {
@@ -44,27 +58,28 @@ main {
 }
 
 
+
+.rights {
+    padding-right: 1em;
+}
+
 .image {
     height: 1em;
     width: 1em;
-    background-color: grey;
+    background-color: #242423;
 }
 
-
-.imagelink {
-    padding-left: 1em;
-}
-
-div .contact {
-    display: flex;
+.address {
+padding-right: 1em;
 }
 
 
 .main-footer {
-    background-color: grey;
+    background-color: #242423;
+    color: lightgrey;
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: center;
     width: 100%;
     padding: 23px;
 }
