@@ -105,6 +105,10 @@ header > img {
   margin: auto;
 }
 
+.planet img:hover {
+  filter: drop-shadow(0 0 0.75rem white);
+}
+
 main {
   display: grid;
   grid-row: repeat(4,1fr);
