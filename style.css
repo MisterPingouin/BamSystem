@@ -28,6 +28,7 @@ nav {
   overflow: hidden;
   top: 0;
   height: 70px;
+  width: 100%;
 }
 
 nav > h1 > a {
@@ -47,6 +48,7 @@ nav > ul {
 
 .menu a:hover {
   color: #242423;
+  background-color: lightgray;
   border-radius: 15%;
 }
 .menu {
@@ -108,7 +110,7 @@ main {
   grid-row: repeat(4,1fr);
 }
 
-.planet-pres {
+section {
   position: relative;
   overflow: hidden;
   color: white;
