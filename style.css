@@ -1,3 +1,11 @@
+:root {
+  --dark-grey: #151515;
+  --grey: #3f3f3f;
+  --black: #0e0e0e;
+  --blue: #08173e;
+  --brown: #2f1e05;
+}
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -6,6 +14,7 @@
 body {
   font-family: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
     sans-serif;
+    background-color: var(--black);
 }
 
 nav {
@@ -15,6 +24,10 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 15px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  height: 70px;
 }
 
 nav > h1 > a {
@@ -33,7 +46,6 @@ nav > ul {
 }
 
 .menu a:hover {
-  background-color: lightgray;
   color: #242423;
   border-radius: 15%;
 }
@@ -59,9 +71,16 @@ nav > ul {
 }
 
 .planets-nav {
+  color: white;
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
+  margin: auto;
+}
+
+header {
+  padding-top: 70px;
 }
 
 header.planets-nav img {
@@ -69,15 +88,68 @@ header.planets-nav img {
   height: auto;
 }
 
-header.planets-nav div {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
-  margin: 3em;
-}
-
 header > img {
   height: 10%;
+}
+
+.planet{
+  text-align: center;
+  padding: 5vw;
+  transition: font-size .5s ease-in-out;
+}
+
+.planet:hover {
+  font-size: 3rem;
+  margin: auto;
+}
+
+main {
+  display: grid;
+  grid-row: repeat(4,1fr);
+}
+
+.planet-pres {
+  position: relative;
+  overflow: hidden;
+  color: white;
+  height: 1024px;
+}
+
+.planet-pres-img {
+  translate: 150px 50px;
+  filter: drop-shadow(0px 0px 30px white);
+}
+
+.planet-pres-txt h1{
+  position: absolute;
+  top: 100px;
+  left: 20px;
+  color: white;
+  font-size: 5rem;
+}
+
+.mars-presentation {
+  background-color: var(--dark-grey);
+}
+
+.moon-presentation {
+  background-color: var(--black);
+}
+
+.mercury-presentation {
+  background-color: var(--blue);
+}
+
+.venus-presentation {
+  background-color: var(--brown);
+}
+
+.planet-pres-txt p {
+  position: absolute;
+  font-size: 1.2em;
+  top: 250px;
+  left: 20px;
+  width: 40vw;
 }
 
 .rights {
@@ -87,7 +159,6 @@ header > img {
 .image {
   height: 1em;
   width: 1em;
-  background-color: #242423;
 }
 
 .address {
