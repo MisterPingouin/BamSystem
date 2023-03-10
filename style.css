@@ -4,6 +4,7 @@
   --accent: orange;
   --light: rgb(184, 184, 184);
   --dark: #242423;
+  --darker: #000210;
 
 /* Fonts */
   --font1: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
@@ -34,7 +35,7 @@ body {
 }
 
 nav {
-  background-color: var(--dark);
+  background-color: var(--darker);
   color: var(--light);
   display: flex;
   justify-content: space-between;
@@ -223,7 +224,7 @@ header > img {
 }
 
 .main-footer {
-  background-color: var(--dark);
+  background-color: var(--darker);
   color: var(--white);
   display: flex;
   flex-direction: row;
@@ -308,6 +309,7 @@ display: none;
   justify-content: center;
   color: var(--light);
   margin-top: 80px;
+  background-image: url(assets/background/fondbooking.png);
 }
 
 .contactez-nous {
@@ -315,7 +317,7 @@ display: none;
   border: 1px solid;
   border-radius: 8px;
   padding: 0 50px 0 50px;
-  background: white;
+  background: var(--light);
   }
   
   .contactez-nous > h1 {
@@ -327,7 +329,6 @@ display: none;
   }
   
   form div {
-  width: 100%;
   display: flex;
   flex-direction: column;
   min-height: 83px;
@@ -340,12 +341,12 @@ display: none;
   }
   
   form div > input, form div > select, form div > textarea {
-  background: #FFD9D9;
+  background: var(--light);
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
-  font-family: Montserrat, "sans-serif";
+  font-family: var(--font1);
   box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
   }
   
@@ -367,16 +368,16 @@ display: none;
   }
   
   form div > input::placeholder, form div > textarea::placeholder {
-  color: white;
+  color: var(--light);
   }
   
   form div > select:invalid {
-  color: white;
+  color: var(--light);
   }
   
   form div > select option {
-  background: white;
-  color: #303030;
+  background: var(--light);
+  color: var(--dark);
   }
   
   form div:last-child {
@@ -390,9 +391,9 @@ display: none;
   height: 60px;
   font-weight: 700;
   font-size: 28px;
-  background: white;
+  background: var(--light);
   border: rgba(48, 48, 48, 0.5) solid 1px;
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-  color: #303030;
+  color: var(--dark);
   }
