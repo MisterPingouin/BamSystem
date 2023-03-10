@@ -1,70 +1,398 @@
-* {
-    margin : 0;
-    box-sizing: border-box;
+:root {
+
+  /* Colors */
+  --accent: orange;
+  --light: rgb(184, 184, 184);
+  --dark: #242423;
+
+/* Fonts */
+  --font1: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
+  sans-serif;
+
+/* Planets Imgs */
+  --marsImg: url("/assets/planets/sd/mars-sd.png");
+  --moonImg: url("/assets/planets/sd/moon-sd.png");
+  --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
+  --venusImg: url("/assets/planets/sd/venus-sd.png");
+
+/* Ship Imgs */
+  --marsTripImg: url("/assets/ships/jump.jpg");
+  --moonTripImg: url("/assets/ships/shuttle.jpg");
+  --mercuryTripImg: url("/assets/ships/Royalcruiser.webp");
+  --venusTrimImg: url("/assets/ships/normandy.jpg");
 }
 
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font1);
+  background-color: var(--dark);
+  color: var(--light);
+}
 
 nav {
-    background-color: grey;
-    color: #fff;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px;
+  background-color: var(--dark);
+  color: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  position: fixed;
+  overflow: hidden;
+  top: 0;
+  height: 70px;
+  width: 100%;
+  z-index: 4;
 }
 
-nav>h1>a {
-    font-size: 2rem;
-    text-decoration: none;
-    color: #fff;
-}
-nav>ul {
-    list-style: none;
+nav > h1 > a {
+  font-size: clamp(0.5rem,2rem,2rem);
+  text-decoration: none;
 }
 
-nav>ul>li {
-    display: inline-block;
+nav > ul {
+  list-style: none;
+  padding: 0;
 }
 
-nav>ul>li>a {
-    text-decoration: none;
-    color: #fff;
-    padding: .25rem;
+.menu a {
+  text-decoration: none;
+  font-weight: bold;
+  padding: 0.5em 1em;
+  width: auto;
+  
 }
 
-nav>ul>li>a:hover {
-    color: grey;
-    background-color: white;
-    padding: .25rem;
+.menu a span:hover, .menu a:hover {
+  color: var(--dark);
+  background-color: var(--light);
+  border-radius: 15%;
+  transition: .3s;
 }
 
-main {
-    height: 30em;
-
+:visited, :link {
+  color: var(--light);
 }
 
+.menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; 
+}
+
+.logomenu {
+  height: 1rem;
+  width: 1rem;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+
+.car {
+  padding-left: 1em;
+}
+
+.rocket {
+  padding-left: 1em;
+}
+
+.planets-nav {
+  color: var(--light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  top: 0;
+  z-index: 3;
+  height: 200px;
+}
+
+header {
+  padding-top: 70px;
+}
+
+header.planets-nav img {
+  width: 4em;
+  height: auto;
+}
+
+header > img {
+  height: 10%;
+}
+
+.planet {
+  text-align: center;
+  padding: 5vw;
+}
+
+/* effet planet nav
+.planet{
+  text-align: center;
+  padding: 5vw;
+  transition: font-size .5s ease-in-out;
+}
+
+.planet:hover {
+  font-size: 3rem;
+  margin: auto;
+}
+*/
+
+.planet img:hover {
+  filter: drop-shadow(0 0 0.75rem var(--white));
+}
+
+.main-index {
+  display: grid;
+  grid-row: repeat(4,100vh);
+  margin-top: 80px;
+}
+
+.main-index section {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  height: 1024px;
+}
+
+.planet-pres-img {
+  translate: 150px 50px;
+  filter: drop-shadow(0px 0px 30px var(--white));
+}
+
+#planet-mars {
+  background-image: var(--marsImg);
+  background-color: var(--dark-grey);
+  padding-top: 80px;
+}
+
+
+#planet-moon {
+  background-image: var(--moonImg);
+  background-color: var(--dark);
+  padding-top: 80px;
+}
+
+#planet-mercury {
+  background-image: var(--mercuryImg);
+  background-color: var(--blue);
+  padding-top: 80px;
+}
+
+#planet-venus {
+  background-image: var(--venusImg);
+  background-color: var(--brown);
+  padding-top: 80px;
+}
+
+.planet-pres {
+  background-repeat: no-repeat no-repeat;
+  background-position-x: 10vw;
+  background-position-y: clamp(100px, calc(100vw*0.5*0.7), 200px);
+  background-size: max(100%, 960px);
+  backdrop-filter: drop-shadow(0 0 30px white);
+  background-blend-mode: overlay;
+}
+
+.planet-pres > div > :first-child {
+  margin-left: clamp(10px, 10vw, 150px);
+  font-size: min(clamp(40pt, 30vw, 200pt), 20vw);
+  border-left: 10vw solid var(--accent);
+}
+
+.planet-pres > div > :nth-child(2) {
+  margin-left: clamp(10px, 10vw, 150px);
+  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  width: 50vw;
+}
+
+.rights {
+  padding-right: 0.5em;
+}
 
 .image {
-    height: 1em;
-    width: 1em;
-    background-color: grey;
+  height: 1em;
+  width: 1em;
 }
 
-
-.imagelink {
-    padding-left: 1em;
+.address {
+  padding-right: 0.5em;
 }
-
-div .contact {
-    display: flex;
-}
-
 
 .main-footer {
-    background-color: grey;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    width: 100%;
-    padding: 23px;
+  background-color: var(--dark);
+  color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+  padding: 23px;
 }
+
+
+
+
+
+
+
+
+/*TRAVEL PAGE TOP*/
+
+
+
+.bamsystem-tour {
+  color: var(--white);
+  padding: 15px;
+  margin: 80px 0 0 0;
+}
+
+.main-travel {
+  display: grid;
+  grid-row: repeat(4,100vh);
+  margin-top: 80px;
+}
+
+.main-travel section {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  height: 1024px;
+}
+
+#mars-trip {
+  background-image: var(--mercuryTripImg);
+  background-color: var(--blue);
+  padding-top: 80px;
+
+  
+}
+
+
+/*TRAVEL PAGE BOTTOM*/
+
+
+
+
+
+
+.bamsystem-rental {
+  color: var(--white);
+  padding: 15px;
+  margin: 80px 0 0 0;
+}
+@media screen and (max-width: 460px) {
+span.textlogo{
+display: none;
+  }
+
+  a.car, a.rocket {
+    padding: 0.1rem;
+  }
+
+}
+
+
+
+.travel-nav {
+  color: var(--white);
+  padding: 0;
+}
+
+/* CSS spécifique booking.html */
+
+.main-booking {
+  display: flex;
+  justify-content: center;
+  color: var(--light);
+  margin-top: 80px;
+}
+
+.contactez-nous {
+  width: 700px;
+  border: 1px solid;
+  border-radius: 8px;
+  padding: 0 50px 0 50px;
+  background: white;
+  }
+  
+  .contactez-nous > h1 {
+  font-weight: 500;
+  }
+  
+  .contactez-nous > p {
+  font-weight: 300;
+  }
+  
+  form div {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  min-height: 83px;
+  margin-top: 25px;
+  }
+  
+  form div > label {
+  margin-bottom: 7px;
+  font-weight: 600;
+  }
+  
+  form div > input, form div > select, form div > textarea {
+  background: #FFD9D9;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  font-weight: 500;
+  font-family: Montserrat, "sans-serif";
+  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
+  }
+  
+  form div > input, form div > select {
+  height: 50px;
+  padding-left: 10px;
+  }
+  
+  form div > select {
+  appearance: none;
+  background-size: 15px;
+  background-position: right 10px top 50%;
+  background-repeat: no-repeat;
+  }
+  
+  form div > textarea {
+  height: 195px;
+  padding: 15px 0px 0px 10px;
+  }
+  
+  form div > input::placeholder, form div > textarea::placeholder {
+  color: white;
+  }
+  
+  form div > select:invalid {
+  color: white;
+  }
+  
+  form div > select option {
+  background: white;
+  color: #303030;
+  }
+  
+  form div:last-child {
+  align-items:center;
+  margin-top: 20px;
+  }
+  
+  form button {
+  width: 450px;
+  max-width: 500px;
+  height: 60px;
+  font-weight: 700;
+  font-size: 28px;
+  background: white;
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
+  color: #303030;
+  }
