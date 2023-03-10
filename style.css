@@ -29,6 +29,7 @@ nav {
   top: 0;
   height: 70px;
   width: 100%;
+  z-index: 4;
 }
 
 nav > h1 > a {
@@ -80,6 +81,9 @@ nav > ul {
   justify-content: center;
   text-align: center;
   margin: auto;
+  position: sticky;
+  top: 0;
+  z-index: 3;
 }
 
 header {
