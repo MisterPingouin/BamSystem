@@ -1,12 +1,9 @@
 :root {
 
   /* Colors */
-  --dark-grey: #151515;
-  --grey: #3f3f3f;
-  --black: #0e0e0e;
-  --blue: #08173e;
-  --brown: #2f1e05;
-  --white: rgb(184, 184, 184);
+  --accent: orange;
+  --light: rgb(184, 184, 184);
+  --dark: #242423;
 
 /* Fonts */
   --font1: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS",
@@ -17,22 +14,28 @@
   --moonImg: url("/assets/planets/sd/moon-sd.png");
   --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
   --venusImg: url("/assets/planets/sd/venus-sd.png");
+
+/* Ship Imgs */
+  --marsTripImg: url("/assets/ships/jump.jpg");
+  --moonTripImg: url("/assets/ships/shuttle.jpg");
+  --mercuryTripImg: url("/assets/ships/Royalcruiser.webp");
+  --venusTrimImg: url("/assets/ships/normandy.jpg");
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
-  color: var(--white);
 }
 
 body {
   font-family: var(--font1);
-  background-color: var(--black);
+  background-color: var(--dark);
+  color: var(--light);
 }
 
 nav {
-  background-color: #242423;
-  color: var(--white);
+  background-color: var(--dark);
+  color: var(--light);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -60,13 +63,20 @@ nav > ul {
   font-weight: bold;
   padding: 0.5em 1em;
   width: auto;
+  
 }
 
-.menu a:hover {
-  color: #242423;
-  background-color: var(--white);
+.menu a span:hover, .menu a:hover {
+  color: var(--dark);
+  background-color: var(--light);
   border-radius: 15%;
+  transition: .3s;
 }
+
+:visited, :link {
+  color: var(--light);
+}
+
 .menu {
   display: flex;
   justify-content: space-between;
@@ -89,7 +99,7 @@ nav > ul {
 }
 
 .planets-nav {
-  color: var(--white);
+  color: var(--light);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -141,7 +151,7 @@ header > img {
   margin-top: 80px;
 }
 
-section {
+.main-index section {
   position: relative;
   overflow: hidden;
   color: var(--white);
@@ -153,29 +163,16 @@ section {
   filter: drop-shadow(0px 0px 30px var(--white));
 }
 
-.planet-pres-txt h1{
-  top: 100px;
-  left: 20px;
-  color: var(--white);
-  font-size: 5rem;
-}
-
-.planet-pres-txt p {
-  font-size: 1.2em;
-  top: 250px;
-  left: 20px;
-  width: 40vw;
-}
-
 #planet-mars {
   background-image: var(--marsImg);
   background-color: var(--dark-grey);
   padding-top: 80px;
 }
 
+
 #planet-moon {
   background-image: var(--moonImg);
-  background-color: var(--black);
+  background-color: var(--dark);
   padding-top: 80px;
 }
 
@@ -196,10 +193,20 @@ section {
   background-position-x: 10vw;
   background-position-y: clamp(100px, calc(100vw*0.5*0.7), 200px);
   background-size: max(100%, 960px);
+  backdrop-filter: drop-shadow(0 0 30px white);
+  background-blend-mode: overlay;
 }
 
-.planet-pres div:first-child {
-  color: red;
+.planet-pres > div > :first-child {
+  margin-left: clamp(10px, 10vw, 150px);
+  font-size: min(clamp(40pt, 30vw, 200pt), 20vw);
+  border-left: 10vw solid var(--accent);
+}
+
+.planet-pres > div > :nth-child(2) {
+  margin-left: clamp(10px, 10vw, 150px);
+  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  width: 50vw;
 }
 
 .rights {
@@ -216,7 +223,7 @@ section {
 }
 
 .main-footer {
-  background-color: #242423;
+  background-color: var(--dark);
   color: var(--white);
   display: flex;
   flex-direction: row;
@@ -224,12 +231,52 @@ section {
   width: 100%;
   padding: 23px;
 }
-/*bamsystem-tour = travel page*/
+
+
+
+
+
+
+
+
+/*TRAVEL PAGE TOP*/
+
+
+
 .bamsystem-tour {
   color: var(--white);
   padding: 15px;
   margin: 80px 0 0 0;
 }
+
+.main-travel {
+  display: grid;
+  grid-row: repeat(4,100vh);
+  margin-top: 80px;
+}
+
+.main-travel section {
+  position: relative;
+  overflow: hidden;
+  color: var(--white);
+  height: 1024px;
+}
+
+#mars-trip {
+  background-image: var(--mercuryTripImg);
+  background-color: var(--blue);
+  padding-top: 80px;
+
+  
+}
+
+
+/*TRAVEL PAGE BOTTOM*/
+
+
+
+
+
 
 .bamsystem-rental {
   color: var(--white);
@@ -254,12 +301,12 @@ display: none;
   padding: 0;
 }
 
-/* CSS spécifique Booking.html */
+/* CSS spécifique booking.html */
 
 .main-booking {
   display: flex;
   justify-content: center;
-  color: #303030;
+  color: var(--light);
   margin-top: 80px;
 }
 
