@@ -108,6 +108,12 @@ nav > ul {
   padding-left: 1em;
 }
 
+.headerDecoLine {
+  /* position: absolute;
+  top: 50px;
+  left: 20px; */
+}
+
 header.planets-nav {
   /* display: flex; */
   justify-content: space-between;
@@ -142,6 +148,10 @@ div.planet-nav-item h2 {
 }
 
 div.planet-nav-item a:hover {
+  transition: .3s ease-in-out;
+}
+
+div.planet-nav-item a:hover {
   color: var(--accent);
 }
 
@@ -155,6 +165,7 @@ div.planet-nav-item a img:hover {
   width: 150px;
   height: 150px;
   rotate: 90deg;
+  filter: drop-shadow(0 0 20px var(--accent));
 }
 
 .main-index {
