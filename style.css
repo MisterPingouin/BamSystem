@@ -33,6 +33,7 @@
   margin: 0;
   box-sizing: border-box;
   scroll-behavior:smooth;
+
 }
 
 body {
@@ -81,8 +82,9 @@ nav > ul {
   transition: .3s;
 }
 
-:visited, :link {
+:visited, :link, a {
   color: var(--light);
+  text-decoration: none;
 }
 
 .menu {
@@ -107,38 +109,52 @@ nav > ul {
 }
 
 header.planets-nav {
+  /* display: flex; */
+  justify-content: space-between;
   color: var(--light);
   background-color: var(--darker);
-  height: fit-content;
   filter: var(--accentDs);
   border-bottom: 2px solid var(--accent);
   padding-top: var(--navHeight);
 }
 
 header.planets-nav section {
+  margin: auto;
+  width: clamp(400px, 100vw, 800px);
   display: flex;
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  margin: auto;
-  height: 150px;
-  width: clamp(300px, 50vw, 500px);
+  height: 220px;
+  padding: 20px;
 }
 
-header.planet-nav div.planet-nav-item {
+section div.planet-nav-item {
   display: flex;
   flex-direction: column;
-  align-items: space-around;
-  width: 100px;
-  height: 200px;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 10px;
 }
 
-div.planet-nav-item a {
-  height: 100%;
+div.planet-nav-item h2 {
+  padding-bottom: 10px;
+}
+
+div.planet-nav-item a:hover {
+  color: var(--accent);
 }
 
 div.planet-nav-item a img {
-  height: 5em;
+  width: 100px;
+  height: 100px;
+  transition: .3s ease-in-out;
+}
+
+div.planet-nav-item a img:hover {
+  width: 150px;
+  height: 150px;
+  rotate: 90deg;
 }
 
 .main-index {
