@@ -47,6 +47,11 @@ nav {
   z-index: 4;
 }
 
+.logobamnav {
+  height: 32px;
+  padding-right: 10px;
+}
+
 nav > h1 > a {
   font-size: clamp(0.5rem, 2rem, 2rem);
   text-decoration: none;
