@@ -5,7 +5,7 @@
   --dark: #14131e;
   --darker: #05081f;
 
-/* Fonts-Families */
+  /* Fonts-Families */
   --font1: "Quicksand";
   --font2: "League Gothic";
 
@@ -15,25 +15,24 @@
   --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
   --venusImg: url("/assets/planets/sd/venus-sd.png");
 
-/* Travel Ship Imgs */
+  /* Travel Ship Imgs */
   --marsTripImg: url("/assets/ships/890_Jump_Leaving_Hurston_3.6.png"); /*ok*/
-  --moonTripImg: url("/assets/ships/shuttle.jpg");/*ok*/
-  --mercuryTripImg: url("/assets/ships/Mass-Effect-Normandy1.jpg");/*ok*/
+  --moonTripImg: url("/assets/ships/shuttle.jpg"); /*ok*/
+  --mercuryTripImg: url("/assets/ships/Mass-Effect-Normandy1.jpg"); /*ok*/
   --venusTrimImg: url("/assets/ships/Royalcruiser.png"); /*ok*/
-  
+
   /* Effects */
-    --accentDropShadow: drop-shadow(0 0px 50px var(--accent));
-    --lightDropShadow: drop-shadow(0 0px 50px var(--light));
+  --accentDropShadow: drop-shadow(0 0px 50px var(--accent));
+  --lightDropShadow: drop-shadow(0 0px 50px var(--light));
 
   /* Structure, padding, margin ... etc */
-    --navHeight: 70px;
+  --navHeight: 70px;
 }
-
 
 * {
   margin: 0;
   box-sizing: border-box;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -88,7 +87,9 @@ nav > ul {
   transition: 0.3s;
 }
 
-:visited, :link, a {
+:visited,
+:link,
+a {
   color: var(--light);
   text-decoration: none;
 }
@@ -145,14 +146,14 @@ div.planet-nav-item h2 {
 }
 
 div.planet-nav-item a:hover {
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
   color: var(--accent);
 }
 
 div.planet-nav-item a img {
   width: 100px;
   height: 100px;
-  transition: .3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 div.planet-nav-item a img:hover {
@@ -196,14 +197,13 @@ div.planet-nav-item a img:hover {
   }
 
   div.planet-nav-item a img:active {
-    filter:var(--accentDs);
+    filter: var(--accentDs);
   }
 
   .planet-pres-txt h3 {
     max-width: 320px;
     margin: auto;
   }
-
 }
 
 .main-index {
@@ -228,7 +228,7 @@ div.planet-nav-item a img:hover {
   position: absolute;
   z-index: -1;
   left: 10vw;
-  top: clamp(100px, calc(100vw*0.5*0.7), 200px);
+  top: clamp(100px, calc(100vw * 0.5 * 0.7), 200px);
   width: max(100%, 960px);
   overflow: hidden;
   filter: var(--lightDropShadow);
@@ -245,7 +245,8 @@ div.planet-nav-item a img:hover {
   padding-top: 20px;
 }
 
-.decoLine .round, .planet-decoLine .round {
+.decoLine .round,
+.planet-decoLine .round {
   background-color: var(--accent);
   width: 10px;
   height: 10px;
@@ -273,13 +274,14 @@ div.planet-nav-item a img:hover {
   padding: 20px;
 }
 
-.planet-pres-title { /*-index- Section Titre*/
+.planet-pres-title {
+  /*-index- Section Titre*/
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.planet-pres-title h1 { 
+.planet-pres-title h1 {
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(40pt, 30vw, 200pt), 20vw);
   font-family: var(--font2);
@@ -294,7 +296,8 @@ div.planet-nav-item a img:hover {
   filter: opacity(70%);
 }
 
-.planet-pres > div > p { /*-index- Section paragraphe*/
+.planet-pres > div > p {
+  /*-index- Section paragraphe*/
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
@@ -324,10 +327,11 @@ div.planet-nav-item a img:hover {
   padding: 23px;
 }
 
-
+footer {
+  margin-top: auto;
+}
 
 /*TRAVEL PAGE TOP-----------------------------------------------------------------------------------------------------------*/
-
 
 .bamsystem-tour {
   color: var(--white);
@@ -336,7 +340,7 @@ div.planet-nav-item a img:hover {
 }
 .main-travel {
   display: grid;
-  grid-row: repeat(4,100vh);
+  grid-row: repeat(4, 100vh);
   margin-top: 80px;
 }
 .main-travel section {
@@ -354,7 +358,10 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
-.jump, .shuttle, .normandy, .royal {
+.jump,
+.shuttle,
+.normandy,
+.royal {
   float: left;
   margin: 15px;
   width: 90%;
@@ -375,13 +382,11 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
-
 #mercury-trip {
   background-color: var(--dark);
   padding-top: 80px;
   margin: 15px;
 }
-
 
 #venus-trip {
   background-color: var(--dark);
@@ -389,20 +394,17 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
-
 .bookTrip {
   margin-top: 50px;
-
 }
 
 @media screen and (max-width: 768px) {
   #large-title {
     display: none;
   }
-}  
+}
 
 @media screen and (min-width: 768px) {
-
   #small-title {
     display: none;
   }
@@ -411,8 +413,7 @@ div.planet-nav-item a img:hover {
     width: 60%;
     max-width: 1500px;
     height: auto;
-    float: left ;
-
+    float: left;
   }
   .shuttle {
     width: 60%;
@@ -429,7 +430,6 @@ div.planet-nav-item a img:hover {
     max-width: 1500px;
     height: auto;
   }
-
 }
 /*TRAVEL PAGE BOTTOM-------------------------------------------------------------------------------------------------------*/
 
@@ -458,28 +458,51 @@ div.planet-nav-item a img:hover {
 
 form {
   opacity: 0;
-  animation-duration: 3s;
+  animation-duration: 4s;
   animation-name: apparition;
   animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 
 @keyframes apparition {
-  0% { opacity: 0; }
-  100% { opacity: 1; }
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
 }
 
-.titleform {
-  opacity: 1;
-  animation-duration: 4s;
-  animation-name: disparition;
-  animation-delay: 0s;
+.titleform h1 {
+  text-align: center;
+  opacity: 0;
+  animation-duration: 3s;
+  animation-name: apparition;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 
+.welcomeform {
+  opacity: 1;
+  animation-duration: 2s;
+  animation-name: disparition;
+  animation-delay: 3s;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation-fill-mode: forwards;
+  font-family: var(--font2);
+  font-size: 2.5em;
+}
+
 @keyframes disparition {
-  0% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 .main-booking {
@@ -501,7 +524,6 @@ form div {
 form div > label {
   margin-bottom: 7px;
   font-weight: 600;
-  
 }
 
 form div > input,
@@ -539,7 +561,8 @@ form div > input::placeholder,
 form div > textarea::placeholder {
   color: var(--light);
 }
-form div > input, form div > select{
+form div > input,
+form div > select {
   opacity: 0.7;
 }
 
@@ -574,7 +597,8 @@ form button {
   opacity: 0.7;
 }
 
-form button:hover, form button:focus {
+form button:hover,
+form button:focus {
   color: var(--light);
   background: var(--dark);
   opacity: 0.9;
@@ -599,18 +623,18 @@ input[type="date"] {
   top: 0;
   bottom: 0;
   z-index: -1;
-  }
-  
+}
+
 /* Rental CSS */
 .main-rental {
-  margin-top : 80px;
+  margin-top: 71px;
 }
 
 .custom-slider {
   display: none;
 }
 .slide-container {
-  width : 100%;
+  width: 100%;
   position: relative;
   margin: auto;
 }
@@ -688,26 +712,33 @@ input[type="date"] {
   display: flex;
   justify-content: center;
   align-content: center;
+  color: var(--dark);
 }
 
 .pack1 {
-  height: 12rem;
-  width: 10rem;
+  height: 15rem;
+  width: 12rem;
   margin: 2vw;
+  border-radius: 20%;
+  text-align: center;
   background-color: var(--light);
 }
 
 .pack2 {
-  height: 12rem;
-  width: 10rem;
+  height: 15rem;
+  width: 12rem;
   margin: 2vw;
+  border-radius: 20%;
+  text-align: center;
   background-color: var(--light);
 }
 
 .pack3 {
-  height: 12rem;
-  width: 10rem;
+  height: 15rem;
+  width: 12rem;
   margin: 2vw;
+  border-radius: 20%;
+  text-align: center;
   background-color: var(--light);
 }
 
@@ -723,6 +754,5 @@ input[type="date"] {
   position: fixed;
   bottom: 30px;
   right: 30px;
-
 }
 /*Button------------------------------------------------------------------------------------------------------*/
