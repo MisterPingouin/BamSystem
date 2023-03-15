@@ -17,10 +17,10 @@
   --venusImg: url("/assets/planets/sd/venus-sd.png");
 
 /* Ship Imgs */
-  --marsTripImg: url("/assets/ships/jump.jpg");
-  --moonTripImg: url("/assets/ships/shuttle.jpg");
-  --mercuryTripImg: url("/assets/ships/Royalcruiser.webp");
-  --venusTrimImg: url("/assets/ships/normandy.jpg");
+  --marsTripImg: url("/assets/ships/890_Jump_Leaving_Hurston_3.6.png"); /*ok*/
+  --moonTripImg: url("/assets/ships/shuttle.jpg");/*ok*/
+  --mercuryTripImg: url("/assets/ships/Mass-Effect-Normandy1.jpg");/*ok*/
+  --venusTrimImg: url("/assets/ships/Royalcruiser.png"); /*ok*/
   
   /* Effects */
     --accentDropShadow: drop-shadow(0 0px 50px var(--accent));
@@ -323,7 +323,7 @@ div.planet-nav-item a img:hover {
 }
 
 
-/*TRAVEL PAGE TOP*/
+/*TRAVEL PAGE TOP-----------------------------------------------------------------------------------------------------------*/
 
 
 
@@ -343,17 +343,44 @@ div.planet-nav-item a img:hover {
   position: relative;
   overflow: hidden;
   color: var(--white);
-  height: 1024px;
+  height: 900px;
+}
+
+.trip-text {
+  margin: 15px;
 }
 
 #mars-trip {
-  background-image: var(--mercuryTripImg);
-  background-color: var(--blue);
+  background-color: var(--dark);
   padding-top: 80px;
+  margin: 15px;
+}
+.jump {
+  float: left;
+  margin: 15px;
+  width: 100%;
+  height: auto;
+}
+
+#moon-trip {
+  background-color: var(--dark);
+  padding-top: 80px;
+  margin: 15px;
+}
+
+.shuttle {
+  float: left;
+  margin: 15px;
+  width: 100%;
+  height: auto;
 }
 
 
 /*TRAVEL PAGE BOTTOM*/
+
+
+
+
 
 
 .bamsystem-rental {
