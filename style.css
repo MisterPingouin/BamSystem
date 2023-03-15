@@ -15,7 +15,7 @@
   --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
   --venusImg: url("/assets/planets/sd/venus-sd.png");
 
-/* Ship Imgs */
+/* Travel Ship Imgs */
   --marsTripImg: url("/assets/ships/890_Jump_Leaving_Hurston_3.6.png"); /*ok*/
   --moonTripImg: url("/assets/ships/shuttle.jpg");/*ok*/
   --mercuryTripImg: url("/assets/ships/Mass-Effect-Normandy1.jpg");/*ok*/
@@ -28,6 +28,7 @@
   /* Structure, padding, margin ... etc */
     --navHeight: 70px;
 }
+
 
 * {
   margin: 0;
@@ -56,15 +57,17 @@ nav {
   z-index: 4;
 }
 
-.logobamnav {
-  height: 32px;
-  padding-right: 10px;
+#navIcon {
+  fill: white;
+  stroke: white;
+  stroke-width: 0.5;
+  margin: auto;
 }
 
-nav > h1 > a {
+/* nav > h1 > a {
   font-size: clamp(0.5rem, 2rem, 2rem);
   text-decoration: none;
-}
+} */
 
 nav > ul {
   list-style: none;
@@ -82,7 +85,6 @@ nav > ul {
 .menu a:hover {
   color: var(--dark);
   background-color: var(--light);
-  border-radius: 15%;
   transition: 0.3s;
 }
 
@@ -98,17 +100,13 @@ nav > ul {
 }
 
 .logomenu {
-  height: 1rem;
-  width: 1rem;
+  height: auto;
+  width: 2rem;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
 
-.car {
-  padding-left: 1em;
-}
-
-.rocket {
+.icon {
   padding-left: 1em;
 }
 
@@ -352,32 +350,29 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
+#small-title {
+  margin: 15px;
+}
+
+.jump, .shuttle, .normandy, .royal {
+  float: left;
+  margin: 15px;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  filter: var(--lightDropShadow);
+}
+
 #mars-trip {
   background-color: var(--dark);
   padding-top: 80px;
   margin: 15px;
 }
-.jump {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-    filter: var(--lightDropShadow);
-}
-
 
 #moon-trip {
   background-color: var(--dark);
   padding-top: 80px;
   margin: 15px;
-}
-
-.shuttle {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
 }
 
 
@@ -386,12 +381,7 @@ div.planet-nav-item a img:hover {
   padding-top: 80px;
   margin: 15px;
 }
-.normandy {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
-}
+
 
 #venus-trip {
   background-color: var(--dark);
@@ -399,23 +389,30 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
-.royal {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
-}
 
 .bookTrip {
   margin-top: 50px;
 
 }
 
+@media screen and (max-width: 768px) {
+  #large-title {
+    display: none;
+  }
+}  
+
 @media screen and (min-width: 768px) {
+
+  #small-title {
+    display: none;
+  }
+
   .jump {
     width: 60%;
     max-width: 1500px;
     height: auto;
+    float: left ;
+
   }
   .shuttle {
     width: 60%;
@@ -459,39 +456,52 @@ div.planet-nav-item a img:hover {
 
 /* CSS spécifique booking.html */
 
+form {
+  opacity: 0;
+  animation-duration: 3s;
+  animation-name: apparition;
+  animation-delay: 4s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apparition {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+.titleform {
+  opacity: 1;
+  animation-duration: 4s;
+  animation-name: disparition;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes disparition {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
+
 .main-booking {
   display: flex;
   justify-content: center;
   color: var(--light);
   margin-top: 80px;
-}
-
-.contactez-nous {
-  width: 700px;
-  border: 1px solid;
-  border-radius: 8px;
-  padding: 0 50px 0 50px;
-  background: var(--light);
-}
-
-.contactez-nous > h1 {
-  font-weight: 500;
-}
-
-.contactez-nous > p {
-  font-weight: 300;
+  font-family: var(--font1);
 }
 
 form div {
   display: flex;
   flex-direction: column;
   min-height: 50px;
-  margin-top: 18px;
+  margin-top: 13px;
+  transition-delay: 5s;
 }
 
 form div > label {
   margin-bottom: 7px;
   font-weight: 600;
+  
 }
 
 form div > input,
@@ -520,13 +530,17 @@ form div > select {
 }
 
 form div > textarea {
-  height: 195px;
+  height: 175px;
   padding: 15px 0px 0px 10px;
+  opacity: 0.7;
 }
 
 form div > input::placeholder,
 form div > textarea::placeholder {
   color: var(--light);
+}
+form div > input, form div > select{
+  opacity: 0.7;
 }
 
 form div > select:invalid {
@@ -546,15 +560,24 @@ form div:last-child {
 form button {
   width: 450px;
   max-width: 500px;
-  height: 60px;
+  height: 50px;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 22px;
   background: var(--light);
   border: rgba(48, 48, 48, 0.5) solid 1px;
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: var(--accent);
+  color: var(--dark);
   margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  opacity: 0.7;
+}
+
+form button:hover, form button:focus {
+  color: var(--light);
+  background: var(--dark);
+  opacity: 0.9;
 }
 
 .date-form {
@@ -563,13 +586,31 @@ form button {
 
 input[type="date"] {
   font-family: var(--font1);
+  opacity: 0.7;
 }
+
+.background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  }
+  
 /* Rental CSS */
+.main-rental {
+  margin-top : 80px;
+}
+
 .custom-slider {
   display: none;
 }
 .slide-container {
-  max-width: 800px;
+  width : 100%;
   position: relative;
   margin: auto;
 }
@@ -669,3 +710,19 @@ input[type="date"] {
   margin: 2vw;
   background-color: var(--light);
 }
+
+/*Button-------------------------------------------------------------------------------------------------------*/
+.toop {
+  height: 80px;
+  width: 80px;
+}
+#myBtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+}
+/*Button------------------------------------------------------------------------------------------------------*/
