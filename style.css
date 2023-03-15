@@ -1,5 +1,4 @@
 :root {
-
   /* Colors */
   --accent: orange;
   --light: rgb(184, 184, 184);
@@ -10,7 +9,7 @@
   --font1: "Quicksand";
   --font2: "League Gothic";
 
-/* Planets Imgs */
+  /* Planets Imgs */
   --marsImg: url("/assets/planets/sd/mars-sd.png");
   --moonImg: url("/assets/planets/sd/moon-sd.png");
   --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
@@ -57,8 +56,13 @@ nav {
   z-index: 4;
 }
 
+.logobamnav {
+  height: 32px;
+  padding-right: 10px;
+}
+
 nav > h1 > a {
-  font-size: clamp(0.5rem,2rem,2rem);
+  font-size: clamp(0.5rem, 2rem, 2rem);
   text-decoration: none;
 }
 
@@ -72,14 +76,14 @@ nav > ul {
   font-weight: bold;
   padding: 0.5em 1em;
   width: auto;
-  
 }
 
-.menu a span:hover, .menu a:hover {
+.menu a span:hover,
+.menu a:hover {
   color: var(--dark);
   background-color: var(--light);
   border-radius: 15%;
-  transition: .3s;
+  transition: 0.3s;
 }
 
 :visited, :link, a {
@@ -90,7 +94,7 @@ nav > ul {
 .menu {
   display: flex;
   justify-content: space-between;
-  align-items: center; 
+  align-items: center;
 }
 
 .logomenu {
@@ -206,7 +210,7 @@ div.planet-nav-item a img:hover {
 
 .main-index {
   display: grid;
-  grid-row: repeat(4,100vh);
+  grid-row: repeat(4, 100vh);
   margin-top: 80px;
 }
 
@@ -322,10 +326,7 @@ div.planet-nav-item a img:hover {
   padding: 23px;
 }
 
-
-/*TRAVEL PAGE TOP-----------------------------------------------------------------------------------------------------------*/
-
-
+/*TRAVEL PAGE TOP*/
 
 .bamsystem-tour {
   color: var(--white);
@@ -335,7 +336,7 @@ div.planet-nav-item a img:hover {
 
 .main-travel {
   display: grid;
-  grid-row: repeat(4,100vh);
+  grid-row: repeat(4, 100vh);
   margin-top: 80px;
 }
 
@@ -375,13 +376,7 @@ div.planet-nav-item a img:hover {
   height: auto;
 }
 
-
 /*TRAVEL PAGE BOTTOM*/
-
-
-
-
-
 
 .bamsystem-rental {
   color: var(--white);
@@ -389,17 +384,15 @@ div.planet-nav-item a img:hover {
   margin: 80px 0 0 0;
 }
 @media screen and (max-width: 460px) {
-span.textlogo{
-display: none;
+  span.textlogo {
+    display: none;
   }
 
-  a.car, a.rocket {
+  a.car,
+  a.rocket {
     padding: 0.1rem;
   }
-
 }
-
-
 
 .travel-nav {
   color: var(--white);
@@ -420,84 +413,201 @@ display: none;
   border: 1px solid;
   border-radius: 8px;
   padding: 0 50px 0 50px;
-  background: white;
-  }
-  
-  .contactez-nous > h1 {
+  background: var(--light);
+}
+
+.contactez-nous > h1 {
   font-weight: 500;
-  }
-  
-  .contactez-nous > p {
+}
+
+.contactez-nous > p {
   font-weight: 300;
-  }
-  
-  form div {
-  width: 100%;
+}
+
+form div {
   display: flex;
   flex-direction: column;
-  min-height: 83px;
-  margin-top: 25px;
-  }
-  
-  form div > label {
+  min-height: 50px;
+  margin-top: 18px;
+}
+
+form div > label {
   margin-bottom: 7px;
   font-weight: 600;
-  }
-  
-  form div > input, form div > select, form div > textarea {
-  background: #FFD9D9;
+}
+
+form div > input,
+form div > select,
+form div > textarea {
+  background: var(--light);
   border: none;
   border-radius: 5px;
   font-size: 16px;
   font-weight: 500;
-  font-family: Montserrat, "sans-serif";
-  box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.25);
-  }
-  
-  form div > input, form div > select {
+  font-family: var(--font1);
+  box-shadow: 0px 2px 2px 0px rgba(0, 0, 0, 0.25);
+}
+
+form div > input,
+form div > select {
   height: 50px;
   padding-left: 10px;
-  }
-  
-  form div > select {
+}
+
+form div > select {
   appearance: none;
   background-size: 15px;
   background-position: right 10px top 50%;
   background-repeat: no-repeat;
-  }
-  
-  form div > textarea {
+}
+
+form div > textarea {
   height: 195px;
   padding: 15px 0px 0px 10px;
-  }
-  
-  form div > input::placeholder, form div > textarea::placeholder {
-  color: white;
-  }
-  
-  form div > select:invalid {
-  color: white;
-  }
-  
-  form div > select option {
-  background: white;
-  color: #303030;
-  }
-  
-  form div:last-child {
-  align-items:center;
+}
+
+form div > input::placeholder,
+form div > textarea::placeholder {
+  color: var(--light);
+}
+
+form div > select:invalid {
+  color: var(--light);
+}
+
+form div > select option {
+  background: var(--light);
+  color: var(--dark);
+}
+
+form div:last-child {
+  align-items: center;
   margin-top: 20px;
-  }
-  
-  form button {
+}
+
+form button {
   width: 450px;
   max-width: 500px;
   height: 60px;
   font-weight: 700;
   font-size: 28px;
-  background: white;
+  background: var(--light);
   border: rgba(48, 48, 48, 0.5) solid 1px;
   border-radius: 5px;
-  box-shadow: 0px 4px 4px 0px rgba(0,0,0,0.25);
-  color: #303030;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: var(--accent);
+  margin-bottom: 25px;
+}
+
+.date-form {
+  margin-top: 28px;
+}
+
+input[type="date"] {
+  font-family: var(--font1);
+}
+/* Rental CSS */
+.custom-slider {
+  display: none;
+}
+.slide-container {
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+}
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 30px;
+  background-color: rgba(0, 0, 0, 0);
+  transition: background-color 0.6s ease;
+}
+.prev {
+  left: 15px;
+}
+.next {
+  right: 15px;
+}
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.slide-text {
+  position: absolute;
+  color: #ffffff;
+  font-size: 15px;
+  padding: 15px;
+  bottom: 15px;
+  width: 100%;
+  text-align: center;
+}
+.slide-index {
+  color: #ffffff;
+  font-size: 13px;
+  padding: 15px;
+  position: absolute;
+  top: 0;
+}
+.slide-img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  object-position: center;
+}
+.slide-dot {
+  text-align: center;
+}
+
+.active,
+.dot:hover {
+  background-color: #111111;
+}
+.fade {
+  animation-name: fade;
+  animation-duration: 1s;
+}
+@keyframes fade {
+  from {
+    opacity: 0;
   }
+  to {
+    opacity: 1;
+  }
+}
+
+.pack-choice {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.pack1 {
+  height: 12rem;
+  width: 10rem;
+  margin: 2vw;
+  background-color: var(--light);
+}
+
+.pack2 {
+  height: 12rem;
+  width: 10rem;
+  margin: 2vw;
+  background-color: var(--light);
+}
+
+.pack3 {
+  height: 12rem;
+  width: 10rem;
+  margin: 2vw;
+  background-color: var(--light);
+}
