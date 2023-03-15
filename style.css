@@ -2,11 +2,12 @@
   /* Colors */
   --accent: orange;
   --light: rgb(184, 184, 184);
-  --dark: #242423;
-  --darker: #000210;
+  --dark: #14131e;
+  --darker: #05081f;
 
-  /* Fonts */
-  --font1: "Gill Sans", "Gill Sans MT", "Calibri", "Trebuchet MS", sans-serif;
+/* Fonts-Families */
+  --font1: "Quicksand";
+  --font2: "League Gothic";
 
   /* Planets Imgs */
   --marsImg: url("/assets/planets/sd/mars-sd.png");
@@ -14,16 +15,24 @@
   --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
   --venusImg: url("/assets/planets/sd/venus-sd.png");
 
-  /* Ship Imgs */
-  --marsTripImg: url("/assets/ships/jump.jpg");
-  --moonTripImg: url("/assets/ships/shuttle.jpg");
-  --mercuryTripImg: url("/assets/ships/Royalcruiser.webp");
-  --venusTrimImg: url("/assets/ships/normandy.jpg");
+/* Ship Imgs */
+  --marsTripImg: url("/assets/ships/890_Jump_Leaving_Hurston_3.6.png"); /*ok*/
+  --moonTripImg: url("/assets/ships/shuttle.jpg");/*ok*/
+  --mercuryTripImg: url("/assets/ships/Mass-Effect-Normandy1.jpg");/*ok*/
+  --venusTrimImg: url("/assets/ships/Royalcruiser.png"); /*ok*/
+  
+  /* Effects */
+    --accentDropShadow: drop-shadow(0 0px 50px var(--accent));
+    --lightDropShadow: drop-shadow(0 0px 50px var(--light));
+
+  /* Structure, padding, margin ... etc */
+    --navHeight: 70px;
 }
 
 * {
   margin: 0;
   box-sizing: border-box;
+  scroll-behavior:smooth;
 }
 
 body {
@@ -42,7 +51,7 @@ nav {
   position: fixed;
   overflow: hidden;
   top: 0;
-  height: 70px;
+  height: var(--navHeight);
   width: 100%;
   z-index: 4;
 }
@@ -77,9 +86,9 @@ nav > ul {
   transition: 0.3s;
 }
 
-:visited,
-:link {
+:visited, :link, a {
   color: var(--light);
+  text-decoration: none;
 }
 
 .menu {
@@ -103,51 +112,100 @@ nav > ul {
   padding-left: 1em;
 }
 
-.planets-nav {
+header.planets-nav {
+  /* display: flex; */
+  /* justify-content: space-between; */
   color: var(--light);
+  background-color: var(--darker);
+  filter: var(--accentDropShadow);
+  border-bottom: 2px solid var(--accent);
+  padding-top: var(--navHeight);
+}
+
+header.planets-nav section {
+  margin: auto;
+  width: clamp(250px, 100vw, 800px);
   display: flex;
   align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  height: 220px;
+  padding: 20px;
+}
+
+section div.planet-nav-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  padding: 10px;
+}
+
+div.planet-nav-item h2 {
+  padding-bottom: 10px;
+  font-size: 1em;
+}
+
+div.planet-nav-item a:hover {
+  transition: .3s ease-in-out;
+  color: var(--accent);
+}
+
+div.planet-nav-item a img {
+  width: 100px;
+  height: 100px;
+  transition: .3s ease-in-out;
+}
+
+div.planet-nav-item a img:hover {
+  width: 150px;
+  height: 150px;
+  rotate: 90deg;
+  filter: drop-shadow(0 0 20px var(--accent));
+}
+
+.planet-decoLine {
+  position: absolute;
+  z-index: -1;
+  display: flex;
   justify-content: center;
-  text-align: center;
-  margin: auto;
-  top: 0;
-  z-index: 3;
-  height: 200px;
+  align-items: center;
+  padding-top: 20px;
 }
 
-header {
-  padding-top: 70px;
+.planet-decoLine .line {
+  background-color: var(--accent);
+  width: 90vw;
+  height: 2px;
 }
 
-header.planets-nav img {
-  width: 4em;
-  height: auto;
-}
+@media screen and (max-width: 520px) {
+  header.planets-nav section {
+    width: clamp(250px, 100vw, 800px);
+    height: 150px;
+  }
 
-header > img {
-  height: 10%;
-}
+  div.planet-nav-item a img {
+    width: 60px;
+    height: 60px;
+  }
 
-.planet {
-  text-align: center;
-  padding: 5vw;
-}
+  div.planet-nav-item a img:hover {
+    width: 60px;
+    height: 60px;
+    rotate: initial;
+    filter: initial;
+  }
 
-/* effet planet nav
-.planet{
-  text-align: center;
-  padding: 5vw;
-  transition: font-size .5s ease-in-out;
-}
+  div.planet-nav-item a img:active {
+    filter:var(--accentDs);
+  }
 
-.planet:hover {
-  font-size: 3rem;
-  margin: auto;
-}
-*/
+  .planet-pres-txt h3 {
+    max-width: 320px;
+    margin: auto;
+  }
 
-.planet img:hover {
-  filter: drop-shadow(0 0 0.75rem var(--white));
 }
 
 .main-index {
@@ -163,54 +221,86 @@ header > img {
   height: 1024px;
 }
 
-.planet-pres-img {
-  translate: 150px 50px;
-  filter: drop-shadow(0px 0px 30px var(--white));
-}
-
-#planet-mars {
-  background-image: var(--marsImg);
-  background-color: var(--dark-grey);
-  padding-top: 80px;
-}
-
-#planet-moon {
-  background-image: var(--moonImg);
+.main-index .planet-pres {
   background-color: var(--dark);
-  padding-top: 80px;
+  z-index: -2;
 }
 
-#planet-mercury {
-  background-image: var(--mercuryImg);
-  background-color: var(--blue);
-  padding-top: 80px;
+.main-index .planet-pres .planet-pres-img {
+  position: absolute;
+  z-index: -1;
+  left: 10vw;
+  top: clamp(100px, calc(100vw*0.5*0.7), 200px);
+  width: max(100%, 960px);
+  overflow: hidden;
+  filter: var(--lightDropShadow);
 }
 
-#planet-venus {
-  background-image: var(--venusImg);
-  background-color: var(--brown);
-  padding-top: 80px;
+.main-index .planet-pres .planet-pres-img:hover {
+  rotate: 90deg;
 }
 
-.planet-pres {
-  background-repeat: no-repeat no-repeat;
-  background-position-x: 10vw;
-  background-position-y: clamp(100px, calc(100vw * 0.5 * 0.7), 200px);
-  background-size: max(100%, 960px);
-  backdrop-filter: drop-shadow(0 0 30px white);
-  background-blend-mode: overlay;
+.decoLine {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 20px;
 }
 
-.planet-pres > div > :first-child {
+.decoLine .round, .planet-decoLine .round {
+  background-color: var(--accent);
+  width: 10px;
+  height: 10px;
+  border-radius: 5px;
+}
+
+.decoLine .line {
+  background-color: var(--accent);
+  width: 80vw;
+  height: 2px;
+}
+
+/* .planet-pres-txt {
+  z-index: 0;
+} */
+
+.planet-pres-txt h3 {
+  text-align: center;
+  padding-bottom: 50px;
+  padding-top: 10px;
+  font-family: var(--font1);
+  color: var(--accent);
+  font-size: 1em;
+  margin: auto;
+  padding: 20px;
+}
+
+.planet-pres-title { /*-index- Section Titre*/
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.planet-pres-title h1 { 
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(40pt, 30vw, 200pt), 20vw);
-  border-left: 10vw solid var(--accent);
+  font-family: var(--font2);
+  color: var(--accent);
 }
 
-.planet-pres > div > :nth-child(2) {
+.planet-pres-title > span.rectangle {
+  background-color: var(--accent);
+  width: 50%;
+  height: min(clamp(10pt, 10vw, 50pt), 20vw);
+  float: right;
+  filter: opacity(70%);
+}
+
+.planet-pres > div > p { /*-index- Section paragraphe*/
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
+  color: white;
 }
 
 .rights {
@@ -254,13 +344,36 @@ header > img {
   position: relative;
   overflow: hidden;
   color: var(--white);
-  height: 1024px;
+  height: 900px;
+}
+
+.trip-text {
+  margin: 15px;
 }
 
 #mars-trip {
-  background-image: var(--mercuryTripImg);
-  background-color: var(--blue);
+  background-color: var(--dark);
   padding-top: 80px;
+  margin: 15px;
+}
+.jump {
+  float: left;
+  margin: 15px;
+  width: 100%;
+  height: auto;
+}
+
+#moon-trip {
+  background-color: var(--dark);
+  padding-top: 80px;
+  margin: 15px;
+}
+
+.shuttle {
+  float: left;
+  margin: 15px;
+  width: 100%;
+  height: auto;
 }
 
 /*TRAVEL PAGE BOTTOM*/
