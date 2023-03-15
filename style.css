@@ -458,9 +458,9 @@ div.planet-nav-item a img:hover {
 
 form {
   opacity: 0;
-  animation-duration: 10s;
+  animation-duration: 3s;
   animation-name: apparition;
-  animation-delay: 3s;
+  animation-delay: 4s;
   animation-fill-mode: forwards;
 }
 
@@ -469,7 +469,18 @@ form {
   100% { opacity: 1; }
 }
 
+.titleform {
+  opacity: 1;
+  animation-duration: 4s;
+  animation-name: disparition;
+  animation-delay: 0s;
+  animation-fill-mode: forwards;
+}
 
+@keyframes disparition {
+  0% { opacity: 1; }
+  100% { opacity: 0; }
+}
 
 .main-booking {
   display: flex;
