@@ -29,6 +29,7 @@
     --navHeight: 70px;
 }
 
+
 * {
   margin: 0;
   box-sizing: border-box;
@@ -349,33 +350,29 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
+#small-title {
+  margin: 15px;
+}
+
+.jump, .shuttle, .normandy, .royal {
+  float: left;
+  margin: 15px;
+  width: 90%;
+  height: auto;
+  border-radius: 10px;
+  filter: var(--lightDropShadow);
+}
 
 #mars-trip {
   background-color: var(--dark);
   padding-top: 80px;
   margin: 15px;
 }
-.jump {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
-  border-radius: 10px;
-  filter: var(--lightDropShadow);
-}
-
 
 #moon-trip {
   background-color: var(--dark);
   padding-top: 80px;
   margin: 15px;
-}
-
-.shuttle {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
 }
 
 
@@ -384,12 +381,7 @@ div.planet-nav-item a img:hover {
   padding-top: 80px;
   margin: 15px;
 }
-.normandy {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
-}
+
 
 #venus-trip {
   background-color: var(--dark);
@@ -397,23 +389,30 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
-.royal {
-  float: left;
-  margin: 15px;
-  width: 100%;
-  height: auto;
-}
 
 .bookTrip {
   margin-top: 50px;
 
 }
 
+@media screen and (max-width: 768px) {
+  #large-title {
+    display: none;
+  }
+}  
+
 @media screen and (min-width: 768px) {
+
+  #small-title {
+    display: none;
+  }
+
   .jump {
     width: 60%;
     max-width: 1500px;
     height: auto;
+    float: left ;
+
   }
   .shuttle {
     width: 60%;
@@ -700,3 +699,19 @@ input[type="date"] {
   margin: 2vw;
   background-color: var(--light);
 }
+
+/*Button-------------------------------------------------------------------------------------------------------*/
+.toop {
+  height: 80px;
+  width: 80px;
+}
+#myBtn {
+  background-color: rgba(255, 255, 255, 0);
+  border: none;
+  display: none;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+
+}
+/*Button------------------------------------------------------------------------------------------------------*/
