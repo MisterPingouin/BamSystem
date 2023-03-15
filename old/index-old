@@ -11,14 +11,6 @@
         <title>BamSystem Agency</title>
     </head>
     <body>
-        <nav>
-                <h1 class="logo"><a href="index.html">BamSystem</a></h1>
-                <ul class="menu">
-                    <li><a class="rocket" href="travel.html"><img class="logomenu" src="assets/logo/rocket.png"><span class="textlogo">Travel</span></a></li>
-                    <li><a class="car" href="rental.html"><img class="logomenu" src="assets/logo/car.png"><span class="textlogo">Rental</span></a></li>
-                </ul>
-        </nav> 
-
         <header class="planets-nav">
             <section>
                 <div class="planet-decoLine">
@@ -110,16 +102,9 @@
                     <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Amet earum quos unde nostrum modi eaque corrupti perferendis voluptas quod? Dignissimos, tenetur voluptatibus. Voluptatibus laborum mollitia magnam illo. Possimus, fugiat ullam!</p>
                 </div>
             </section>
+
         </main>
-
-        <footer>
-            <div class="main-footer">
-                <p class="rights">© Bam System |</p>
-                <p class="address">Office : ISS STATION Mod #53 - B57 |</p>
-                <a class ="imagelink" href="mailto:#"><img class="image" src=assets/logo/email.png></a>
-            </div>
-        </footer>
-
+      
         <script src="script.js"></script>
 
     </body>
