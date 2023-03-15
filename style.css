@@ -460,39 +460,41 @@ div.planet-nav-item a img:hover {
 
 /* CSS spécifique booking.html */
 
+form {
+  opacity: 0;
+  animation-duration: 10s;
+  animation-name: apparition;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes apparition {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+
+
 .main-booking {
   display: flex;
   justify-content: center;
   color: var(--light);
   margin-top: 80px;
-}
-
-.contactez-nous {
-  width: 700px;
-  border: 1px solid;
-  border-radius: 8px;
-  padding: 0 50px 0 50px;
-  background: var(--light);
-}
-
-.contactez-nous > h1 {
-  font-weight: 500;
-}
-
-.contactez-nous > p {
-  font-weight: 300;
+  font-family: var(--font1);
 }
 
 form div {
   display: flex;
   flex-direction: column;
   min-height: 50px;
-  margin-top: 18px;
+  margin-top: 13px;
+  transition-delay: 5s;
 }
 
 form div > label {
   margin-bottom: 7px;
   font-weight: 600;
+  
 }
 
 form div > input,
@@ -521,13 +523,17 @@ form div > select {
 }
 
 form div > textarea {
-  height: 195px;
+  height: 175px;
   padding: 15px 0px 0px 10px;
+  opacity: 0.7;
 }
 
 form div > input::placeholder,
 form div > textarea::placeholder {
   color: var(--light);
+}
+form div > input, form div > select{
+  opacity: 0.7;
 }
 
 form div > select:invalid {
@@ -547,15 +553,24 @@ form div:last-child {
 form button {
   width: 450px;
   max-width: 500px;
-  height: 60px;
+  height: 50px;
   font-weight: 700;
-  font-size: 28px;
+  font-size: 22px;
   background: var(--light);
   border: rgba(48, 48, 48, 0.5) solid 1px;
   border-radius: 5px;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: var(--accent);
+  color: var(--dark);
   margin-bottom: 25px;
+  cursor: pointer;
+  transition: all 1s ease-out;
+  opacity: 0.7;
+}
+
+form button:hover, form button:focus {
+  color: var(--light);
+  background: var(--dark);
+  opacity: 0.9;
 }
 
 .date-form {
@@ -564,7 +579,21 @@ form button {
 
 input[type="date"] {
   font-family: var(--font1);
+  opacity: 0.7;
 }
+
+.background-video {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  }
+  
 /* Rental CSS */
 .main-rental {
   margin-top : 80px;
