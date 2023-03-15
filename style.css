@@ -15,7 +15,7 @@
   --mercuryImg: url("/assets/planets/sd/mercury-sd.png");
   --venusImg: url("/assets/planets/sd/venus-sd.png");
 
-/* Ship Imgs */
+/* Travel Ship Imgs */
   --marsTripImg: url("/assets/ships/890_Jump_Leaving_Hurston_3.6.png"); /*ok*/
   --moonTripImg: url("/assets/ships/shuttle.jpg");/*ok*/
   --mercuryTripImg: url("/assets/ships/Mass-Effect-Normandy1.jpg");/*ok*/
@@ -352,6 +352,7 @@ div.planet-nav-item a img:hover {
   margin: 15px;
 }
 
+
 #mars-trip {
   background-color: var(--dark);
   padding-top: 80px;
@@ -363,7 +364,7 @@ div.planet-nav-item a img:hover {
   width: 100%;
   height: auto;
   border-radius: 10px;
-    filter: var(--lightDropShadow);
+  filter: var(--lightDropShadow);
 }
 
 
@@ -565,11 +566,15 @@ input[type="date"] {
   font-family: var(--font1);
 }
 /* Rental CSS */
+.main-rental {
+  margin-top : 80px;
+}
+
 .custom-slider {
   display: none;
 }
 .slide-container {
-  max-width: 800px;
+  width : 100%;
   position: relative;
   margin: auto;
 }

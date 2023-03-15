@@ -1,0 +1,42 @@
+<main class="main-booking">
+    <div class="booking-form">
+        <h1>Booking Form</h1>
+        <p>Ready to travel to space ? Use this form to take your ship !</p>
+        <form action="" method="post">
+        <div>
+        <label for="nom">Name</label>
+        <input type="text" id="nom" name="nom" placeholder="Martin" required>
+        </div>
+        <div><label for="email"></label>E-mail</label>
+        <input type="email" id="email" name="email" placeholder="monadresse@mail.com" required>
+        </div>
+        <div class="date-form">
+            <label for="Departure-Date">
+              Date of departure :
+              <input type="date" name="Departure" />
+            </label>
+            <label for="Return-Date">
+              Date of return :
+              <input type="date" name="Return" />
+            </label>
+          </div>
+        <div class="destination-from">
+        <label for="sujet">Choose your destination</label>
+        <select name="sujet" id="sujet" required>
+        <option value="" disabled selected hidden>Choose your destination</option>
+        <option value="Bloup">Bloup Bloup</option>
+        <option value="Blip">Blip Blip</option>
+        <option value="Blep">Blep Blep</option>
+        </select>
+        </div>
+        <div>
+        <label for="message">Asking for a special treatment</label>
+        <textarea id="message" name="message" placeholder="I contacted you..." required></textarea>
+        </div>
+        <div>
+        <button type="button" id="booknow">Book Now !</button>
+        </div>
+        </form>
+        </div>
+
+</main>
