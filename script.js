@@ -1,28 +1,17 @@
-// JS Page Rental //
+//Button
 
-var slideIndex = 1;
-showSlides(slideIndex);
+let mybutton = document.getElementById("myBtn");
 
-function plusSlides(n) {
-  showSlides((slideIndex += n));
+function scrollFunction() {
+  if (document.body.scrollTop > 1200 || document.documentElement.scrollTop > 1200) {
+    mybutton.style.display = "block";
+  } else {
+    mybutton.style.display = "none";
+  }
 }
 
-function currentSlide(n) {
-  showSlides((slideIndex = n));
-}
+window.onscroll = function() {scrollFunction()};
 
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("custom-slider");
-
-  if (n > slides.length) {
-    slideIndex = 1;
-  }
-  if (n < 1) {
-    slideIndex = slides.length;
-  }
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  slides[slideIndex - 1].style.display = "block";
+function topFunction() {
+  document.documentElement.scrollTop = 0;
 }

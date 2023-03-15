@@ -2,15 +2,10 @@
 BamSystem Website
 
 Planning 15/03/2023
-- Responsive TRAVEL
 - MAJ CSS pour nav et planet nav
-- Arranger les sources img
+
 - MAJ icons
-- Creation de structure php
-    - menu.php
-    - planetNav.php
-    - footer.php
-    - autre bloc si besoin
+
 
 Rental 
 
@@ -18,6 +13,6 @@ Rental
 - pack (https://www.elitedangerous.com/)
 - https://shop.spacex.com/
 
-Booking
-
-- 
+BEN -travel
+-Optimiser code CSS
+-ajouter code CSS
