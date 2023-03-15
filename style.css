@@ -56,15 +56,17 @@ nav {
   z-index: 4;
 }
 
-.logobamnav {
-  height: 32px;
-  padding-right: 10px;
+#navIcon {
+  fill: white;
+  stroke: white;
+  stroke-width: 0.5;
+  margin: auto;
 }
 
-nav > h1 > a {
+/* nav > h1 > a {
   font-size: clamp(0.5rem, 2rem, 2rem);
   text-decoration: none;
-}
+} */
 
 nav > ul {
   list-style: none;
@@ -82,7 +84,6 @@ nav > ul {
 .menu a:hover {
   color: var(--dark);
   background-color: var(--light);
-  border-radius: 15%;
   transition: 0.3s;
 }
 
@@ -98,17 +99,13 @@ nav > ul {
 }
 
 .logomenu {
-  height: 1rem;
-  width: 1rem;
+  height: auto;
+  width: 2rem;
   margin-left: 0.5em;
   margin-right: 0.5em;
 }
 
-.car {
-  padding-left: 1em;
-}
-
-.rocket {
+.icon {
   padding-left: 1em;
 }
 

@@ -3,7 +3,9 @@
 
 <?php
 
-    require 'html/shared/head.html';
+$pageTitle = 'Booking';
+
+    require 'html/shared/head.php';
     include 'html/shared/nav.html';
     include 'html/content/booking-content.html';
     include 'html/shared/footer.html';
