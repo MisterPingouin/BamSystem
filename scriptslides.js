@@ -31,3 +31,13 @@ const bookNowButton = document.getElementById("rentnow");
 bookNowButton.addEventListener("click", function () {
   alert("Put in Cart");
 });
+
+const bookNowButton1 = document.getElementById("rentnow1");
+bookNowButton1.addEventListener("click", function () {
+  alert("Put in Cart");
+});
+const bookNowButton2 = document.getElementById("rentnow2");
+bookNowButton2.addEventListener("click", function () {
+  alert("Put in Cart");
+});
+

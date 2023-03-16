@@ -483,6 +483,8 @@ form {
   animation-name: apparition;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+  z-index: 2;
+  position:relative;
 }
 
 @keyframes apparition {
@@ -761,6 +763,32 @@ input[type="date"] {
   border-radius: 20%;
   text-align: center;
   background-color: var(--light);
+}
+
+.pack-choice h2 {
+  font-family: var(--font2);
+  font-weight:400;
+}
+
+.pack-choice button {
+  font-weight: 500;
+  font-size: 15px;
+  background: var(--light);
+  border: rgba(48, 48, 48, 0.5) solid 1px;
+  border-radius: 5px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  color: var(--dark);
+  cursor: pointer;
+  transition: all 1s ease-out;
+  opacity: 0.7;
+  margin-top: 15px;
+}
+
+.pack-choice button:hover,
+.pack-choice button:focus {
+  color: var(--light);
+  background: var(--dark);
+  opacity: 0.9;
 }
 
 /*Button-------------------------------------------------------------------------------------------------------*/
