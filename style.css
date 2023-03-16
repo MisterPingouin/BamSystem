@@ -1,7 +1,7 @@
 :root {
   /* Colors */
   --accent: orange;
-  --light: rgb(184, 184, 184);
+  --light: #b8b8b8;
   --dark: #14131e;
   --darker: #05081f;
 
@@ -57,11 +57,9 @@ nav {
   z-index: 4;
 }
 
-#navIcon {
-  fill: white;
-  stroke: white;
-  stroke-width: 0.5;
-  margin: auto;
+.menu a object {
+  filter: invert(77%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(94%) contrast(96%);
+  transition: 0.3s;
 }
 
 /* nav > h1 > a {
@@ -79,14 +77,35 @@ nav > ul {
   font-weight: bold;
   padding: 0.5em 1em;
   width: auto;
+  transition: 0.3s;
 }
 
-.menu a span:hover,
-.menu a:hover {
+/* .menu a span:hover, .menu a:hover {
   color: var(--dark);
   background-color: var(--light);
   transition: 0.3s;
+} */
+
+.menu a span {
+  transition: 0.3s;
 }
+
+.menu a:hover {
+  background-color: var(--light);
+}
+
+.menu a:hover span {
+  color: var(--dark);
+}
+
+.menu a:hover object {
+  filter: invert(6%) sepia(25%) saturate(840%) hue-rotate(206deg) brightness(100%) contrast(97%);
+}
+
+/* a:hover #navIcon {
+  fill: var(--dark);
+  stroke: var(--dark);
+} */
 
 :visited, :link, a {
   color: var(--light);
@@ -102,8 +121,8 @@ nav > ul {
 .logomenu {
   height: auto;
   width: 2rem;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  /* margin-left: 0.5em;
+  margin-right: 0.5em; */
 }
 
 .icon {
