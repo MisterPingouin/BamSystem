@@ -71,11 +71,6 @@ nav a {
   color: var(--light);
 }
 
-nav .logo a:hover {
-  color: var(--accent);
-}
-
-
 .menu a object {
   filter: var(--flight);
   width: 30%;
@@ -101,18 +96,39 @@ nav > ul {
   transition: var(--transiFast);
 }
 
-.menu a:hover span {
-  color: var(--accent);
-}
+.menu span:after {
+    content: '';
+    display: block;
+    margin: auto;
+    height: 1px;
+    width: 0;
+    background: transparent;
+    transition: width .5s ease, background-color .5s ease;
+  }
 
-.menu a:hover object {
-  filter: var(--faccent);
+.menu span:hover:after {
+  width: 100%;
+  background: var(--light);
 }
 
 :visited, :link, a {
   text-decoration: none;
 }
 
+.logo:after {
+  content: '';
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width .5s ease, background-color .5s ease;
+}
+
+.logo:hover:after {
+  width: 100%;
+  background: var(--light);
+}
 
 .menu, .menu li a {
   display: flex;
@@ -515,15 +531,12 @@ footer {
   padding: 15px;
   margin: 80px 0 0 0;
 }
-@media screen and (max-width: 460px) {
-  span.textlogo {
-    display: none;
-  }
 
-  a.car,
-  a.rocket {
-    padding: 0.1rem;
-  }
+@media screen and (max-width: 460px) {
+.menu {
+  height: 60%;
+  width: 60%;
+}
 }
 
 .travel-nav {
