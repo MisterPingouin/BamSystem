@@ -13,6 +13,7 @@ $link4 = '#planet-venus';
     echo "<body>";
     include 'html/shared/nav.html';
     include 'html/shared/planet-nav.php';
+    include 'html/shared/planet-nav2.html';
     include 'html/content/index-content.php';
     include 'html/shared/scripts.html';
     include 'html/shared/footer.html';

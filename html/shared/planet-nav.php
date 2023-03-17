@@ -27,7 +27,6 @@ echo("
         </div>
     </section>
 </header>
-
 ")
 
 ?>
