@@ -733,14 +733,12 @@ input[type="date"] {
 
 .pack-choice {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
   align-content: center;
   color: var(--dark);
 }
 
 .pack1 {
-  height: 15rem;
-  width: 12rem;
   margin: 2vw;
   border-radius: 20%;
   text-align: center;
@@ -748,8 +746,6 @@ input[type="date"] {
 }
 
 .pack2 {
-  height: 15rem;
-  width: 12rem;
   margin: 2vw;
   border-radius: 20%;
   text-align: center;
@@ -757,8 +753,6 @@ input[type="date"] {
 }
 
 .pack3 {
-  height: 15rem;
-  width: 12rem;
   margin: 2vw;
   border-radius: 20%;
   text-align: center;
@@ -766,8 +760,8 @@ input[type="date"] {
 }
 
 .pack-choice h2 {
-  font-family: var(--font2);
-  font-weight:400;
+  font-family: var(--font1);
+  font-weight:bold;
 }
 
 .pack-choice button {
@@ -781,7 +775,7 @@ input[type="date"] {
   cursor: pointer;
   transition: all 1s ease-out;
   opacity: 0.7;
-  margin-top: 15px;
+  width: 50%;
 }
 
 .pack-choice button:hover,
@@ -789,6 +783,28 @@ input[type="date"] {
   color: var(--light);
   background: var(--dark);
   opacity: 0.9;
+}
+
+.btclogo {
+  height: 1.5em;
+  width:1.5em;
+  margin-left: 8px;
+}
+
+.pack1 , .pack2 , .pack3 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 16rem;
+  width: 14rem;
+  align-items: center;
+  margin: 25px 0px 25px 0;
+}
+
+.packprice {
+  display: flex;
+  align-items: center;
+  font-weight: bold;
 }
 
 /*Button-------------------------------------------------------------------------------------------------------*/
