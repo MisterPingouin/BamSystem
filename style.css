@@ -168,7 +168,7 @@ header.planets-nav section {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  height: 220px;
+  height: 180px;
   padding: 20px;
 }
 
@@ -201,10 +201,10 @@ div.planet-nav-item a img {
 }
 
 div.planet-nav-item a img:hover {
-  width: 150px;
-  height: 150px;
+  width: 135px;
+  height: 135px;
   rotate: 90deg;
-  filter: drop-shadow(0 0 20px var(--accent));
+  filter: drop-shadow(0 0 10px var(--accent));
 }
 
 .planet-decoLine {
