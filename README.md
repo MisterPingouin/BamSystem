@@ -1,17 +1,20 @@
 # BamSystem
 BamSystem Website
 
-Planning 15/03/2023
-- MAJ CSS pour nav et planet nav
+Planning 17/03/2023
+- MAJ CSS pour nav: Faire liens comme le spaceX
 
-- MAJ icons
-
+index
+- probleme planetes
+- probleme centrage générale
 
 Rental 
 
 - Slideshow 100vw
 - pack (https://www.elitedangerous.com/)
 - https://shop.spacex.com/
+
+
 
 BEN -travel
 -Optimiser code CSS
