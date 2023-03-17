@@ -8,7 +8,6 @@ $pageTitle = 'Rental';
     require 'html/shared/head.php';
     echo "<body>";
     include 'html/shared/nav.html';
-    include 'html/shared/planet-nav2.html';
     include 'html/content/rental-content.html';
     include 'html/shared/footer.html';
     include 'html/shared/scriptslides.html';

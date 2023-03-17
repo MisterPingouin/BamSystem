@@ -27,6 +27,20 @@ echo("
         </div>
     </section>
 </header>
+<section class='planets-nav2'>
+    <div class='planet-nav-item'><a href='$link1'>
+        <h2>Mars</h2> </a>                   
+    </div>
+    <div class='planet-nav-item'><a href='$link2'>
+        <h2>Moon</h2></a>     
+    </div>
+    <div class='planet-nav-item'><a href='$link3'>
+        <h2>Mercury</h2></a>      
+    </div>
+    <div class='planet-nav-item'><a href='#$link4'>
+        <h2>Venus</h2></a>    
+    </div>
+    </section>
 ")
 
 ?>
