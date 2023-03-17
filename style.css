@@ -1,9 +1,13 @@
 :root {
   /* Colors */
-  --accent: orange;
+  --accent: #ffa500;
   --light: #b8b8b8;
   --dark: #14131e;
   --darker: #05081f;
+
+  --faccent: invert(72%) sepia(67%) saturate(3358%) hue-rotate(0deg) brightness(103%) contrast(105%);
+  --fdark: invert(77%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(94%) contrast(96%);
+  --flight: invert(89%) sepia(2%) saturate(15%) hue-rotate(322deg) brightness(87%) contrast(81%);
 
   /* Fonts-Families */
   --font1: "Quicksand";
@@ -27,6 +31,9 @@
 
   /* Structure, padding, margin ... etc */
   --navHeight: 70px;
+
+  /* Animation */
+  --transiFast: .3s;
 }
 
 * {
@@ -39,6 +46,10 @@ body {
   font-family: var(--font1);
   background-color: var(--dark);
   color: var(--light);
+}
+
+a {
+  text-decoration: none;
 }
 
 nav {
@@ -56,15 +67,22 @@ nav {
   z-index: 4;
 }
 
-.menu a object {
-  filter: invert(77%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(94%) contrast(96%);
-  transition: 0.3s;
+nav a {
+  color: var(--light);
 }
 
-/* nav > h1 > a {
-  font-size: clamp(0.5rem, 2rem, 2rem);
-  text-decoration: none;
-} */
+nav .logo a:hover {
+  color: var(--accent);
+}
+
+
+.menu a object {
+  filter: var(--flight);
+  width: 30%;
+  height: 30%;
+
+  transition: var(--transiFast);
+}
 
 nav > ul {
   list-style: none;
@@ -76,46 +94,27 @@ nav > ul {
   font-weight: bold;
   padding: 0.5em 1em;
   width: auto;
-  transition: 0.3s;
+  transition: var(--transiFast);
 }
-
-/* .menu a span:hover, .menu a:hover {
-  color: var(--dark);
-  background-color: var(--light);
-  transition: 0.3s;
-} */
 
 .menu a span {
-  transition: 0.3s;
-}
-
-.menu a:hover {
-  background-color: var(--light);
+  transition: var(--transiFast);
 }
 
 .menu a:hover span {
-  color: var(--dark);
+  color: var(--accent);
 }
 
 .menu a:hover object {
-  filter: invert(6%) sepia(25%) saturate(840%) hue-rotate(206deg) brightness(100%) contrast(97%);
+  filter: var(--faccent);
 }
-
-/* a:hover #navIcon {
-  fill: var(--dark);
-  stroke: var(--dark);
-} */
 
 :visited, :link, a {
   text-decoration: none;
 }
 
-a {
-  color: var(--light);
-  text-decoration: none;
-}
 
-.menu {
+.menu, .menu li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -124,17 +123,15 @@ a {
 .logomenu {
   height: auto;
   width: 2rem;
-  /* margin-left: 0.5em;
-  margin-right: 0.5em; */
 }
 
 .icon {
   padding-left: 1em;
 }
 
+/* -------------planet-nav------------- */
+
 header.planets-nav {
-  /* display: flex; */
-  /* justify-content: space-between; */
   color: var(--light);
   background-color: var(--darker);
   filter: var(--accentDropShadow);
@@ -166,15 +163,19 @@ div.planet-nav-item h2 {
   font-size: 1em;
 }
 
+div.planet-nav-item a {
+  color: var(--light);
+}
+
 div.planet-nav-item a:hover {
-  transition: 0.3s ease-in-out;
+  transition: var(--transiFast) ease-in-out;
   color: var(--accent);
 }
 
 div.planet-nav-item a img {
   width: 100px;
   height: 100px;
-  transition: 0.3s ease-in-out;
+  transition: var(--transiFast) ease-in-out;
 }
 
 div.planet-nav-item a img:hover {
@@ -227,27 +228,22 @@ div.planet-nav-item a img:hover {
   }
 }
 
-.main-index {
-  display: grid;
-  grid-row: repeat(4, 100vh);
-  margin-top: 80px;
+.planet-pres {
+  display: flex;
+  height: 1024px;
+  background-color: transparent;
+  z-index: -3;
 }
 
-.main-index section {
-  position: relative;
+.planet-pres-txt {
   overflow: hidden;
   color: var(--white);
-  height: 1024px;
-}
-
-.main-index .planet-pres {
-  background-color: var(--dark);
-  z-index: -2;
-}
-
-.main-index .planet-pres .planet-pres-img {
-  position: absolute;
   z-index: -1;
+}  
+
+.planet-pres-img {
+  position: absolute;
+  z-index: -2;
   left: 10vw;
   top: clamp(100px, calc(100vw * 0.5 * 0.7), 200px);
   width: max(100%, 960px);
@@ -255,9 +251,6 @@ div.planet-nav-item a img:hover {
   filter: var(--lightDropShadow);
 }
 
-.main-index .planet-pres .planet-pres-img:hover {
-  rotate: 90deg;
-}
 
 .decoLine {
   display: flex;
@@ -279,10 +272,6 @@ div.planet-nav-item a img:hover {
   width: 80vw;
   height: 2px;
 }
-
-/* .planet-pres-txt {
-  z-index: 0;
-} */
 
 .planet-pres-txt h3 {
   text-align: center;
@@ -325,6 +314,40 @@ div.planet-nav-item a img:hover {
   color: white;
 }
 
+#planet-pres-to-travel {
+  position: relative;
+  margin-left: clamp(10px, 10vw, 150px);
+  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  border: none;
+  border-radius: 100px;
+  background-color: var(--accent);
+  margin-top: 100px;
+  z-index: 5;
+  padding: 30px;
+  transition: var(--transiFast);
+}
+
+#planet-pres-to-travel:hover a {
+  color: var(--dark);
+  
+}
+
+#planet-pres-to-travel:hover {
+  background-color: var(--darker);
+}
+
+#planet-pres-to-travel:active {
+  background-color: var(--accent);
+}
+
+#planet-pres-to-travel:hover a {
+  color: var(--accent);
+}
+
+#planet-pres-to-travel a:active {
+  color: var(--darker);
+}
+
 .rights {
   padding-right: 0.5em;
 }
@@ -338,19 +361,20 @@ div.planet-nav-item a img:hover {
   padding-right: 0.5em;
 }
 
-.main-footer {
+footer {
+  position: relative;
   background-color: var(--darker);
   color: var(--white);
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
   width: 100%;
   padding: 23px;
 }
 
-footer {
-  margin-top: auto;
+.main-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+
 
 /*TRAVEL PAGE TOP-----------------------------------------------------------------------------------------------------------*/
 
