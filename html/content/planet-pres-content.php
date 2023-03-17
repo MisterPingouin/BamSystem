@@ -27,6 +27,7 @@ $venus = [
 if ($planetPresName === $mars[0]) {
     $planetPreseDescription = $mars[1];
     $planetPresInfo = $mars[2];
+    $planetPresTitle = strtoupper($planetPresName);
 } elseif ($planetPresName === $moon[0]) {
     $planetPreseDescription = $moon[1];
     $planetPresInfo = $moon[2];
@@ -38,12 +39,9 @@ if ($planetPresName === $mars[0]) {
     $planetPresInfo = $venus[2];
 };
 
-
-
 echo ("
-
 <section id='$planetPresId' class='planet-pres'>
-    <img class='planet-pres-img' src='$planetPresImg'>
+    <img class='planet-pres-img' src='/assets/planets/sd/$planetPresName-sd.png' alt='planet $planetPresName'>
     <div class='planet-pres-txt'>
         <div class='decoLine'>
             <span class='round'></span>
@@ -60,5 +58,4 @@ echo ("
         
     </div>
 </section>
-
 ");
