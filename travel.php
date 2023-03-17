@@ -14,6 +14,7 @@ $link4 = "#venus-trip";
     echo "<body>";
     include 'html/shared/nav.html';
     include 'html/shared/planet-nav.php';
+    include 'html/shared/planet-nav2.html';
     include 'html/content/travel-content.html';
     include 'html/shared/footer.html';
     include 'html/shared/scripts.html';
