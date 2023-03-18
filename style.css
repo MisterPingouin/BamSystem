@@ -5,9 +5,12 @@
   --dark: #14131e;
   --darker: #05081f;
 
-  --faccent: invert(72%) sepia(67%) saturate(3358%) hue-rotate(0deg) brightness(103%) contrast(105%);
-  --fdark: invert(77%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(94%) contrast(96%);
-  --flight: invert(89%) sepia(2%) saturate(15%) hue-rotate(322deg) brightness(87%) contrast(81%);
+  --faccent: invert(72%) sepia(67%) saturate(3358%) hue-rotate(0deg)
+    brightness(103%) contrast(105%);
+  --fdark: invert(77%) sepia(0%) saturate(0%) hue-rotate(273deg) brightness(94%)
+    contrast(96%);
+  --flight: invert(89%) sepia(2%) saturate(15%) hue-rotate(322deg)
+    brightness(87%) contrast(81%);
 
   /* Fonts-Families */
   --font1: "Quicksand";
@@ -33,7 +36,7 @@
   --navHeight: 70px;
 
   /* Animation */
-  --transiFast: .3s;
+  --transiFast: 0.3s;
 }
 
 * {
@@ -71,11 +74,6 @@ nav a {
   color: var(--light);
 }
 
-nav .logo a:hover {
-  color: var(--accent);
-}
-
-
 .menu a object {
   filter: var(--flight);
   width: 30%;
@@ -101,20 +99,44 @@ nav > ul {
   transition: var(--transiFast);
 }
 
-.menu a:hover span {
-  color: var(--accent);
+.menu span:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
 }
 
-.menu a:hover object {
-  filter: var(--faccent);
+.menu span:hover:after {
+  width: 100%;
+  background: var(--light);
 }
 
-:visited, :link, a {
+:visited,
+:link,
+a {
   text-decoration: none;
 }
 
+.logo:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
 
-.menu, .menu li a {
+.logo:hover:after {
+  width: 100%;
+  background: var(--light);
+}
+
+.menu,
+.menu li a {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -146,7 +168,7 @@ header.planets-nav section {
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  height: 220px;
+  height: 180px;
   padding: 20px;
 }
 
@@ -167,11 +189,6 @@ div.planet-nav-item a {
   color: var(--light);
 }
 
-div.planet-nav-item a:hover {
-  transition: var(--transiFast) ease-in-out;
-  color: var(--accent);
-}
-
 div.planet-nav-item a img {
   width: 100px;
   height: 100px;
@@ -179,10 +196,10 @@ div.planet-nav-item a img {
 }
 
 div.planet-nav-item a img:hover {
-  width: 150px;
-  height: 150px;
+  width: 135px;
+  height: 135px;
   rotate: 90deg;
-  filter: drop-shadow(0 0 20px var(--accent));
+  filter: drop-shadow(0 0 10px var(--accent));
 }
 
 .planet-decoLine {
@@ -248,9 +265,6 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres-txt {
-  color: var(--light);
-  z-index: 1;
-}  
 
 .planet-pres-img {
   position: absolute;
@@ -262,7 +276,6 @@ div.planet-nav-item a img:hover {
   clip: auto;
   margin-bottom: calc(100vh - var(--navHeight));
 }
-
 
 .decoLine {
   display: flex;
@@ -335,7 +348,6 @@ div.planet-nav-item a img:hover {
 
 #planet-pres-to-travel:hover a {
   color: var(--dark);
-  
 }
 
 #planet-pres-to-travel:hover {
@@ -383,7 +395,6 @@ footer {
   justify-content: center;
 }
 
-
 /*TRAVEL PAGE TOP-----------------------------------------------------------------------------------------------------------*/
 
 .bamsystem-tour {
@@ -395,11 +406,9 @@ footer {
   display: grid;
   grid-row: repeat(4, 100vh);
   margin-top: 80px;
-
 }
 
 .main-travel section {
-
   height: 800px;
 }
 
@@ -410,13 +419,11 @@ footer {
 #small-title {
   margin: 15px;
   color: var(--accent);
-
 }
 
 #large-title {
   color: var(--accent);
 }
-
 
 .jump,
 .shuttle,
@@ -433,13 +440,11 @@ footer {
 #mars-trip,
 #moon-trip,
 #mercury-trip,
-#venus-trip
- {
+#venus-trip {
   background-color: var(--dark);
   padding-top: 60px;
   margin-top: 15px;
 }
-
 
 .bookTrip {
   margin-top: 50px;
@@ -457,26 +462,12 @@ footer {
   opacity: 0.7;
 }
 
-
-
-
 .bookTrip:hover,
 .bookTrip:focus {
   color: var(--light);
   background: var(--dark);
   opacity: 0.9;
 }
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 768px) {
   #large-title {
@@ -489,7 +480,7 @@ footer {
     display: none;
   }
 
-  .bookTrip{
+  .bookTrip {
     margin-top: 150px;
   }
 
@@ -515,7 +506,6 @@ footer {
   }
 }
 
-
 /*TRAVEL PAGE BOTTOM-------------------------------------------------------------------------------------------------------*/
 
 .bamsystem-rental {
@@ -523,14 +513,11 @@ footer {
   padding: 15px;
   margin: 80px 0 0 0;
 }
-@media screen and (max-width: 460px) {
-  span.textlogo {
-    display: none;
-  }
 
-  a.car,
-  a.rocket {
-    padding: 0.1rem;
+@media screen and (max-width: 460px) {
+  .menu {
+    height: 60%;
+    width: 60%;
   }
 }
 
@@ -548,7 +535,7 @@ form {
   animation-delay: 4s;
   animation-fill-mode: forwards;
   z-index: 2;
-  position:relative;
+  position: relative;
 }
 
 @keyframes apparition {
@@ -825,7 +812,7 @@ input[type="date"] {
 
 .pack-choice h2 {
   font-family: var(--font1);
-  font-weight:bold;
+  font-weight: bold;
 }
 
 .pack-choice button {
@@ -851,11 +838,13 @@ input[type="date"] {
 
 .btclogo {
   height: 1.5em;
-  width:1.5em;
+  width: 1.5em;
   margin-left: 8px;
 }
 
-.pack1 , .pack2 , .pack3 {
+.pack1,
+.pack2,
+.pack3 {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -886,3 +875,60 @@ input[type="date"] {
   cursor: pointer;
 }
 /*Button------------------------------------------------------------------------------------------------------*/
+
+
+/* Planet nav 2*/
+
+.planets-nav2 {
+  display: none;
+  position: fixed;
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.planets-nav2.menu2 {
+  display: flex;
+  transform: translateY(0);
+}
+
+.planets-nav2 {
+  position: fixed;
+  top: -100%;
+  left: 0;
+  width: 100%;
+  display: flex;
+  margin-top: 70px;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--darker);
+  transition: top 1s ease-in-out;
+  z-index: 4;
+  border-top: solid var(--accent) 1px;
+}
+
+.planets-nav2.is-visible {
+  top: 0;
+}
+
+.planets-nav2 .planet-nav-item {
+  margin-left: 25px;
+}
+
+.planets-nav2 .planet-nav-item h2{
+padding: 0;
+}
+
+.planets-nav2 .planet-nav-item:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.planets-nav2 .planet-nav-item:hover:after {
+  width: 100%;
+  background: var(--light);
+}
