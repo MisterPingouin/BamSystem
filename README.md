@@ -32,7 +32,7 @@ Ant
 - nav: hover, responsive logo, 
 
 Max
-- index a arranger
-- Cohérences graphiques
+- index a arranger / ok
+- Cohérences graphiques / 
 - logo mail
 
