@@ -189,11 +189,6 @@ div.planet-nav-item a {
   color: var(--light);
 }
 
-div.planet-nav-item a:hover {
-  transition: var(--transiFast) ease-in-out;
-  color: var(--accent);
-}
-
 div.planet-nav-item a img {
   width: 100px;
   height: 100px;
@@ -876,6 +871,9 @@ input[type="date"] {
 }
 /*Button------------------------------------------------------------------------------------------------------*/
 
+
+/* Planet nav 2*/
+
 .planets-nav2 {
   display: none;
   position: fixed;
@@ -907,6 +905,25 @@ input[type="date"] {
   top: 0;
 }
 
-.planet-nav-item {
+.planets-nav2 .planet-nav-item {
   margin-left: 25px;
+}
+
+.planets-nav2 .planet-nav-item h2{
+padding: 0;
+}
+
+.planets-nav2 .planet-nav-item:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.planets-nav2 .planet-nav-item:hover:after {
+  width: 100%;
+  background: var(--light);
 }
