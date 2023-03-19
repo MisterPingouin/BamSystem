@@ -5,16 +5,16 @@
 
 $pageTitle = 'Travel';
 
-$link1 = "#mars-trip";
-$link2 = "#moon-trip";
-$link3 = "#mercury-trip";
-$link4 = "#venus-trip";
+$link1 = "#mars-pack";
+$link2 = "#moon-pack";
+$link3 = "#mercury-pack";
+$link4 = "#venus-pack";
 
     require 'html/shared/head.php';
     echo "<body>";
     include 'html/shared/nav.html';
     include 'html/shared/planet-nav.php';
-    include 'html/content/travel-content.html';
+    include 'html/content/travel-content.php';
     include 'html/shared/footer.html';
     include 'html/shared/scripts.html';
     echo "</body>";
