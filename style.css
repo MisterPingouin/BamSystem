@@ -36,7 +36,7 @@
   --navHeight: 70px;
 
   /* Animation */
-  --transiFast: 0.3s;
+  --transiFast: 0.3s ease-out;
 }
 
 * {
@@ -254,7 +254,7 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres {
-  padding-top: var(--navHeight);
+  padding-top: calc(var(--navHeight) + 42px);
   margin: auto;
   position: relative;
   display: flex;
@@ -265,6 +265,8 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres-txt {
+  z-index: 1;
+}
 
 .planet-pres-img {
   position: absolute;
@@ -282,6 +284,7 @@ div.planet-nav-item a img:hover {
   justify-content: center;
   align-items: center;
   padding-top: 20px;
+  z-index: 1;
 }
 
 .decoLine .round,
@@ -330,6 +333,7 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres > div > p {
+  color: white;
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
@@ -368,6 +372,153 @@ div.planet-nav-item a img:hover {
 
 /* -----------------------fin index--------------------------------- */
 
+/* -----------------------debut travel by max--------------------------------- */
+
+.travel-pack {
+  /* padding-top: calc(var(--navHeight) + 42px); */
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  height: calc((100vw / 16 * 6));
+  /* width: 100%; */
+  background-color: transparent;
+}
+
+.travel-img {
+  position: absolute;
+  transition: var(--transiFast);
+  width: 100vw;
+  aspect-ratio: 16 / 6;
+  object-fit: cover;
+  justify-content: center;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.travel-title {
+  font-family: var(--font2);
+  font-size: clamp(10pt, 8vw, 100pt);
+  color: var(--accent);
+}
+
+.travel-txt {
+  /* padding-top: calc((var(--navHeight) + 42px)); */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 50px;
+  z-index: 1;
+  /* width: clamp(100px, 70vw, 800px); */
+  margin: auto;
+}
+
+.travel-titleGroup {
+  text-align: right;
+  margin-left: auto;
+}
+
+.travel-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.travel-name {
+  font-family: var(--font2);
+  font-size: clamp(10pt, 10vw, 70pt);
+  color: white;
+}
+
+.travel-duration {
+  color: white;
+  text-justify: distribute;
+  font-family: var(--font1);
+  padding-top: 10px;
+}
+
+.travel-name:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 3px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.travel-name:hover:after {
+  width: 100%;
+  background: white;
+}
+
+.bookTrip {
+  width: min(200px, 60%);
+  /* height: 50px; */
+  font-family: var(--font1);
+  font-size: clamp(5pt, 4vw, 30pt);
+  border: none;
+  border-radius: 100px;
+  margin: 30px 0 0 0;
+  text-align:center;
+  padding: .5em;
+  background-color: var(--accent);
+  color: var(--darker);
+  font-weight: bolder;
+  transition: var(--transiFast);
+}
+
+.bookTrip:hover {
+  background-color: var(--darker);
+  color: var(--accent);
+}
+
+.bookTrip:active {
+  background-color: white;
+}
+
+.travel-description {
+  font-family: var(--font1);
+  width: 60%;
+  float: right;
+  font-size: clamp(7pt, 5vw, 10pt);
+  color: white;
+}
+
+.travel-pack:hover .travel-img {
+  transform: scale(1.2);
+  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+}
+
+@media screen and (max-width: 520px)  {
+  .travel-title{
+    font-size: 2rem;
+  }
+  
+  .travel-name {
+    font-size: 2rem;
+  }
+
+  .bookTrip {
+    font-size: 1rem;
+    margin: 5px 0 0 0;
+    padding: .1em;
+    width: 40%;
+  }
+
+  .travel-description {
+    width: 70%;
+    font-size: 7pt;
+  }
+  
+  .travel-duration {
+    padding-top: 1px;
+  }
+}
+
+
+
+/* -----------------------fin travel by max--------------------------------- */
+
 .rights {
   padding-right: 0.5em;
 }
@@ -397,7 +548,7 @@ footer {
 
 /*TRAVEL PAGE TOP-----------------------------------------------------------------------------------------------------------*/
 
-.bamsystem-tour {
+/* .bamsystem-tour {
   color: var(--white);
   padding: 15px;
   margin: 80px 0 0 0;
@@ -504,7 +655,7 @@ footer {
     max-width: 1500px;
     height: auto;
   }
-}
+} */
 
 /*TRAVEL PAGE BOTTOM-------------------------------------------------------------------------------------------------------*/
 
@@ -897,7 +1048,7 @@ input[type="date"] {
   left: 0;
   width: 100%;
   display: flex;
-  margin-top: 70px;
+  margin-top: var(--navHeight);
   justify-content: center;
   align-items: center;
   background-color: var(--darker);

@@ -37,7 +37,7 @@ echo("
     <div class='planet-nav-item'><a href='$link3'>
         <h2>Mercury</h2></a>      
     </div>
-    <div class='planet-nav-item'><a href='#$link4'>
+    <div class='planet-nav-item'><a href='$link4'>
         <h2>Venus</h2></a>    
     </div>
     </section>
