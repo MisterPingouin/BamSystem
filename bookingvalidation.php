@@ -13,7 +13,8 @@ $pageTitle = 'Booking Validation';
     <img src='/assets/background/fondbooking.png' class='background-bookingvalidation'>
     <div class='validation-message'>";
 $name = $_POST['nom'];
-echo "Merci $name";
+$sujet = $_POST['sujet'];
+echo "Thank you $name !" . "<br>" .  " Your booking to $sujet has been well sent, you will receive your confirmation ASAP on your mail ";
     echo "
     </div>
     </main>";

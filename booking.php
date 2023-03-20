@@ -10,6 +10,7 @@ $pageTitle = 'Booking';
     include 'html/shared/nav.html';
     include 'html/content/booking-content.html';
     include 'html/shared/footer.html';
+    include 'html/shared/scriptbooking.html';
     echo "</body>";
 ?>
 </html>
