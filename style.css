@@ -67,7 +67,7 @@ nav {
   top: 0;
   height: var(--navHeight);
   width: 100%;
-  z-index: 4;
+  z-index: 5;
 }
 
 nav a {
@@ -348,6 +348,10 @@ div.planet-nav-item a img:hover {
   margin-top: 100px;
   padding: 30px;
   transition: var(--transiFast);
+}
+
+#planet-pres-to-travel a {
+  color: var(--darker);
 }
 
 #planet-pres-to-travel:hover a {
