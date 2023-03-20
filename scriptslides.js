@@ -27,17 +27,11 @@ function showSlides(n) {
   slides[slideIndex - 1].style.display = "block";
 }
 
-const bookNowButton = document.getElementById("rentnow");
-bookNowButton.addEventListener("click", function () {
-  alert("Put in Cart");
-});
+// Pop-up
+function openForm() {
+  document.getElementById("popupForm").style.display = "block";
+}
 
-const bookNowButton1 = document.getElementById("rentnow1");
-bookNowButton1.addEventListener("click", function () {
-  alert("Put in Cart");
-});
-const bookNowButton2 = document.getElementById("rentnow2");
-bookNowButton2.addEventListener("click", function () {
-  alert("Put in Cart");
-});
-
+function closeForm() {
+  document.getElementById("popupForm").style.display = "none";
+}
