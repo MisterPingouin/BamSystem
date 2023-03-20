@@ -1,5 +1,18 @@
 <main class="main-travel">
 
+    <section id="travel-pack">
+        <img class ="travel-img" src="assets/ships/890_Jump_Leaving_Hurston_3.6.png" alt="Spaceship Image">
+        <div class="travel-txt">
+            <h1 class="travel-title">MISSION TO MARS</h1>
+            <h2 class="travel-name">Ship: 890-Jump</h2>
+            <h3 class="travel-length">Duration of the trip: 3 months</h3>
+            <p class="travel-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi obcaecati maiores ipsum repellendus nisi, error suscipit impedit, maxime ea aut vero eligendi harum. Aliquid eaque alias quo iusto a voluptas.</p>
+            
+            <button class="bookTrip" onclick="window.location.href='booking.php';">Book you trip!</button>
+        </div>
+
+    </section>
+
     <section id="mars-trip" class="trip-pres">
 
         <h1 id="small-title">MISSION TO MARS</h1> <br><br>
