@@ -6,7 +6,7 @@
     <div class="titleform">
       <h1>Booking Form</h1>
     </div>
-    <form action="" method="post">
+    <form action="/bookingvalidation.php" method="post">
       <div>
         <label for="nom">Name</label>
         <input type="text" id="nom" name="nom" placeholder="Martin" required/>
@@ -37,9 +37,10 @@
           <option value="Choose your destination" disabled selected hidden>
             Choose your destination
           </option>
-          <option value="Mission to Mars">Mission to Mars</option>
-          <option value="Blip">Blip Blip</option>
-          <option value="Blep">Blep Blep</option>
+          <option value="Mars">Mission to Mars</option>
+          <option value="Moon">Mission to Moon</option>
+          <option value="Mercury">Mission to Mercury</option>
+          <option value="Venus">Mission to Venus</option>
         </select>
       </div>
       <div>
@@ -48,11 +49,10 @@
           id="message"
           name="message"
           placeholder="I contacted you..."
-          required
         ></textarea>
       </div>
       <div class="stylebutton">
-        <button type="button" id="booknow">Book Now !</button>
+        <button type="submit" id="booknow">Book Now !</button>
       </div>
     </form>
   </div>

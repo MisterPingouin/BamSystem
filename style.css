@@ -1087,3 +1087,39 @@ padding: 0;
   width: 100%;
   background: var(--light);
 }
+
+
+/* Validation Booking style */
+
+.background-bookingvalidation {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.validation-message {
+  display: flex;
+  flex-direction: column;
+height: 300px;
+  margin: 13px;
+width: 150px;
+  background-color: var(--light);
+ justify-content: center;
+ align-items: center;
+ text-align: center;
+
+}
+
+.validation-booking {
+  margin-top: 73px;
+display: flex;
+justify-content: center;
+align-items: center;
+color: var(--dark);
+}
