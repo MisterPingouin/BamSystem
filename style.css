@@ -49,6 +49,7 @@ body {
   font-family: var(--font1);
   background-color: var(--dark);
   color: var(--light);
+  height: 100vh;
 }
 
 a {
@@ -538,6 +539,7 @@ footer {
   color: var(--white);
   width: 100%;
   padding: 23px;
+  margin-top: auto;
 }
 
 .main-footer {
@@ -853,6 +855,7 @@ input[type="date"] {
 /* Rental CSS */
 .main-rental {
   margin-top: 71px;
+  min-height: 100%;
 }
 
 .custom-slider {
@@ -1024,6 +1027,7 @@ input[type="date"] {
   bottom: 30px;
   right: 30px;
   cursor: pointer;
+  z-index: 6;
 }
 /*Button------------------------------------------------------------------------------------------------------*/
 
