@@ -738,6 +738,7 @@ form {
   color: var(--light);
   margin-top: 80px;
   font-family: var(--font1);
+  height: 100vh;
 }
 
 form div {
@@ -1024,7 +1025,7 @@ input[type="date"] {
   border: none;
   display: none;
   position: fixed;
-  bottom: 30px;
+  bottom: 54px;
   right: 30px;
   cursor: pointer;
   z-index: 6;
