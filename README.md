@@ -20,16 +20,20 @@ Rental
 Les trucs dont on va se rendre compte en en parlant
 
 Ben
+
 - Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée ============> 
 - back to top button ===============> MODIFIE ET AJOUTER SUR INDEX
 - probleme footer =============> PROBLEME REGLE SUR RENTAL ET BOOKING
 
 Ant
-- Planetnav reduis quand scroll + meilleure responsive
-- nav: hover, responsive logo, 
+- mettre les js au propre
+- style bouton pillule a modifier
+- peaufiner responsive travel
+- js sur popup (optionel) 
+- form message obligatoire
 
 Max
-- index a arranger / ok
-- Cohérences graphiques / 
-- logo mail
-
+- index soucis glow
+- index opacité bar jaune
+- cohérence graphique booking et rental
+- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
