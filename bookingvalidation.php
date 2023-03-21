@@ -10,7 +10,7 @@ $pageTitle = 'Booking Validation';
     include 'html/shared/nav.html';
     echo "
     <main class='validation-booking'>
-    <img src='/assets/background/fondbooking.png' class='background-bookingvalidation'>
+    <img src='/assets/background/fondbooking.png' class='background-bookingvalidation' alt='backgroundspace'>
     <div class='validation-message'>";
 $name = $_POST['nom'];
 $sujet = $_POST['sujet'];

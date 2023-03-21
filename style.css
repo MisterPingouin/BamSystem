@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --accent: #ffa500;
+  --accent: #0d88e2;
   --light: #b8b8b8;
   --dark: #14131e;
   --darker: #05081f;
@@ -565,7 +565,7 @@ div.planet-nav-item a img:hover {
 footer {
   position: relative;
   background-color: var(--darker);
-  color: var(--white);
+  color: var(--light);
   width: 100%;
   padding: 23px;
   bottom: 0;
@@ -1167,7 +1167,7 @@ input[type="date"] {
   left: 50%;
   top: 5%;
   transform: translate(-45%, 5%);
-  border: 2px solid #666;
+  border: 1px solid #666;
   z-index: 9;
 }
 /* Styles pour le conteneur de la forme */
