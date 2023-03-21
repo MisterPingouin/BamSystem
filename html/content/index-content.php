@@ -41,6 +41,8 @@
     planetPres($mercury);
     planetPres($venus);
 
-    echo "</main>"
+    echo "</main>";
+
+echo "<button onclick='topFunction()' id='myBtn' title='Go to top'><img src='/assets/logo/transparent-logo-rocket-circle-symbol-emblem-4d-v16-r4-is-here-4d-blog5dbe8038c7f6d2.9656801015727657528191.png' class='toop' alt='top'></button>"
 
 ?>
