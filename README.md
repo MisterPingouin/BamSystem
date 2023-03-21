@@ -15,26 +15,28 @@ Rental
 - https://shop.spacex.com/
 
 
-
-BEN -travel
--Optimiser code CSS
--ajouter code CSS
-
 Les trucs dont on va se rendre compte en en parlant
 
 Ben
-- back to top button
-- probleme footer / logo mail
-- contenu rental (attendre que max ai finis le style de rental)
+
+- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée ============> 
+- back to top button ===============> MODIFIE ET AJOUTER SUR INDEX
+- probleme footer =============> PROBLEME REGLE SUR RENTAL ET BOOKING
+
+
 Ant
 - mettre les js au propre
 - style bouton pillule a modifier
 - peaufiner responsive travel
-- js sur popup (optionel)
+
+- js sur popup (optionel) 
 - form message obligatoire
+
+
 Max
 - index soucis glow
 - index opacité bar jaune
 - cohérence graphique booking et rental
+
 - Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
 
