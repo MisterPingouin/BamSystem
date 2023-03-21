@@ -16,16 +16,13 @@ Rental
 
 
 
-BEN -travel
--Optimiser code CSS
--ajouter code CSS
 
 Les trucs dont on va se rendre compte en en parlant
 
 Ben
-- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
-- back to top button
-- probleme footer
+- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée ============> 
+- back to top button ===============> MODIFIE ET AJOUTER SUR INDEX
+- probleme footer =============> PROBLEME REGLE SUR RENTAL ET BOOKING
 
 Ant
 - Planetnav reduis quand scroll + meilleure responsive
