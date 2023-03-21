@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --accent: #ffa500;
+  --accent: #0d88e2;
   --light: #b8b8b8;
   --dark: #14131e;
   --darker: #05081f;
@@ -464,8 +464,8 @@ div.planet-nav-item a img:hover {
   border: none;
   border-radius: 100px;
   margin: 30px 0 0 0;
-  text-align:center;
-  padding: .5em;
+  text-align: center;
+  padding: 0.5em;
   background-color: var(--accent);
   color: var(--darker);
   font-weight: bolder;
@@ -491,14 +491,41 @@ div.planet-nav-item a img:hover {
 
 .travel-pack:hover .travel-img {
   transform: scale(1.2);
-  transition-timing-function: cubic-bezier(0, 0, .58, 1);
+  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }
 
-@media screen and (max-width: 520px)  {
-  .travel-title{
+@media screen and (max-width: 1023px) and (min-width: 521px) {
+  .travel-title {
+    font-size: 4rem;
+  }
+
+  .travel-name {
+    font-size: 4rem;
+  }
+
+  .bookTrip {
+    font-size: 0.5rem;
+    margin: 5px 0 0 0;
+    padding: 0.1em;
+    width: 30%;
+  }
+
+  .travel-description {
+    width: 70%;
+    font-size: 10pt;
+  }
+
+  .travel-duration {
+    padding-top: 2px;
+    font-size: 1rem;
+  }
+}
+
+@media screen and (max-width: 520px) {
+  .travel-title {
     font-size: 2rem;
   }
-  
+
   .travel-name {
     font-size: 2rem;
   }
@@ -506,7 +533,7 @@ div.planet-nav-item a img:hover {
   .bookTrip {
     font-size: 1rem;
     margin: 5px 0 0 0;
-    padding: .1em;
+    padding: 0.1em;
     width: 40%;
   }
 
@@ -514,13 +541,12 @@ div.planet-nav-item a img:hover {
     width: 70%;
     font-size: 7pt;
   }
-  
+
   .travel-duration {
     padding-top: 1px;
+    font-size: 0.7rem;
   }
 }
-
-
 
 /* -----------------------fin travel by max--------------------------------- */
 
@@ -540,10 +566,12 @@ div.planet-nav-item a img:hover {
 footer {
   position: relative;
   background-color: var(--darker);
-  color: var(--white);
+  color: var(--light);
   width: 100%;
   padding: 23px;
+
   margin-top: auto;
+
 }
 
 .main-footer {
@@ -911,7 +939,6 @@ input[type="date"] {
 }
 /*Button------------------------------------------------------------------------------------------------------*/
 
-
 /* Planet nav 2*/
 
 .planets-nav2 {
@@ -949,8 +976,8 @@ input[type="date"] {
   margin-left: 25px;
 }
 
-.planets-nav2 .planet-nav-item h2{
-padding: 0;
+.planets-nav2 .planet-nav-item h2 {
+  padding: 0;
 }
 
 .planets-nav2 .planet-nav-item:after {
@@ -966,4 +993,98 @@ padding: 0;
 .planets-nav2 .planet-nav-item:hover:after {
   width: 100%;
   background: var(--light);
+}
+
+/* Validation Booking style */
+
+.background-bookingvalidation {
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+.validation-message {
+  display: flex;
+  flex-direction: column;
+  height: 300px;
+  margin: 13px;
+  width: 150px;
+  background-color: var(--light);
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.validation-booking {
+  margin-top: 73px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--dark);
+}
+
+/* Pop Style */
+
+/* Stylez et fixez le bouton sur la page */
+.open-button {
+  cursor: pointer;
+}
+/* Positionnez la forme Popup */
+.login-popup {
+  position: relative;
+  text-align: center;
+  width: 100%;
+}
+/* Masquez la forme Popup */
+.form-popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 5%;
+  transform: translate(-45%, 5%);
+  border: 1px solid #666;
+  z-index: 9;
+}
+/* Styles pour le conteneur de la forme */
+.form-container {
+  max-width: 300px;
+  padding: 20px;
+  background-color: #fff;
+}
+/* Largeur complète pour les champs de saisie */
+.form-container input[type="text"],
+.form-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #eee;
+}
+/* Quand les entrées sont concentrées, faites quelque chose */
+.form-container input[type="text"]:focus,
+.form-container input[type="password"]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+/* Stylez le bouton de connexion */
+.form-container .btn {
+  background-color: var(--accent);
+  color: var(--dark);
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+}
+/* Stylez le bouton pour annuler */
+.form-container .cancel {
+  background-color: var(--darker);
+  color: var(--light);
 }
