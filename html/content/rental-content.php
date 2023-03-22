@@ -2,14 +2,14 @@
 
 $rentalMars = [
     'titles' => [
-        'title 1',
-        'title 2',
-        'title 3'
+        'Standard Bundle',
+        'Standard Plus',
+        'Premium Bundle'
     ],
     'descriptions' => [
-        'Description 1 Mars',
-        'Description 2 Mars',
-        'Description 3 Mars'
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.'
     ],
     'prices' => [
         rand(52,500),
@@ -21,25 +21,19 @@ $rentalMars = [
         'assets/ships/ship2.jpg',
         'assets/ships/ship3.jpg'
     ],
-    'customSlider' => [
-        'custom-slider1'
-    ],
-    'plusBtn' => [
-        'plusSlides1'
-    ],
-    'planetName' => [
-        'Mars'
-    ]
+    'customSlider' => ['custom-slider1'],
+    'plusBtn' => ['plusSlides1'],
+    'planetName' => ['Mars']
 ];
 
 $rentalMoon = [
     'titles' => [
-        'title 1',
-        'title 2',
-        'title 3'
+        'Standard Bundle',
+        'Standard Plus',
+        'Premium Bundle'
     ],
     'descriptions' => [
-        'Description 1 Moon',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
         'Description 2 Moon',
         'Description 3 Moon'
     ],
@@ -53,23 +47,16 @@ $rentalMoon = [
         'assets/ships/ship5.jpg',
         'assets/ships/ship6.jpg'
     ],
-    'customSlider' => [
-        'custom-slider2'
-    ]
-    ,
-    'plusBtn' => [
-        'plusSlides2'
-    ],
-    'planetName' => [
-        'The Moon'
-    ]
+    'customSlider' => ['custom-slider2'],
+    'plusBtn' => ['plusSlides2'],
+    'planetName' => ['The Moon']
 ];
 
 $rentalMercury = [
     'titles' => [
-        'title 1',
-        'title 2',
-        'title 3'
+        'Standard Bundle',
+        'Standard Plus',
+        'Premium Bundle'
     ],
     'descriptions' => [
         'Description 1 Mercury',
@@ -86,22 +73,16 @@ $rentalMercury = [
         'assets/ships/ship8.jpg',
         'assets/ships/ship9.jpg'
     ],
-    'customSlider' => [
-        'custom-slider3'
-    ],
-    'plusBtn' => [
-        'plusSlides3'
-    ],
-    'planetName' => [
-        'Mercury'
-    ]
+    'customSlider' => ['custom-slider3'],
+    'plusBtn' => ['plusSlides3'],
+    'planetName' => ['Mercury']
 ];
 
 $rentalVenus = [
     'titles' => [
-        'title 1',
-        'title 2',
-        'title 3'
+        'Standard Bundle',
+        'Standard Plus',
+        'Premium Bundle'
     ],
     'descriptions' => [
         'Description 1 Venus',
@@ -118,15 +99,9 @@ $rentalVenus = [
         'assets/ships/ship11.jpg',
         'assets/ships/ship12.jpg'
     ],
-    'customSlider' => [
-        'custom-slider4'
-    ],
-    'plusBtn' => [
-        'plusSlides4'
-    ],
-    'planetName' => [
-        'Venus'
-    ]
+    'customSlider' => ['custom-slider4'],
+    'plusBtn' => ['plusSlides4'],
+    'planetName' => ['Venus']
 ];
 
 function makeRentalSection($rentalPlanetSelected) {
@@ -161,6 +136,7 @@ function makeRentalSection($rentalPlanetSelected) {
 
 echo "<main class='main-rental'>";
 
+include "html/content/page-title.html";
 makeRentalSection($rentalMars);
 makeRentalSection($rentalMoon);
 makeRentalSection($rentalMercury);

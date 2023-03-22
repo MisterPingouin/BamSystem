@@ -4,10 +4,10 @@
 
 $pageTitle = 'Home';
 
-$link1 = '#planet-mars';
-$link2 = '#planet-moon';
-$link3 = '#planet-mercury';
-$link4 = '#planet-venus';
+$link1 = '#planet-mars-scroll';
+$link2 = '#planet-moon-scroll';
+$link3 = '#planet-mercury-scroll';
+$link4 = '#planet-venus-scroll';
 
     require 'html/shared/head.php';
     echo "<body>";
