@@ -1,42 +1,27 @@
-# BamSystem
-BamSystem Website
-
-Planning 17/03/2023
-- MAJ CSS pour nav: Faire liens comme le spaceX
-
-index
-- probleme planetes
-- probleme centrage générale
-
-Rental 
-
-- Slideshow 100vw
-- pack (https://www.elitedangerous.com/)
-- https://shop.spacex.com/
-
-
-Les trucs dont on va se rendre compte en en parlant
 
 Ben
-
-- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée ============> 
-- back to top button ===============> MODIFIE ET AJOUTER SUR INDEX
-- probleme footer =============> PROBLEME REGLE SUR RENTAL ET BOOKING
-
-
+- Mettre titre index pour remplir padding degueu de scroll
+- padding de scroll travel
+- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
+- back to top button a la couleur de l'accent
+- supprimer anim hover travel
+- footer sur travel probleme fixé en bas
 Ant
 - mettre les js au propre
-- style bouton pillule a modifier
-- peaufiner responsive travel
-
-- js sur popup (optionel) 
-- form message obligatoire
-
-
+- (optionel) style bouton pillule a modifier
+- mise en page booking
+- (optionel) design booking
+- mise en page booking validation 
+- style poppup rental
+- (optionel) nav et/ou planetnav bouton actif reste souligné
 Max
 - index soucis glow
-- index opacité bar jaune
 - cohérence graphique booking et rental
-
+- logo mail
 - Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
-
+- index opacité bar accent
+- index taille titre plus petit
+- changer couleur accent
+---
+- contenu de rental
+- passer les pages dans w3c
