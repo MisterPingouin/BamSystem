@@ -291,8 +291,6 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres {
-  padding-top: calc(var(--navHeight) + 42px);
-  /*margin: auto;*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -415,8 +413,6 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-/* #mars-pack-scroll,
-
 .travel-pack{
   width: 100%;
 }
@@ -436,25 +432,7 @@ div.planet-nav-item a img:hover {
 
 
 
-
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
-#mars-pack-scroll,
-
-#moon-pack-scroll,
-#mercury-pack-scroll,
-#venus-pack-scroll {
-  display: block;
-  position: relative;
-  top: calc((var(--navHeight) + 42px)*-1);
-  visibility: hidden;
-} */
 
 .travel-pack {
   padding-top: calc(var(--navHeight) + 42px);
@@ -1224,10 +1202,12 @@ input[type="date"] {
   max-width: 300px;
   padding: 10px;
   background-color: var(--light);
+  color: var(--dark);
 }
 
 .form-container h2 {
   padding-bottom:5px;
+  color: var(--dark);
 }
 /* Largeur complète pour les champs de saisie */
 .form-container input[type="text"],
@@ -1256,6 +1236,7 @@ input[type="date"] {
   width: 100%;
   margin-bottom: 10px;
   opacity: 0.8;
+  filter: none;
 }
 /* Stylez le bouton pour annuler */
 .form-container .cancel {
