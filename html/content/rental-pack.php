@@ -8,17 +8,17 @@ echo ("
     <div class='login-popup'>
       <div class='form-popup' id='popupForm'>
         <div class='form-container'>
+        <button type='button' class='btn cancel' onclick='closeForm()'>X</button>
           <h2>Please login</h2>
           <label for='email'>
             <strong>E-mail</strong>
           </label>
-          <input type='text' id='email' placeholder='Votre Email' name='email' required />
+          <input type='text' id='email' placeholder='Email' name='email' required />
           <label for='psw'>
             <strong>Password</strong>
           </label>
-          <input type='password' id='psw' placeholder='Votre Mot de passe' name='psw' required />
+          <input type='password' id='psw' placeholder='Password' name='psw' required />
           <button type='submit' class='btn'>Login</button>
-          <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
         </div>
       </div>
     </div>
@@ -44,7 +44,7 @@ echo ("
           </label>
           <input type='password' id='psw' placeholder='Votre Mot de passe' name='psw' required />
           <button type='submit' class='btn'>Login</button>
-          <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
+          <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
         </div>
       </div>
     </div>
@@ -64,13 +64,13 @@ echo ("
           <label for='email'>
             <strong>E-mail</strong>
           </label>
-          <input type='text' id='email' placeholder='Votre Email' name='email' required />
+          <input type='text' id='email' placeholder='Email' name='email' required />
           <label for='psw'>
             <strong>Password</strong>
           </label>
-          <input type='password' id='psw' placeholder='Votre Mot de passe' name='psw' required />
+          <input type='password' id='psw' placeholder='Password' name='psw' required />
           <button type='submit' class='btn'>Login</button>
-          <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
+          <button type='button' class='btn cancel' onclick='closeForm()'>Close</button>
         </div>
       </div>
     </div>
