@@ -275,7 +275,7 @@ div.planet-nav-item a img:hover {
 
 /* --------------------------index ------------------------------ */
 
-#planet-mars-scroll,
+/* #planet-mars-scroll,
 #planet-moon-scroll,
 #planet-mercury-scroll,
 #planet-venus-scroll {
@@ -283,23 +283,21 @@ div.planet-nav-item a img:hover {
   position: relative;
   top: calc((var(--navHeight) + 42px)*-1);
   visibility: hidden;
-}
+} */
 
 .main-index {
   display: grid;
   grid-template: repeat(4, 1024px) / 100vw;
-  overflow: hidden;
 }
 
 .planet-pres {
-  /* padding-top: calc(var(--navHeight) + 42px); */
+  padding-top: calc(var(--navHeight) + 42px);
   /*margin: auto;*/
   position: relative;
   display: flex;
   flex-direction: column;
-  height: 100vh;
-  width: 100%;
   background-color: var(--darker);
+  overflow: hidden;
 }
 
 .planet-pres-txt {
@@ -416,7 +414,7 @@ div.planet-nav-item a img:hover {
 
 /* -----------------------debut travel by max--------------------------------- */
 
-#mars-pack-scroll,
+/* #mars-pack-scroll,
 #moon-pack-scroll,
 #mercury-pack-scroll,
 #venus-pack-scroll {
@@ -424,10 +422,10 @@ div.planet-nav-item a img:hover {
   position: relative;
   top: calc((var(--navHeight) + 42px)*-1);
   visibility: hidden;
-}
+} */
 
 .travel-pack {
-  /* padding-top: calc(var(--navHeight) + 42px); */
+  padding-top: calc(var(--navHeight) + 42px);
   position: relative;
   display: flex;
   flex-direction: column;
