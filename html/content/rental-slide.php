@@ -6,19 +6,19 @@ echo ("
     <div>
     <div class='slide-container'>
         <div class='$customSlider fade'>
-          <div class='slide-index'>Pack 1</div>
+          <div class='slide-index'>$planetName</div>
           <img class='slide-img' src='$rentalSlideImg1'/>
           <div class='slide-text'>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </div>
         </div>
     <div class='$customSlider fade'>
-        <div class='slide-index'>Pack 2</div>
+        <div class='slide-index'>$planetName</div>
         <img class='slide-img' src='$rentalSlideImg2' />
         <div class='slide-text'>Nullam luctus aliquam ornare.</div>
     </div>
     <div class='$customSlider fade'>
-        <div class='slide-index'>Pack 3</div>
+        <div class='slide-index'>$planetName</div>
         <img class='slide-img' src='$rentalSlideImg3' />
         <div class='slide-text'>
           Praesent lobortis libero sed egestas suscipit.

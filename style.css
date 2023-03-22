@@ -837,7 +837,15 @@ input[type="date"] {
   margin: 2vw;
   border-radius: 20%;
   text-align: center;
-  background-color: var(--light);
+  background-color: var(--darker);
+  border: 2px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 16rem;
+  width: 14rem;
+  align-items: center;
+  margin: 25px 0px 25px 0;
 }
 
 .pack-choice h2 {
@@ -870,18 +878,6 @@ input[type="date"] {
   height: 1.5em;
   width: 1.5em;
   margin-left: 8px;
-}
-
-.pack1,
-.pack2,
-.pack3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 16rem;
-  width: 14rem;
-  align-items: center;
-  margin: 25px 0px 25px 0;
 }
 
 .packprice {
