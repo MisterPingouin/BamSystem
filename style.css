@@ -685,6 +685,7 @@ form {
   animation-fill-mode: forwards;
   font-family: var(--font2);
   font-size: 2.5em;
+  text-align: center;
 }
 
 @keyframes disparition {
@@ -703,6 +704,7 @@ form {
   margin-top: 80px;
   font-family: var(--font1);
   height: 100vh;
+  align-items: center;
 }
 
 form div {
@@ -1111,7 +1113,9 @@ input[type="date"] {
   background: var(--light);
 }
 
+
 /* Validation Booking style */
+
 
 .background-bookingvalidation {
   height: 100vh;
@@ -1128,22 +1132,56 @@ input[type="date"] {
 .validation-message {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: auto;
   margin: 13px;
-  width: 150px;
-  background-color: var(--light);
-  justify-content: center;
-  align-items: center;
+  width: auto;
   text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
 }
 
 .validation-booking {
-  margin-top: 73px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: var(--dark);
+  color: white;
   height: 100vh;
+  text-decoration: none;
+}
+
+
+.validationgorental {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.validationgorental a {
+  text-decoration: none;
+  font-family: var(--font1);
+  font-size:1.2rem;
+  color: white;
+}
+
+.titlevalidation {
+  margin-bottom: 40px;
+}
+
+.validationgorental a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.validationgorental a:hover:after {
+  width: 100%;
+  background: var(--light);
 }
 
 /* Pop Style */
@@ -1165,14 +1203,21 @@ input[type="date"] {
   left: 50%;
   top: 5%;
   transform: translate(-45%, 5%);
-  border: 1px solid #666;
+  border: 1px solid var(--darker);
   z-index: 9;
+  margin-top:10%;
 }
 /* Styles pour le conteneur de la forme */
+
+
 .form-container {
   max-width: 300px;
-  padding: 20px;
-  background-color: #fff;
+  padding: 10px;
+  background-color: var(--light);
+}
+
+.form-container h2 {
+  padding-bottom:5px;
 }
 /* Largeur complète pour les champs de saisie */
 .form-container input[type="text"],
@@ -1182,11 +1227,13 @@ input[type="date"] {
   margin: 5px 0 22px 0;
   border: none;
   background: #eee;
+  border: 1px solid var(--darker);
 }
 /* Quand les entrées sont concentrées, faites quelque chose */
 .form-container input[type="text"]:focus,
 .form-container input[type="password"]:focus {
   background-color: #ddd;
+  border: 1px solid var(--darker);
   outline: none;
 }
 /* Stylez le bouton de connexion */
@@ -1202,6 +1249,18 @@ input[type="date"] {
 }
 /* Stylez le bouton pour annuler */
 .form-container .cancel {
-  background-color: var(--darker);
-  color: var(--light);
+  background-color: var(--light);
+  color: var(--dark);
+  cursor: pointer;
+  border: none;
+  float:right;
+  height:4px;
+  width:4px;
+  margin:0;
+  padding:0;
+  font-size:0.7rem;
+}
+.form-container .cancel:not(.no-hover):hover {
+  color: var(--dark);
+  background-color: var(--light);
 }
