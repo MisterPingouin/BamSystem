@@ -310,7 +310,7 @@ div.planet-nav-item a img:hover {
   left: 10vw;
   top: clamp(100px, calc(100vw * 0.5 * 0.7), 200px);
   width: max(100%, 960px);
-  /*filter: var(--lightDropShadow);*/
+  filter: var(--lightDropShadow);
   clip: auto;
   margin-bottom: calc(100vh - var(--navHeight));
 }
@@ -415,7 +415,6 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-/* #mars-pack-scroll,
 
 .travel-pack{
   width: 100%;
@@ -434,6 +433,15 @@ div.planet-nav-item a img:hover {
   text-align: center;
 }
 
+/* #mars-pack-scroll,
+#moon-pack-scroll,
+#mercury-pack-scroll,
+#venus-pack-scroll {
+display: block;
+position: relative;
+top: calc((var(--navHeight) + 42px)*-1);
+visibility: hidden;
+} */
 
 
 
@@ -445,16 +453,7 @@ div.planet-nav-item a img:hover {
 
 
 @media screen and (min-width: 768px) {
-#mars-pack-scroll,
 
-#moon-pack-scroll,
-#mercury-pack-scroll,
-#venus-pack-scroll {
-  display: block;
-  position: relative;
-  top: calc((var(--navHeight) + 42px)*-1);
-  visibility: hidden;
-} */
 
 .travel-pack {
   padding-top: calc(var(--navHeight) + 42px);
