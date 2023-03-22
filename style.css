@@ -53,6 +53,10 @@ body {
   height: 100vh;
 }
 
+.darkerBg {
+  background-color: var(--darker);
+}
+
 a {
   text-decoration: none;
 }
@@ -308,7 +312,7 @@ div.planet-nav-item a img:hover {
   left: 10vw;
   top: clamp(100px, calc(100vw * 0.5 * 0.7), 200px);
   width: max(100%, 960px);
-  filter: var(--lightDropShadow);
+  /*filter: var(--lightDropShadow);*/
   clip: auto;
   margin-bottom: calc(100vh - var(--navHeight));
 }
@@ -532,10 +536,10 @@ div.planet-nav-item a img:hover {
   color: white;
 }
 
-.travel-pack:hover .travel-img {
+/*.travel-pack:hover .travel-img {
   transform: scale(1.2);
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-}
+}*/
 
 @media screen and (max-width: 1023px) and (min-width: 521px) {
   .travel-title {
@@ -622,6 +626,8 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
+
+
 
 /*TRAVEL PAGE BOTTOM-------------------------------------------------------------------------------------------------------*/
 
@@ -1263,4 +1269,22 @@ input[type="date"] {
 .form-container .cancel:not(.no-hover):hover {
   color: var(--dark);
   background-color: var(--light);
+}
+
+.pageNameD {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  background-color: var(--darker);
+}
+
+.pageName {
+  font-size: 60px;
+  text-align: center;
+
+}
+@media screen and (min-width: 768px){
+  .pageName {
+    font-size: 80px;
+  }
 }

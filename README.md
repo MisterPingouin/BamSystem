@@ -1,5 +1,4 @@
 
-
 Ben
 - Mettre titre index pour remplir padding degueu de scroll
 - padding de scroll travel
@@ -25,5 +24,6 @@ Max
 - index opacité bar accent
 - index taille titre plus petit
 - changer couleur accent
+
 - contenu de rental
 - passer les pages dans w3c
