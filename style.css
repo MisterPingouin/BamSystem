@@ -256,7 +256,7 @@ div.planet-nav-item a img:hover {
 
 .planet-pres {
   padding-top: calc(var(--navHeight) + 42px);
-  margin: auto;
+  /*margin: auto;*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -380,7 +380,7 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max--------------------------------- */
 
 .travel-pack {
-  /* padding-top: calc(var(--navHeight) + 42px); */
+  padding-top: calc(var(--navHeight) + 42px);
   position: relative;
   display: flex;
   flex-direction: column;
@@ -1027,6 +1027,7 @@ input[type="date"] {
   justify-content: center;
   align-items: center;
   color: var(--dark);
+  height: 100vh;
 }
 
 /* Pop Style */
