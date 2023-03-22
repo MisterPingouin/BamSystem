@@ -4,6 +4,7 @@
 echo ("
 <section id='$travelId-pack' class='travel-pack' href='booking.php'>
         <img class ='travel-img' src='$travelImg' alt='Spaceship Image'>
+        <div id='$travelId-scroll'></div>
         <div class='decoLine'>
             <span class='round'></span>
             <span class='line'></span>
