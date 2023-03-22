@@ -10,7 +10,7 @@ $link3 = '#planet-mercury';
 $link4 = '#planet-venus';
 
     require 'html/shared/head.php';
-    echo "<body>";
+    echo "<body class='darkerBg'>";
     include 'html/shared/nav.html';
     include 'html/shared/planet-nav.php';
     include 'html/content/index-content.php';
