@@ -415,46 +415,50 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-/* #mars-pack-scroll,
+
 
 .travel-pack{
   width: 100%;
+  padding: 25px;
 }
 
 .travel-img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 
 .travel-txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   text-align: center;
+  padding: 15px;
+}
+
+.planet-pres-txt {
+  margin: 110px;
+}
+
+.travel-titleGroup {
+  text-align: left;
+  padding-bottom: 15px;
+  margin-right: 20px;
+}
+
+.travel-title {
+  padding-bottom: 10px;
+}
+
+.travel-info {
+  width: auto;
 }
 
 
 
 
-
-
-
-
-
-
-
 @media screen and (min-width: 768px) {
-#mars-pack-scroll,
-
-#moon-pack-scroll,
-#mercury-pack-scroll,
-#venus-pack-scroll {
-  display: block;
-  position: relative;
-  top: calc((var(--navHeight) + 42px)*-1);
-  visibility: hidden;
-} */
 
 .travel-pack {
   padding-top: calc(var(--navHeight) + 42px);
