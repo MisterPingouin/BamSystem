@@ -44,6 +44,8 @@ function travelPres(array $planetSelected) {
     include 'html/content/travel-pres-content.php';
 };
 
+echo "<div class='pageNameD'><h1 class='pageName'>Our cruises</h1></div>";
+
 echo "<main class='main-travel'>";
 
 travelPres($marsTravel);
