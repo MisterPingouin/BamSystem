@@ -15,12 +15,9 @@ Ant
 - passer les pages dans w3c
 
 Max
-- ancre de scrolls
+
 - cohérence graphique rental
-- + index opacité bar accent
-- + index taille titre plus petit
-- changer couleur accent
 - contenu de rental
-- + (optionel) style bouton pillule a modifier
+- changer couleur accent
 
 - passer les pages dans w3c
