@@ -22,7 +22,6 @@ echo ("
         </div>
       </div>
     </div>
-
     <div class='packprice'>
         <p>$rentalPackPrice1</p>
         <img class='btclogo' src='assets/logo/bitcoin.png'>

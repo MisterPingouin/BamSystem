@@ -12,14 +12,23 @@ $rentalMars = [
         'Description 3 Mars'
     ],
     'prices' => [
-        '468',
-        '562',
-        '789'
+        rand(52,500),
+        rand(52,500),
+        rand(52,500)
     ],
     'shipImgs' => [
         'assets/ships/ship1.jpg',
-        'assets/ships/Ship2.jpg',
-        'assets/ships/Ship3.jpg'
+        'assets/ships/ship2.jpg',
+        'assets/ships/ship3.jpg'
+    ],
+    'customSlider' => [
+        'custom-slider1'
+    ],
+    'plusBtn' => [
+        'plusSlides1'
+    ],
+    'planetName' => [
+        'Mars'
     ]
 ];
 
@@ -35,14 +44,24 @@ $rentalMoon = [
         'Description 3 Moon'
     ],
     'prices' => [
-        '468',
-        '562',
-        '789'
+        rand(52,500),
+        rand(52,500),
+        rand(52,500)
     ],
     'shipImgs' => [
-        'assets/ships/ship1.jpg',
-        'assets/ships/Ship2.jpg',
-        'assets/ships/Ship3.jpg'
+        'assets/ships/ship4.jpeg',
+        'assets/ships/ship5.jpg',
+        'assets/ships/ship6.jpg'
+    ],
+    'customSlider' => [
+        'custom-slider2'
+    ]
+    ,
+    'plusBtn' => [
+        'plusSlides2'
+    ],
+    'planetName' => [
+        'The Moon'
     ]
 ];
 
@@ -58,14 +77,23 @@ $rentalMercury = [
         'Description 3 Mercury'
     ],
     'prices' => [
-        '468',
-        '562',
-        '789'
+        rand(52,500),
+        rand(52,500),
+        rand(52,500)
     ],
     'shipImgs' => [
-        'assets/ships/ship1.jpg',
-        'assets/ships/Ship2.jpg',
-        'assets/ships/Ship3.jpg'
+        'assets/ships/ship7.jpg',
+        'assets/ships/ship8.jpg',
+        'assets/ships/ship9.jpg'
+    ],
+    'customSlider' => [
+        'custom-slider3'
+    ],
+    'plusBtn' => [
+        'plusSlides3'
+    ],
+    'planetName' => [
+        'Mercury'
     ]
 ];
 
@@ -81,14 +109,23 @@ $rentalVenus = [
         'Description 3 Venus'
     ],
     'prices' => [
-        '468',
-        '562',
-        '789'
+        rand(52,500),
+        rand(52,500),
+        rand(52,500)
     ],
     'shipImgs' => [
-        'assets/ships/ship1.jpg',
-        'assets/ships/Ship2.jpg',
-        'assets/ships/Ship3.jpg'
+        'assets/ships/ship10.png',
+        'assets/ships/ship11.jpg',
+        'assets/ships/ship12.jpg'
+    ],
+    'customSlider' => [
+        'custom-slider4'
+    ],
+    'plusBtn' => [
+        'plusSlides4'
+    ],
+    'planetName' => [
+        'Venus'
     ]
 ];
 
@@ -109,6 +146,12 @@ function makeRentalSection($rentalPlanetSelected) {
     $rentalSlideImg1 = $rentalPlanetSelected['shipImgs'][0];
     $rentalSlideImg2 = $rentalPlanetSelected['shipImgs'][1];
     $rentalSlideImg3 = $rentalPlanetSelected['shipImgs'][2];
+
+    $customSlider = $rentalPlanetSelected['customSlider'][0];
+
+    $plusBtn = $rentalPlanetSelected['plusBtn'][0];
+
+    $planetName = $rentalPlanetSelected['planetName'][0];
 
     include 'html/content/rental-slide.php';
     echo "<div class='pack-choice'>";
