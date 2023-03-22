@@ -1,6 +1,7 @@
 <?php
 
 echo ("
+
 <section>
   <div class='backBar'></div>
   <div class='pack pack1'>
@@ -74,6 +75,7 @@ echo ("
             <button type='submit' class='btn'>Login</button>
             <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
           </div>
+
         </div>
       </div>
       <div class='packprice'>
