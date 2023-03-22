@@ -34,8 +34,6 @@
         include 'html/content/planet-pres-content.php';
     };
 
-    echo "<div class='pageNameD'><h1 class='pageName'>Our destinations</h1></div>";
-
     echo "<main class='main-index'>";
     
     planetPres($mars);
