@@ -1,6 +1,6 @@
 :root {
   /* Colors */
-  --accent: #0d88e2;
+  --accent: #00ccff;
   --light: #b8b8b8;
   --dark: #14131e;
   --darker: #05081f;
@@ -37,6 +37,7 @@
 
   /* Animation */
   --transiFast: 0.3s;
+  --transiSuperFast: 0.1s;
 }
 
 * {
@@ -58,6 +59,28 @@ body {
 
 a {
   text-decoration: none;
+}
+
+.page-title {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+
+  background-color: var(--darker);
+}
+
+.page-title h1 {
+  font-size: 5em;
+  font-family: var(--font2);
+  color: white;
+  /* filter: drop-shadow(0 0px 10px var(white)); */
+  filter: drop-shadow(0 0px 35px var(--accent));
+}
+
+.page-title h4 {
+  font-size: 1em;
 }
 
 nav {
@@ -252,6 +275,16 @@ div.planet-nav-item a img:hover {
 
 /* --------------------------index ------------------------------ */
 
+#planet-mars-scroll,
+#planet-moon-scroll,
+#planet-mercury-scroll,
+#planet-venus-scroll {
+  display: block;
+  position: relative;
+  top: calc((var(--navHeight) + 42px)*-1);
+  visibility: hidden;
+}
+
 .main-index {
   display: grid;
   grid-template: repeat(4, 1024px) / 100vw;
@@ -259,7 +292,7 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres {
-  padding-top: calc(var(--navHeight) + 42px);
+  /* padding-top: calc(var(--navHeight) + 42px); */
   /*margin: auto;*/
   position: relative;
   display: flex;
@@ -383,8 +416,18 @@ div.planet-nav-item a img:hover {
 
 /* -----------------------debut travel by max--------------------------------- */
 
+#mars-pack-scroll,
+#moon-pack-scroll,
+#mercury-pack-scroll,
+#venus-pack-scroll {
+  display: block;
+  position: relative;
+  top: calc((var(--navHeight) + 42px)*-1);
+  visibility: hidden;
+}
+
 .travel-pack {
-  padding-top: calc(var(--navHeight) + 42px);
+  /* padding-top: calc(var(--navHeight) + 42px); */
   position: relative;
   display: flex;
   flex-direction: column;
@@ -648,6 +691,7 @@ form {
   animation-fill-mode: forwards;
   font-family: var(--font2);
   font-size: 2.5em;
+  text-align: center;
 }
 
 @keyframes disparition {
@@ -666,6 +710,7 @@ form {
   margin-top: 80px;
   font-family: var(--font1);
   height: 100vh;
+  align-items: center;
 }
 
 form div {
@@ -780,9 +825,9 @@ input[type="date"] {
   z-index: -1;
 }
 
-/* Rental CSS */
+/* Rental CSS ----------------------------------------------------- */ 
 .main-rental {
-  margin-top: 71px;
+  margin-top: var(--navHeight);
   min-height: 100%;
 }
 
@@ -864,44 +909,84 @@ input[type="date"] {
   }
 }
 
+/* ---------------------------------------------- */
+.pack-choice section .backBar {
+  height: 30px;
+  width: 100vw;
+  background-color: var(--accent);
+  filter: var(--accentDropShadow);
+
+  position: absolute;
+  z-index: -1;
+  /* top: calc(50% - 30px); */
+}
+
 .pack-choice {
   display: flex;
-  justify-content: space-evenly;
-  align-content: center;
-  color: var(--dark);
+  flex-direction: column;
+}
+
+.pack-choice section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
 }
 
 .pack {
-  margin: 2vw;
-  border-radius: 20%;
-  text-align: center;
-  background-color: var(--light);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 7px;
+  
+  background-color: var(--darker);
+  border: 2px solid var(--accent);
+  border-radius: 20px;
+  width: calc(100% - 14px);
 }
 
-.pack-choice h2 {
+.pack h2 {
   font-family: var(--font1);
   font-weight: bold;
+  color: var(--light);
+
+  padding: 15px 0 5px 0;
 }
 
-.pack-choice button {
+.pack p {
+  color: var(--light);
+  padding: 20px 0;
+  width: 80%;
+}
+
+.pack button {
   font-weight: 500;
-  font-size: 15px;
-  background: var(--light);
-  border: rgba(48, 48, 48, 0.5) solid 1px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: var(--dark);
-  cursor: pointer;
-  transition: all 1s ease-out;
-  opacity: 0.7;
-  width: 50%;
+  font-size: 1.5em;
+  color: var(--darker);
+
+  background-color: var(--accent);
+  filter: var(--accentDropShadow);
+  border: 1px solid var(--accent);
+  border-radius: 30px;
+
+  transition: var(--transiSuperFast);
+  padding: 10px 20px;
+  width: fit-content;
 }
 
-.pack-choice button:hover,
-.pack-choice button:focus {
+.pack button:hover,
+.pack button:focus {
   color: var(--light);
   background: var(--dark);
   opacity: 0.9;
+}
+
+.pack button:active {
+  color: black;
+  background-color: white;
+  transform: scale(90%);
 }
 
 .btclogo {
@@ -910,25 +995,56 @@ input[type="date"] {
   margin-left: 8px;
 }
 
-.pack1,
-.pack2,
-.pack3 {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  height: 16rem;
-  width: 14rem;
-  align-items: center;
-  margin: 25px 0px 25px 0;
-}
-
 .packprice {
   display: flex;
   align-items: center;
   font-weight: bold;
 }
 
-/*Button-------------------------------------------------------------------------------------------------------*/
+.pack-choice .decoLine {
+  padding-bottom: 20px;
+}
+
+.pack h2:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.pack h2:hover:after {
+  width: 100%;
+  background: var(--light);
+}
+
+@media screen and (min-width: 768px) {
+  .pack-choice section {
+    flex-direction: row;
+    align-items: stretch;
+    width: 100%;
+  }
+  
+  .pack {
+    /* height: none; */
+    width: 300px;
+    /* max-width: 300px; */
+    aspect-ratio: 1 / 1;
+  }
+  
+  .pack button {  
+    background-color: var(--accent);
+    filter: var(--accentDropShadow);
+    border-radius: 30px;
+    cursor: pointer;
+  }
+}
+
+/*end rental--------*/
+
+/*Button---------*/
 .toop {
   height: 80px;
   width: 80px;
@@ -943,7 +1059,9 @@ input[type="date"] {
   cursor: pointer;
   z-index: 6;
 }
-/*Button------------------------------------------------------------------------------------------------------*/
+
+/*Button---------*/
+
 
 /* Planet nav 2*/
 
@@ -1001,7 +1119,9 @@ input[type="date"] {
   background: var(--light);
 }
 
+
 /* Validation Booking style */
+
 
 .background-bookingvalidation {
   height: 100vh;
@@ -1018,22 +1138,56 @@ input[type="date"] {
 .validation-message {
   display: flex;
   flex-direction: column;
-  height: 300px;
+  height: auto;
   margin: 13px;
-  width: 150px;
-  background-color: var(--light);
-  justify-content: center;
-  align-items: center;
+  width: auto;
   text-align: center;
+  color: white;
+  font-size: 1rem;
+  padding: 10px;
 }
 
 .validation-booking {
-  margin-top: 73px;
+  margin-top: 150px;
   display: flex;
   justify-content: center;
-  align-items: center;
-  color: var(--dark);
+  color: white;
   height: 100vh;
+  text-decoration: none;
+}
+
+
+.validationgorental {
+  margin-top: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.validationgorental a {
+  text-decoration: none;
+  font-family: var(--font1);
+  font-size:1.2rem;
+  color: white;
+}
+
+.titlevalidation {
+  margin-bottom: 40px;
+}
+
+.validationgorental a:after {
+  content: "";
+  display: block;
+  margin: auto;
+  height: 1px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.validationgorental a:hover:after {
+  width: 100%;
+  background: var(--light);
 }
 
 /* Pop Style */
@@ -1055,14 +1209,21 @@ input[type="date"] {
   left: 50%;
   top: 5%;
   transform: translate(-45%, 5%);
-  border: 1px solid #666;
+  border: 1px solid var(--darker);
   z-index: 9;
+  margin-top:10%;
 }
 /* Styles pour le conteneur de la forme */
+
+
 .form-container {
   max-width: 300px;
-  padding: 20px;
-  background-color: #fff;
+  padding: 10px;
+  background-color: var(--light);
+}
+
+.form-container h2 {
+  padding-bottom:5px;
 }
 /* Largeur complète pour les champs de saisie */
 .form-container input[type="text"],
@@ -1072,11 +1233,13 @@ input[type="date"] {
   margin: 5px 0 22px 0;
   border: none;
   background: #eee;
+  border: 1px solid var(--darker);
 }
 /* Quand les entrées sont concentrées, faites quelque chose */
 .form-container input[type="text"]:focus,
 .form-container input[type="password"]:focus {
   background-color: #ddd;
+  border: 1px solid var(--darker);
   outline: none;
 }
 /* Stylez le bouton de connexion */
@@ -1092,8 +1255,20 @@ input[type="date"] {
 }
 /* Stylez le bouton pour annuler */
 .form-container .cancel {
-  background-color: var(--darker);
-  color: var(--light);
+  background-color: var(--light);
+  color: var(--dark);
+  cursor: pointer;
+  border: none;
+  float:right;
+  height:4px;
+  width:4px;
+  margin:0;
+  padding:0;
+  font-size:0.7rem;
+}
+.form-container .cancel:not(.no-hover):hover {
+  color: var(--dark);
+  background-color: var(--light);
 }
 
 .pageNameD {
