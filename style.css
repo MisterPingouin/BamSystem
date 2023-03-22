@@ -414,8 +414,36 @@ div.planet-nav-item a img:hover {
 
 /* -----------------------fin index--------------------------------- */
 
-/* -----------------------debut travel by max--------------------------------- */
+/* -----------------------debut travel by max------------------------------------------------------------ */
 
+.travel-pack{
+  width: 100%;
+}
+
+.travel-img {
+  width: 100%;
+  height: auto;
+}
+
+
+.travel-txt {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (min-width: 768px) {
 #mars-pack-scroll,
 #moon-pack-scroll,
 #mercury-pack-scroll,
@@ -535,13 +563,13 @@ div.planet-nav-item a img:hover {
   font-size: clamp(7pt, 5vw, 10pt);
   color: white;
 }
-
+}
 /*.travel-pack:hover .travel-img {
   transform: scale(1.2);
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
 }*/
 
-@media screen and (max-width: 1023px) and (min-width: 521px) {
+/*@media screen and (max-width: 1023px) and (min-width: 521px) {
   .travel-title {
     font-size: 4rem;
   }
@@ -567,35 +595,9 @@ div.planet-nav-item a img:hover {
     font-size: 1rem;
   }
 }
+*/
 
-@media screen and (max-width: 520px) {
-  .travel-title {
-    font-size: 2rem;
-  }
-
-  .travel-name {
-    font-size: 2rem;
-  }
-
-  .bookTrip {
-    font-size: 1rem;
-    margin: 5px 0 0 0;
-    padding: 0.1em;
-    width: 40%;
-  }
-
-  .travel-description {
-    width: 70%;
-    font-size: 7pt;
-  }
-
-  .travel-duration {
-    padding-top: 1px;
-    font-size: 0.7rem;
-  }
-}
-
-/* -----------------------fin travel by max--------------------------------- */
+/* -----------------------fin travel by max------------------------------------------------------------------ */
 
 .rights {
   padding-right: 0.5em;
