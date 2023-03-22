@@ -4,7 +4,7 @@ echo ("
 
 <section>
   <div class='backBar'></div>
-  <div class='pack pack1'>
+  <div id=rentalmars class='pack pack1'>
       <h2>$rentalPackTitle1</h2>
       <p>$rentalPackDescription1</p>
       <button type='open-button' onclick='openForm()'>Rent it</button>
@@ -30,7 +30,7 @@ echo ("
           <img class='btclogo' src='assets/logo/bitcoin.png'>
       </div>
   </div>
-  <div class='pack pack2'>
+  <div id=rentalmoon class='pack pack2'>
       <h2>$rentalPackTitle2</h2>
       <p>$rentalPackDescription2</p>
       <button type='open-button' onclick='openForm()'>Rent it</button>
@@ -56,7 +56,7 @@ echo ("
           <img class='btclogo' src='assets/logo/bitcoin.png'>
       </div>
   </div>
-  <div class='pack pack3'>
+  <div id=rentalmercury class='pack pack3'>
       <h2>$rentalPackTitle3</h2>
       <p>$rentalPackDescription3</p>
       <button type='open-button' onclick='openForm()'>Rent it</button>

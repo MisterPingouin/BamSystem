@@ -10,10 +10,14 @@ $link2 = "#moon-pack";
 $link3 = "#mercury-pack";
 $link4 = "#venus-pack";
 
+$page_title = 'Our Cruise';
+$subtitle = ' Pick the cruise that is made for you. ';
+
     require 'html/shared/head.php';
     echo "<body class='darkerBg'>";
     include 'html/shared/nav.html';
     include 'html/shared/planet-nav.php';
+    include "html/content/page-title.html";
     include 'html/content/travel-content.php';
     include 'html/shared/footer-travel.html';
     include 'html/shared/scripts.html';
