@@ -2,6 +2,7 @@
 
 echo ("
 <section id='$planetPresId' class='planet-pres'>
+    <div id='$planetPresId-scroll'></div>
     <div class='decoLine'>
         <span class='round'></span>
         <span class='line'></span>
