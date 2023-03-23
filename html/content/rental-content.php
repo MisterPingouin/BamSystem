@@ -49,7 +49,8 @@ $rentalMoon = [
     ],
     'customSlider' => ['custom-slider2'],
     'plusBtn' => ['plusSlides2'],
-    'planetName' => ['The Moon']
+    'planetName' => ['The Moon'],
+    'planetAnchor' => ['Moon']
 ];
 
 $rentalMercury = [
@@ -128,7 +129,11 @@ function makeRentalSection($rentalPlanetSelected) {
 
     $planetName = $rentalPlanetSelected['planetName'][0];
 
-    echo "<div id='$planetName-rental-anchor'></div>";
+    $planetAnchor = isset($rentalPlanetSelected['planetAnchor'][0]) ? $rentalPlanetSelected['planetAnchor'][0] : $rentalPlanetSelected['planetName'][0];
+
+    // $planetName = $rentalPlanetSelected['planetName'][0];
+
+    echo "<div id='$planetAnchor-rental-anchor'></div>";
     include 'html/content/rental-slide.php';
     echo "<div class='pack-choice'>";
     include 'html/content/rental-pack.php';
