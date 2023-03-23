@@ -15,8 +15,9 @@ echo ("
             <span class='rectangle'></span>
         </div>    
         <p>$planetPresDescription</p>
-        <a href='travel.php#$planetPresName-pack' class='planet-pres-to-travel'>Go to $planetBtnTravel!</a>
+        <a href='travel.php#$planetPresName-pack-anchor' class='planet-pres-to-travel'>Go to $planetBtnTravel!</a>
     </div>
         <img class='planet-pres-img' src='/assets/planets/sd/$planetPresName-sd.png' alt='planet $planetPresName' loading='lazy'>    
 </section>
 ");
+

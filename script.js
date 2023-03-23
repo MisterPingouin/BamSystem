@@ -4,8 +4,8 @@ let mybutton = document.getElementById("myBtn");
 
 function scrollFunction() {
   if (
-    document.body.scrollTop > 1200 ||
-    document.documentElement.scrollTop > 1200
+    document.body.scrollTop > 800 ||
+    document.documentElement.scrollTop > 800
   ) {
     mybutton.style.display = "block";
   } else {
