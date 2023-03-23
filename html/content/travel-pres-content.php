@@ -2,8 +2,8 @@
 
 
 echo ("
+<div id='$travelId-pack-anchor'></div>
 <section id='$travelId-pack' class='travel-pack' href='booking.php'>
-        <div id='$travelId-pack-anchor'></div>
         <img class ='travel-img' src='$travelImg' alt='Spaceship Image'>
         <div class='decoLine'>
             <span class='round'></span>

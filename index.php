@@ -11,6 +11,7 @@ $link4 = '#planet-venus-anchor';
 
 $page_title = 'Our Destination';
 $subtitle = 'Choose your destination, and discover the planet made for you.';
+$page_title_class = '';
 
     require 'html/shared/head.php';
     echo "<body class='darkerBg'>";

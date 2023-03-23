@@ -62,25 +62,50 @@ a {
   text-decoration: none;
 }
 
+@keyframes slideInTop {
+  0% {
+    transform: translateY(-150%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .page-title {
   display: flex;
   flex-direction: column;
   justify-content: center;
   text-align: center;
   height: 200px;
-
   background-color: var(--darker);
+  overflow-y: hidden;
 }
 
-.page-title h1 {
+.page-title-booking {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  height: 200px;
+  background-color: transparent;
+  overflow-y: hidden;
+}
+
+.page-title h1,
+.page-title-booking h1 {
   font-size: 5em;
   font-family: var(--font2);
   color: white;
-  /* filter: drop-shadow(0 0px 10px var(white)); */
+  animation: var(--transiSlow) 0s 1 slideInTop;
   filter: drop-shadow(0 0px 35px var(--accent));
 }
 
-.page-title h4 {
+
+
+.page-title h4,
+.page-title-booking h4 {
+  animation: var(--transiSlow) 0s 1 apparition;
   font-size: 1em;
 }
 
@@ -165,6 +190,15 @@ a {
 
 /* -------------planet-nav------------- */
 
+@keyframes rotation360 {
+  0% {
+    transform: rotate(-360deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
 header.planets-nav {
   color: var(--light);
   background-color: var(--darker);
@@ -205,6 +239,7 @@ div.planet-nav-item a img {
   width: 100px;
   height: 100px;
   transition: var(--transiSlow);
+  animation: var(--transiSlow) 0s 1 rotation360;
 }
 
 div.planet-nav-item a img:hover {
@@ -275,8 +310,6 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres {
-  /* padding-top: calc(var(--navHeight) + 42px); */
-  /*margin: auto;*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -347,15 +380,15 @@ div.planet-nav-item a img:hover {
 
 .planet-pres-title > span.rectangle {
   background-color: var(--accent);
-  width: 30%;
+  width: 10%;
   height: min(clamp(10pt, 10vw, 50pt), 20vw);
-  margin-left: 50px;
+  /* margin-left: 50px; */
   opacity: 50%;
   transition: var(--transiSlow);
 }
 
 .planet-pres:hover span.rectangle {
-  width: 60%;
+  width: 40%;
 }
 
 .planet-pres > div > p {
@@ -364,22 +397,23 @@ div.planet-nav-item a img:hover {
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
   margin-bottom: 100px;
+  margin-top: 20%;
 }
 
 .planet-pres-to-travel {
-  margin-left: clamp(10px, 10vw, 150px);
-  margin-top: 100px;
-  padding: 30px;
-
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   font-weight: 900;
-  color: var(--darker);
+  margin-top: 100px;
+  padding: 30px;
   
   border: 3px solid white;
   outline: 4px solid var(--accent);
   outline-offset: 5px;
   border-radius: 50px;
   background: linear-gradient(135deg, var(--accent) 0%, white 100%);
+  color: var(--darker);
+  
+  margin-left: clamp(10px, 10vw, 150px);
   
   transition: var(--transiSuperFast);
   transform-origin: center;
@@ -409,15 +443,9 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-
-.main-travel {
-  padding-top: 15px;
-}
-
-
 .travel-pack{
   width: 100%;
-  padding: 25px;
+  padding: 0px 25px;
   border: 2px solid var(--accent);
   border-radius: 20px;
   margin-bottom: 7px;
@@ -463,69 +491,6 @@ div.planet-nav-item a img:hover {
   text-align: left;
   padding-bottom: 10px;
 }
-
-/* .bookTrip {
-  display: block;
-
-  font-family: var(--font1);
-  font-size: clamp(5pt, 4vw, 30pt);
-  border-style: solid;
-  border-radius: 100px;
-  background-color: var(--accent);
-  font-weight: bolder;
-  margin-left: auto;
-  width: 150px;
-  color: var(--darker);
-} */
-
-  .bookTrip {
-    display: block;
-    font-family: var(--font1);
-    font-size: clamp(5pt, 4vw, 20pt);
-    text-align: center;
-
-    border: 3px solid white;
-    outline: 4px solid var(--accent);
-    outline-offset: 5px;
-    border-radius: 50px;
-    background: linear-gradient(135deg, var(--accent) 0%, white 100%);
-    color: var(--darker);
-
-    width: 190px;
-    margin-left: auto;
-    padding: 15px 25px;
-    font-weight: bolder;
-    transition: var(--transiSuperFast);
-    transform-origin: center;
-  }
-
-
-
-  .bookTrip:active {
-    background: white;
-    transform: scale(85%);
-    filter: drop-shadow(0 0px 20px white);
-    color: var(--darker);
-  }
-
-
-/* 
-.bookTrip:hover {
-  background-color: var(--darker);
-  color: var(--accent);
-  border-style: solid;
-} */
-
-
-
-
-
-
-
-
-
-
-
 
 @media screen and (min-width: 768px) {
 
@@ -619,6 +584,7 @@ visibility: hidden;
     width: min(200px, 60%);
     font-family: var(--font1);
     font-size: clamp(5pt, 4vw, 20pt);
+    font-weight: bolder;
     text-align: center;
 
     border: 3px solid white;
@@ -631,20 +597,20 @@ visibility: hidden;
     width: auto;
     margin: 30px 0 0 0;
     padding: 15px 25px;
-    font-weight: bolder;
     transition: var(--transiSuperFast);
     transform-origin: center;
   }
 
   .bookTrip:hover {
     background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+    border: 3px solid var(--accent);
     outline: 2px solid white;
     outline-offset: 30px;
+    color: white;
+    filter: drop-shadow(0 0px 50px white);;
+    
     transform: scale(90%);
     cursor: pointer;
-    filter: drop-shadow(0 0px 50px white);;
-    border: 3px solid var(--accent);
-    color: white;
   }
 
 
@@ -725,6 +691,10 @@ footer {
 
 /* CSS spécifique booking.html */
 
+.booking-spacer {
+  padding-top: var(--navHeight);
+}
+
 form {
   opacity: 0;
   animation-duration: 4s;
@@ -781,9 +751,9 @@ form {
   display: flex;
   justify-content: center;
   color: var(--light);
-  margin-top: 80px;
+  /* margin-top: 80px; */
   font-family: var(--font1);
-  height: 100vh;
+  height: calc(100vh - var(--navHeight)*2 - 200px);
   align-items: center;
 }
 
@@ -802,7 +772,8 @@ form div > label {
 
 form div > input,
 form div > select,
-form div > textarea {
+form div > textarea,
+input[type="date"] {
   background: var(--light);
   border: none;
   border-radius: 5px;
@@ -813,7 +784,8 @@ form div > textarea {
 }
 
 form div > input,
-form div > select {
+form div > select,
+input[type="date"] {
   height: 50px;
   padding-left: 10px;
 }
@@ -836,8 +808,11 @@ form div > textarea::placeholder {
   color: var(--light);
 }
 form div > input,
-form div > select {
+form div > select,
+form div > #message,
+input[type="date"] {
   opacity: 0.7;
+  border: 2px solid var(--accent);
 }
 
 form div > select:invalid {
@@ -855,27 +830,40 @@ form div:last-child {
 }
 
 form button {
-  width: 450px;
-  max-width: 500px;
-  height: 50px;
-  font-weight: 700;
-  font-size: 22px;
-  background: var(--light);
-  border: rgba(48, 48, 48, 0.5) solid 1px;
-  border-radius: 5px;
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-  color: var(--dark);
-  margin-bottom: 25px;
-  cursor: pointer;
-  transition: all 1s ease-out;
-  opacity: 0.7;
+  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  font-weight: 900;
+  margin-top: 20px;
+  padding: 20px;
+  width: clamp(400px, 50vw, 600px);
+
+  border: 3px solid white;
+  outline: 4px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, white 100%);
+  color: var(--darker);
+  
+  transition: var(--transiSuperFast);
+  transform-origin: center;
 }
 
-form button:hover,
-form button:focus {
-  color: var(--light);
-  background: var(--dark);
-  opacity: 0.9;
+form button:hover {
+  background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+  border: 3px solid var(--accent);
+  outline: 2px solid white;
+  outline-offset: 30px;
+  color: white;
+  filter: drop-shadow(0 0px 50px white);;
+  
+  transform: scale(90%);
+  cursor: pointer;
+}
+
+form button:active {
+  background: white;
+  transform: scale(85%);
+  filter: drop-shadow(0 0px 20px white);
+  color: var(--darker);
 }
 
 .date-form {
@@ -1135,12 +1123,25 @@ input[type="date"] {
 
 /*end rental--------*/
 
-/*Button---------*/
+/*back to top Button---------*/
+
+@keyframes slideInBottom {
+  0% {
+    transform: translateY(120%);
+  }
+  100% {
+    transform: translateY(0%);
+  }
+}
+
 .toop {
   height: 80px;
   width: 80px;
 }
+
 #myBtn {
+  animation: var(--transiSlow) 0s 1 slideInBottom;
+  transition: var(--transiSuperFast);
   background-color: rgba(255, 255, 255, 0);
   border: none;
   display: none;
@@ -1149,6 +1150,19 @@ input[type="date"] {
   right: 30px;
   cursor: pointer;
   z-index: 6;
+
+  outline: 0px;
+  outline-offset: 0px;
+  outline-color: var(--accent);
+}
+
+#myBtn:hover {
+  transform: scale(120%);
+  filter: drop-shadow(0 0 15px white);
+}
+
+#myBtn:active {
+  transform: scale(90%);
 }
 
 /*Button---------*/
@@ -1256,29 +1270,43 @@ input[type="date"] {
 }
 
 .validationgorental a {
-  text-decoration: none;
-  font-family: var(--font1);
-  font-size:1.2rem;
-  color: white;
+  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  font-weight: 900;
+  padding: 20px;
+  margin-top: 30px;
+  
+  border: 3px solid white;
+  outline: 4px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, white 100%);
+  color: var(--darker);
+    
+  transition: var(--transiSuperFast);
+  transform-origin: center;
 }
 
 .titlevalidation {
   margin-bottom: 40px;
 }
 
-.validationgorental a:after {
-  content: "";
-  display: block;
-  margin: auto;
-  height: 1px;
-  width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
+.validationgorental a:hover {
+  background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+  border: 3px solid var(--accent);
+  outline: 2px solid white;
+  outline-offset: 30px;
+  color: white;
+  filter: drop-shadow(0 0px 50px white);;
+  
+  transform: scale(90%);
+  cursor: pointer;
 }
 
-.validationgorental a:hover:after {
-  width: 100%;
-  background: var(--light);
+.validationgorental a:active {
+  background: white;
+  transform: scale(85%);
+  filter: drop-shadow(0 0px 20px white);
+  color: var(--darker);
 }
 
 /* Pop Style */

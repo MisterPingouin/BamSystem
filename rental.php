@@ -10,6 +10,7 @@ $link1 = '#Mars-rental-anchor';
 $link2 = '#Moon-rental-anchor';
 $link3 = '#Mercury-rental-anchor';
 $link4 = '#Venus-rental-anchor';
+$page_title_class = '';
 
     require 'html/shared/head.php';
     echo "<body>";
