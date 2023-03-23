@@ -49,7 +49,7 @@ $rentalMoon = [
     ],
     'customSlider' => ['custom-slider2'],
     'plusBtn' => ['plusSlides2'],
-    'planetName' => ['Moon']
+    'planetName' => ['The Moon']
 ];
 
 $rentalMercury = [

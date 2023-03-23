@@ -12,6 +12,7 @@ $link4 = "#venus-pack-anchor";
 
 $page_title = 'Our Cruise';
 $subtitle = ' Pick the cruise that is made for you. ';
+$page_title_class = '';
 
     require 'html/shared/head.php';
     echo "<body class='darkerBg'>";
