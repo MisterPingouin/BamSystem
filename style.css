@@ -36,8 +36,9 @@
   --navHeight: 70px;
 
   /* Animation */
-  --transiFast: 0.3s;
-  --transiSuperFast: 0.1s;
+  --transiSlow: 1s cubic-bezier(.13,0,0,1);
+  --transiFast: .3s cubic-bezier(0,1,0,1);
+  --transiSuperFast: 0.1s cubic-bezier(.3,0,0,1);
 }
 
 * {
@@ -92,7 +93,7 @@ nav {
   overflow: hidden;
   top: 0;
   height: var(--navHeight);
-  width: 100%;
+  width: 100vw;
   z-index: 5;
 }
 
@@ -104,8 +105,6 @@ nav a {
   filter: var(--flight);
   width: 30%;
   height: 30%;
-
-  transition: var(--transiFast);
 }
 
 nav > ul {
@@ -132,7 +131,7 @@ nav > ul {
   height: 1px;
   width: 0;
   background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
+  transition: var(--transiFast);
 }
 
 .menu span:hover:after {
@@ -144,21 +143,6 @@ nav > ul {
 :link,
 a {
   text-decoration: none;
-}
-
-.logo:after {
-  content: "";
-  display: block;
-  margin: auto;
-  height: 1px;
-  width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
-}
-
-.logo:hover:after {
-  width: 100%;
-  background: var(--light);
 }
 
 .menu,
@@ -218,7 +202,7 @@ div.planet-nav-item a {
 div.planet-nav-item a img {
   width: 100px;
   height: 100px;
-  transition: var(--transiFast) ease-in-out;
+  transition: var(--transiSlow);
 }
 
 div.planet-nav-item a img:hover {
@@ -359,10 +343,15 @@ div.planet-nav-item a img:hover {
 
 .planet-pres-title > span.rectangle {
   background-color: var(--accent);
-  width: 50%;
+  width: 30%;
   height: min(clamp(10pt, 10vw, 50pt), 20vw);
   margin-left: 50px;
   opacity: 50%;
+  transition: var(--transiSlow);
+}
+
+.planet-pres:hover span.rectangle {
+  width: 60%;
 }
 
 .planet-pres > div > p {
@@ -442,10 +431,6 @@ div.planet-nav-item a img:hover {
   padding: 15px;
 }
 
-.planet-pres-txt {
-  margin: 110px;
-}
-
 .travel-titleGroup {
   text-align: justify;
   padding-bottom: 15px;
@@ -498,20 +483,18 @@ div.planet-nav-item a img:hover {
 
 
   .travel-pack {
-    /* padding-top: calc(var(--navHeight) + 42px); */
     position: relative;
     display: flex;
     flex-direction: column;
     height: calc((100vw / 16 * 6));
-/*
-    /* width: 100%; */
     background-color: transparent;
   }
 
   .travel-img {
     position: absolute;
+    left: 0;
     transition: var(--transiFast);
-    width: 100vw;
+    width: 100%;
     aspect-ratio: 16 / 6;
     object-fit: cover;
     justify-content: center;
@@ -526,12 +509,10 @@ div.planet-nav-item a img:hover {
   }
 
   .travel-txt {
-    /* padding-top: calc((var(--navHeight) + 42px)); */
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 50px;
     z-index: 1;
-    /* width: clamp(100px, 70vw, 800px); */
     margin: auto;
   }
 
@@ -567,73 +548,10 @@ div.planet-nav-item a img:hover {
     height: 3px;
     width: 0;
     background: transparent;
-    transition: width 0.5s ease, background-color 0.5s ease;
+    transition: var(--transiSlow);
   }
 
-
-  .travel-img {
-    position: absolute;
-    transition: var(--transiFast);
-    width: 100vw;
-    aspect-ratio: 16 / 6;
-    object-fit: cover;
-    justify-content: center;
-    overflow: hidden;
-    z-index: -1;
-  }
-
-  .travel-title {
-    font-family: var(--font2);
-    font-size: clamp(10pt, 8vw, 100pt);
-    color: var(--accent);
-  }
-
-  .travel-txt {
-    /* padding-top: calc((var(--navHeight) + 42px)); */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
-    z-index: 1;
-    /* width: clamp(100px, 70vw, 800px); */
-    margin: auto;
-  }
-
-  .travel-titleGroup {
-    text-align: right;
-    margin-left: auto;
-  }
-
-  .travel-info {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-  }
-
-  .travel-name {
-    font-family: var(--font2);
-    font-size: clamp(10pt, 10vw, 70pt);
-    color: white;
-  }
-
-  .travel-duration {
-    color: white;
-    text-justify: distribute;
-    font-family: var(--font1);
-    padding-top: 10px;
-  }
-
-  .travel-name:after {
-    content: "";
-    display: block;
-    margin: auto;
-    height: 3px;
-    width: 0;
-    background: transparent;
-    transition: width 0.5s ease, background-color 0.5s ease;
-  }
-
-  .travel-name:hover:after {
+  .travel-pack:hover .travel-name:after {
     width: 100%;
     background: white;
   }
@@ -641,7 +559,6 @@ div.planet-nav-item a img:hover {
 
   .bookTrip {
     width: min(200px, 60%);
-    /* height: 50px; */
     font-family: var(--font1);
     font-size: clamp(5pt, 4vw, 30pt);
     border: none;
@@ -684,22 +601,6 @@ div.planet-nav-item a img:hover {
     transform-origin: center;
   }
 
-/*
-.bookTrip {
-  width: min(200px, 60%);
-  font-family: var(--font1);
-  font-size: clamp(5pt, 4vw, 30pt);
-  border-style: solid;
-  border-radius: 100px;
-  margin: 30px 0 0 0;
-  text-align: center;
-  padding: 0.5em;
-  background-color: var(--accent);
-  font-weight: bolder;
-  transition: var(--transiFast);
-}
-*/
-
   .bookTrip:hover {
     background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
     outline: 2px solid white;
@@ -728,40 +629,6 @@ div.planet-nav-item a img:hover {
     color: white;
   }
 }
-
-
-/*.travel-pack:hover .travel-img {
-  transform: scale(1.2);
-  transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
-}*/
-
-/*@media screen and (max-width: 1023px) and (min-width: 521px) {
-  .travel-title {
-    font-size: 4rem;
-  }
-
-  .travel-name {
-    font-size: 4rem;
-  }
-
-  .bookTrip {
-    font-size: 0.5rem;
-    margin: 5px 0 0 0;
-    padding: 0.1em;
-    width: 30%;
-  }
-
-  .travel-description {
-    width: 70%;
-    font-size: 10pt;
-  }
-
-  .travel-duration {
-    padding-top: 2px;
-    font-size: 1rem;
-  }
-}
-*/
 
 /* -----------------------fin travel by max------------------------------------------------------------------ */
 
@@ -996,8 +863,17 @@ input[type="date"] {
 }
 
 /* Rental CSS ----------------------------------------------------- */
+#Mars-rental-anchor,
+#Moon-rental-anchor,
+#Mercury-rental-anchor,
+#Venus-rental-anchor {
+  display: block;
+  position: relative;
+  top: calc((var(--navHeight) + 42px)*-1);
+  visibility: hidden;
+}
+
 .main-rental {
-  margin-top: var(--navHeight);
   min-height: 100%;
 }
 
@@ -1088,7 +964,6 @@ input[type="date"] {
 
   position: absolute;
   z-index: -1;
-  /* top: calc(50% - 30px); */
 }
 
 .pack-choice {
@@ -1196,7 +1071,7 @@ input[type="date"] {
   transition: width 0.5s ease, background-color 0.5s ease;
 }
 
-.pack h2:hover:after {
+.pack:hover h2:after {
   width: 100%;
   background: var(--light);
 }
@@ -1209,9 +1084,7 @@ input[type="date"] {
   }
 
   .pack {
-    /* height: none; */
     width: 300px;
-    /* max-width: 300px; */
     aspect-ratio: 1 / 1;
   }
 

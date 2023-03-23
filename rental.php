@@ -6,10 +6,10 @@
 $pageTitle = 'Rental';
 $page_title = 'Our Shuttles';
 $subtitle = ' Choose the best transportation that fits your needs.';
-$link1 = '#rentalmars';
-$link2 = '#rentalmoon';
-$link3 = '#rentalmercury';
-$link4 = '#rentalvenus';
+$link1 = '#Mars-rental-anchor';
+$link2 = '#Moon-rental-anchor';
+$link3 = '#Mercury-rental-anchor';
+$link4 = '#Venus-rental-anchor';
 
     require 'html/shared/head.php';
     echo "<body>";
