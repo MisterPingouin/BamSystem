@@ -67,7 +67,6 @@ a {
   justify-content: center;
   text-align: center;
   height: 200px;
-
   background-color: var(--darker);
 }
 
@@ -75,7 +74,6 @@ a {
   font-size: 5em;
   font-family: var(--font2);
   color: white;
-  /* filter: drop-shadow(0 0px 10px var(white)); */
   filter: drop-shadow(0 0px 35px var(--accent));
 }
 
@@ -291,8 +289,6 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres {
-  /* padding-top: calc(var(--navHeight) + 42px); */
-  /*margin: auto;*/
   position: relative;
   display: flex;
   flex-direction: column;
@@ -420,23 +416,23 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
+.travel-pack {
 
 .main-travel {
   padding-top: 15px;
 }
 
 
-.travel-pack{
+/*.travel-pack{
   width: 100%;
   padding: 25px;
-}
+}*/
 
 .travel-img {
   width: 100%;
   height: auto;
   border-radius: 5px;
 }
-
 
 .travel-txt {
   display: flex;
@@ -445,7 +441,6 @@ div.planet-nav-item a img:hover {
   text-align: center;
   padding: 15px;
 }
-
 
 .planet-pres-txt {
   margin: 110px;
@@ -508,6 +503,74 @@ div.planet-nav-item a img:hover {
     display: flex;
     flex-direction: column;
     height: calc((100vw / 16 * 6));
+/*
+    /* width: 100%; */
+    background-color: transparent;
+  }
+
+  .travel-img {
+    position: absolute;
+    transition: var(--transiFast);
+    width: 100vw;
+    aspect-ratio: 16 / 6;
+    object-fit: cover;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .travel-title {
+    font-family: var(--font2);
+    font-size: clamp(10pt, 8vw, 100pt);
+    color: var(--accent);
+  }
+
+  .travel-txt {
+    /* padding-top: calc((var(--navHeight) + 42px)); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    z-index: 1;
+    /* width: clamp(100px, 70vw, 800px); */
+    margin: auto;
+  }
+
+  .travel-titleGroup {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .travel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .travel-name {
+    font-family: var(--font2);
+    font-size: clamp(10pt, 10vw, 70pt);
+    color: white;
+  }
+
+  .travel-duration {
+    color: white;
+    text-justify: distribute;
+    font-family: var(--font1);
+    padding-top: 10px;
+  }
+
+  .travel-name:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+
+*/
     background-color: transparent;
   }
 
@@ -578,6 +641,32 @@ div.planet-nav-item a img:hover {
     width: 100%;
     background: white;
   }
+/*
+
+  .bookTrip {
+    width: min(200px, 60%);
+    /* height: 50px; */
+    font-family: var(--font1);
+    font-size: clamp(5pt, 4vw, 30pt);
+    border: none;
+    border-radius: 100px;
+    margin: 30px 0 0 0;
+    text-align: center;
+    padding: 0.5em;
+    background-color: var(--accent);
+    color: var(--darker);
+    font-weight: bolder;
+    transition: var(--transiFast);
+  }
+
+  .bookTrip:hover {
+    background-color: var(--darker);
+    color: var(--accent);
+  }
+
+  .bookTrip:active {
+    background-color: white;
+*/
 
   .bookTrip {
     font-family: var(--font1);
@@ -631,6 +720,7 @@ div.planet-nav-item a img:hover {
     transform: scale(85%);
     filter: drop-shadow(0 0px 20px white);
     color: var(--darker);
+
   }
 
   .travel-description {
@@ -700,7 +790,6 @@ footer {
   padding: 23px;
 
   margin-top: auto;
-
 }
 
 .main-footer {
@@ -708,8 +797,6 @@ footer {
   flex-direction: row;
   justify-content: center;
 }
-
-
 
 /*TRAVEL PAGE BOTTOM-------------------------------------------------------------------------------------------------------*/
 
@@ -755,6 +842,10 @@ form {
 .titleform h1 {
   text-align: center;
   opacity: 0;
+  font-size: 2.5em;
+  font-family: var(--font2);
+  color: var(--light);
+  filter: drop-shadow(0 0px 35px var(--accent));
   animation-duration: 3s;
   animation-name: apparition;
   animation-delay: 4s;
@@ -907,7 +998,7 @@ input[type="date"] {
   z-index: -1;
 }
 
-/* Rental CSS ----------------------------------------------------- */ 
+/* Rental CSS ----------------------------------------------------- */
 .main-rental {
   margin-top: var(--navHeight);
   min-height: 100%;
@@ -1022,7 +1113,7 @@ input[type="date"] {
   justify-content: center;
   align-items: center;
   margin: 7px;
-  
+
   background-color: var(--darker);
   border: 2px solid var(--accent);
   border-radius: 20px;
@@ -1119,15 +1210,15 @@ input[type="date"] {
     align-items: stretch;
     width: 100%;
   }
-  
+
   .pack {
     /* height: none; */
     width: 300px;
     /* max-width: 300px; */
     aspect-ratio: 1 / 1;
   }
-  
-  .pack button {  
+
+  .pack button {
     background-color: var(--accent);
     filter: var(--accentDropShadow);
     border-radius: 30px;
@@ -1154,7 +1245,6 @@ input[type="date"] {
 }
 
 /*Button---------*/
-
 
 /* Planet nav 2*/
 
@@ -1212,9 +1302,7 @@ input[type="date"] {
   background: var(--light);
 }
 
-
 /* Validation Booking style */
-
 
 .background-bookingvalidation {
   height: 100vh;
@@ -1249,7 +1337,6 @@ input[type="date"] {
   text-decoration: none;
 }
 
-
 .validationgorental {
   margin-top: 25px;
   display: flex;
@@ -1260,7 +1347,7 @@ input[type="date"] {
 .validationgorental a {
   text-decoration: none;
   font-family: var(--font1);
-  font-size:1.2rem;
+  font-size: 1.2rem;
   color: white;
 }
 
@@ -1304,19 +1391,20 @@ input[type="date"] {
   transform: translate(-45%, 5%);
   border: 1px solid var(--darker);
   z-index: 9;
-  margin-top:10%;
+  margin-top: 10%;
 }
 /* Styles pour le conteneur de la forme */
-
 
 .form-container {
   max-width: 300px;
   padding: 10px;
   background-color: var(--light);
+  color: var(--dark);
 }
 
 .form-container h2 {
-  padding-bottom:5px;
+  padding-bottom: 5px;
+  color: var(--dark);
 }
 /* Largeur complète pour les champs de saisie */
 .form-container input[type="text"],
@@ -1345,6 +1433,7 @@ input[type="date"] {
   width: 100%;
   margin-bottom: 10px;
   opacity: 0.8;
+  filter: none;
 }
 /* Stylez le bouton pour annuler */
 .form-container .cancel {
@@ -1352,12 +1441,12 @@ input[type="date"] {
   color: var(--dark);
   cursor: pointer;
   border: none;
-  float:right;
-  height:4px;
-  width:4px;
-  margin:0;
-  padding:0;
-  font-size:0.7rem;
+  float: right;
+  height: 4px;
+  width: 4px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
 }
 .form-container .cancel:not(.no-hover):hover {
   color: var(--dark);
@@ -1374,9 +1463,8 @@ input[type="date"] {
 .pageName {
   font-size: 60px;
   text-align: center;
-
 }
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .pageName {
     font-size: 80px;
   }

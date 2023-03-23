@@ -4,24 +4,24 @@ echo ("
 
 <section>
   <div class='backBar'></div>
-  <div class='pack pack1'>
+  <div id=rentalmars class='pack pack1'>
       <h2>$rentalPackTitle1</h2>
       <p>$rentalPackDescription1</p>
       <button type='open-button' onclick='openForm()'>Rent it</button>
       <div class='login-popup'>
         <div class='form-popup' id='popupForm'>
           <div class='form-container'>
+          <button type='button' class='btn cancel' onclick='closeForm()'>X</button>
             <h2>Please login</h2>
             <label for='email'>
               <strong>E-mail</strong>
             </label>
-            <input type='text' id='email' placeholder='Votre Email' name='email' required />
+            <input type='text' id='email' placeholder='Email' name='email' required />
             <label for='psw'>
               <strong>Password</strong>
             </label>
-            <input type='password' id='psw' placeholder='Votre Mot de passe' name='psw' required />
+            <input type='password' id='psw' placeholder='Password' name='psw' required />
             <button type='submit' class='btn'>Login</button>
-            <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
           </div>
         </div>
       </div>
@@ -30,24 +30,24 @@ echo ("
           <img class='btclogo' src='assets/logo/bitcoin.png'>
       </div>
   </div>
-  <div class='pack pack2'>
+  <div id=rentalmoon class='pack pack2'>
       <h2>$rentalPackTitle2</h2>
       <p>$rentalPackDescription2</p>
       <button type='open-button' onclick='openForm()'>Rent it</button>
       <div class='login-popup'>
         <div class='form-popup' id='popupForm'>
           <div class='form-container'>
+          <button type='button' class='btn cancel' onclick='closeForm()'>X</button>
             <h2>Please login</h2>
             <label for='email'>
               <strong>E-mail</strong>
             </label>
-            <input type='text' id='email' placeholder='Votre Email' name='email' required />
+            <input type='text' id='email' placeholder='Email' name='email' required />
             <label for='psw'>
               <strong>Password</strong>
             </label>
-            <input type='password' id='psw' placeholder='Votre Mot de passe' name='psw' required />
+            <input type='password' id='psw' placeholder='Password' name='psw' required />
             <button type='submit' class='btn'>Login</button>
-            <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
           </div>
         </div>
       </div>
@@ -56,26 +56,25 @@ echo ("
           <img class='btclogo' src='assets/logo/bitcoin.png'>
       </div>
   </div>
-  <div class='pack pack3'>
+  <div id=rentalmercury class='pack pack3'>
       <h2>$rentalPackTitle3</h2>
       <p>$rentalPackDescription3</p>
       <button type='open-button' onclick='openForm()'>Rent it</button>
       <div class='login-popup'>
         <div class='form-popup' id='popupForm'>
           <div class='form-container'>
+          <button type='button' class='btn cancel' onclick='closeForm()'>X</button>
             <h2>Please login</h2>
             <label for='email'>
               <strong>E-mail</strong>
             </label>
-            <input type='text' id='email' placeholder='Votre Email' name='email' required />
+            <input type='text' id='email' placeholder='Email' name='email' required />
             <label for='psw'>
               <strong>Password</strong>
             </label>
-            <input type='password' id='psw' placeholder='Votre Mot de passe' name='psw' required />
+            <input type='password' id='psw' placeholder='Password' name='psw' required />
             <button type='submit' class='btn'>Login</button>
-            <button type='button' class='btn cancel' onclick='closeForm()'>Closed</button>
           </div>
-
         </div>
       </div>
       <div class='packprice'>
