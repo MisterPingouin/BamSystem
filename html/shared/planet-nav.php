@@ -11,19 +11,19 @@ echo("
         </div>
         <div class='planet-nav-item'><a href='$link1'>
             <h2>Mars</h2>    
-            <img src='assets/planets/planet-nav/mars-pn.png'></a>                    
+            <img src='assets/planets/planet-nav/mars-pn.png' alt='mars from contextual menu'></a>                    
         </div>
         <div class='planet-nav-item'><a href='$link2'>
             <h2>Moon</h2>    
-            <img src='assets/planets/planet-nav/moon-pn.png'></a>
+            <img src='assets/planets/planet-nav/moon-pn.png' alt='the moon from contextual menu'></a>
         </div>
         <div class='planet-nav-item'><a href='$link3'>
             <h2>Mercury</h2>    
-            <img src='assets/planets/planet-nav/mercury-pn.png'></a>
+            <img src='assets/planets/planet-nav/mercury-pn.png' alt='mercury from contextual menu'></a>
         </div>
         <div class='planet-nav-item'><a href='$link4'>
             <h2>Venus</h2>    
-            <img src='assets/planets/planet-nav/venus-pn.png'></a>
+            <img src='assets/planets/planet-nav/venus-pn.png' alt='venus from contextual menu'></a>
         </div>
     </section>
 </header>

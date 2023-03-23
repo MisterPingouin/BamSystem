@@ -374,56 +374,44 @@ div.planet-nav-item a img:hover {
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
+  margin-bottom: 100px;
 }
 
-#planet-pres-to-travel {
+.planet-pres-to-travel {
   margin-left: clamp(10px, 10vw, 150px);
+  margin-top: 100px;
+  padding: 30px;
+
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  font-weight: 900;
+  color: var(--darker);
+  
   border: 3px solid white;
   outline: 4px solid var(--accent);
   outline-offset: 5px;
   border-radius: 50px;
-  /* background-color: var(--accent); */
   background: linear-gradient(135deg, var(--accent) 0%, white 100%);
-  margin-top: 100px;
-  padding: 30px;
+  
   transition: var(--transiSuperFast);
   transform-origin: center;
 }
 
-#planet-pres-to-travel a {
-  color: var(--darker);
-  font-weight: 900;
-  transition: var(--transiSuperFast);
-  outline: 0px solid white;
-  outline-offset: 0px;
-  border-radius: 50px;
-}
-
-#planet-pres-to-travel:hover {
+.planet-pres-to-travel:hover {
   background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+  border: 3px solid var(--accent);
   outline: 2px solid white;
   outline-offset: 30px;
+  color: white;
+  filter: drop-shadow(0 0px 50px white);;
+  
   transform: scale(90%);
   cursor: pointer;
-  filter: drop-shadow(0 0px 50px white);;
-  border: 3px solid var(--accent);
 }
 
-#planet-pres-to-travel:active {
+.planet-pres-to-travel:active {
   background: white;
   transform: scale(85%);
   filter: drop-shadow(0 0px 20px white);
-}
-
-#planet-pres-to-travel:hover a {
-  color: white;
-  outline: 10px solid white;
-  outline-offset: 20px;
-}
-
-#planet-pres-to-travel a:active,
-#planet-pres-to-travel:active a {
   color: var(--darker);
 }
 
