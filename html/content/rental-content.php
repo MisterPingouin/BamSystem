@@ -34,8 +34,8 @@ $rentalMoon = [
     ],
     'descriptions' => [
         'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
-        'Description 2 Moon',
-        'Description 3 Moon'
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.'
     ],
     'prices' => [
         rand(52,500),
@@ -49,7 +49,7 @@ $rentalMoon = [
     ],
     'customSlider' => ['custom-slider2'],
     'plusBtn' => ['plusSlides2'],
-    'planetName' => ['The Moon']
+    'planetName' => ['Moon']
 ];
 
 $rentalMercury = [
@@ -59,9 +59,9 @@ $rentalMercury = [
         'Premium Bundle'
     ],
     'descriptions' => [
-        'Description 1 Mercury',
-        'Description 2 Mercury',
-        'Description 3 Mercury'
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.'
     ],
     'prices' => [
         rand(52,500),
@@ -85,9 +85,9 @@ $rentalVenus = [
         'Premium Bundle'
     ],
     'descriptions' => [
-        'Description 1 Venus',
-        'Description 2 Venus',
-        'Description 3 Venus'
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.',
+        'Travel aboard this exceptional spaceship which actually really fast as it is in space and there are no sort of friction to slow it down at all.'
     ],
     'prices' => [
         rand(52,500),
@@ -128,10 +128,11 @@ function makeRentalSection($rentalPlanetSelected) {
 
     $planetName = $rentalPlanetSelected['planetName'][0];
 
+    echo "<div id='$planetName-rental-anchor'></div>";
     include 'html/content/rental-slide.php';
     echo "<div class='pack-choice'>";
     include 'html/content/rental-pack.php';
-    echo "</div>";
+    echo "</div></div>";
 }
 
 echo "<main class='main-rental'>";
