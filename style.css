@@ -412,15 +412,19 @@ div.planet-nav-item a img:hover {
 
 .main-travel {
   padding-top: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 
 .travel-pack{
-  width: 100%;
+  width: 95%;
   padding: 25px;
   border: 2px solid var(--accent);
   border-radius: 20px;
-  margin-bottom: 7px;
+  margin-bottom: 25px;
+  display: block;
 }
 
 .travel-img {
@@ -518,12 +522,15 @@ div.planet-nav-item a img:hover {
 
 
 
-
-
-
-
-
-
+#mars-pack-anchor,
+#moon-pack-anchor,
+#mercury-pack-anchor,
+#venus-pack-anchor {
+display: block;
+position: relative;
+top: calc((var(--navHeight) + 42px)*-1);
+visibility: hidden;
+}
 
 
 
@@ -539,16 +546,15 @@ top: calc((var(--navHeight) + 42px)*-1);
 visibility: hidden;
 }
 
-
+/*
   .travel-pack {
     position: relative;
-    display: flex;
-    flex-direction: column;
     height: calc((100vw / 16 * 6));
     background-color: transparent;
     border: none;
   }
-
+*/
+/*
   .travel-img {
     position: absolute;
     left: 0;
@@ -560,24 +566,50 @@ visibility: hidden;
     overflow: hidden;
     z-index: -1;
   }
+*/
+
+.travel-pack{
+  display: flex;
+  align-items: center;
+  height: 90vh;
+  width: 95%;
+}
+  .travel-img {
+    width: 60%;
+    height: auto;
+
+  }
+
+  #tLine {
+    flex-direction: column;
+    padding: 15px;
+  }
+
+  #ttline {
+    background-color: var(--accent);
+    width: 2px;
+    height: 500px;
+  }
 
   .travel-title {
     font-family: var(--font2);
-    font-size: clamp(10pt, 8vw, 100pt);
+    font-size: clamp(10pt, 6vw, 60pt);
     color: var(--accent);
+    margin-bottom: 20px;
   }
 
   .travel-txt {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: baseline;
+    text-align: center;
     z-index: 1;
-    margin: auto;
+    margin: 0;
   }
 
   .travel-titleGroup {
-    text-align: right;
-    margin-left: auto;
+    text-align: left;
+    margin: 0;
   }
 
   .travel-info {
@@ -589,7 +621,7 @@ visibility: hidden;
 
   .travel-name {
     font-family: var(--font2);
-    font-size: clamp(10pt, 10vw, 70pt);
+    font-size: clamp(10pt, 5vw, 70pt);
     color: white;
   }
 
@@ -634,6 +666,7 @@ visibility: hidden;
     font-weight: bolder;
     transition: var(--transiSuperFast);
     transform-origin: center;
+    margin-left: auto;
   }
 
   .bookTrip:hover {
@@ -657,10 +690,11 @@ visibility: hidden;
 
   .travel-description {
     font-family: var(--font1);
-    width: 60%;
-    float: right;
+    width: 80%;
+    float: left;
     font-size: clamp(7pt, 5vw, 10pt);
     color: white;
+    margin-bottom: 20px;
   }
 }
 
