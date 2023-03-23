@@ -1311,6 +1311,7 @@ input[type="date"] {
   max-width: 300px;
   padding: 10px;
   background-color: var(--light);
+  color: var(--dark);
 }
 
 .form-container h2 {
