@@ -415,7 +415,9 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-
+.main-travel {
+  padding-top: 15px;
+}
 
 .travel-pack{
   width: 100%;
@@ -442,9 +444,9 @@ div.planet-nav-item a img:hover {
 }
 
 .travel-titleGroup {
-  text-align: left;
+  text-align: justify;
   padding-bottom: 15px;
-  margin-right: 20px;
+  margin-right: 60px;
 }
 
 .travel-title {
@@ -452,11 +454,33 @@ div.planet-nav-item a img:hover {
 }
 
 .travel-info {
-  width: auto;
+  width: 90%;
 }
 
+.travel-name, .travel-duration {
+  text-align: left;
+  padding-bottom: 10px;
+}
 
+.bookTrip {
+  display: block;
 
+  font-family: var(--font1);
+  font-size: clamp(5pt, 4vw, 30pt);
+  border-style: solid;
+  border-radius: 100px;
+  background-color: var(--accent);
+  font-weight: bolder;
+  margin-left: auto;
+  width: 150px;
+  color: var(--darker);
+}
+
+.bookTrip:hover {
+  background-color: var(--darker);
+  color: var(--accent);
+  border-style: solid;
+}
 
 @media screen and (min-width: 768px) {
 
@@ -542,13 +566,12 @@ div.planet-nav-item a img:hover {
   /* height: 50px; */
   font-family: var(--font1);
   font-size: clamp(5pt, 4vw, 30pt);
-  border: none;
+  border-style: solid;
   border-radius: 100px;
   margin: 30px 0 0 0;
   text-align: center;
   padding: 0.5em;
   background-color: var(--accent);
-  color: var(--darker);
   font-weight: bolder;
   transition: var(--transiFast);
 }
@@ -612,6 +635,7 @@ div.planet-nav-item a img:hover {
 .image {
   height: 1em;
   width: 1em;
+
 }
 
 .address {
