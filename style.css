@@ -76,7 +76,6 @@ a {
   font-size: 5em;
   font-family: var(--font2);
   color: white;
-  /* filter: drop-shadow(0 0px 10px var(white)); */
   filter: drop-shadow(0 0px 35px var(--accent));
 }
 
@@ -726,6 +725,8 @@ footer {
 /* CSS spécifique booking.html */
 
 form {
+  display: flex;
+  flex-direction: column;
   opacity: 0;
   animation-duration: 4s;
   animation-name: apparition;
@@ -751,6 +752,10 @@ form {
   animation-name: apparition;
   animation-delay: 4s;
   animation-fill-mode: forwards;
+  font-size: 3em;
+  font-family: var(--font2);
+  color: var(--light);
+  filter: drop-shadow(0 0px 35px var(--accent));
 }
 
 .welcomeform {
@@ -784,7 +789,7 @@ form {
   margin-top: 80px;
   font-family: var(--font1);
   height: 100vh;
-  align-items: center;
+  width: 100%;
 }
 
 form div {
@@ -899,6 +904,13 @@ input[type="date"] {
   z-index: -1;
 }
 
+@media screen and (max-width: 460px) {
+  .booking-form {
+    width: 90%;
+    align-items: center;
+  }
+
+}
 /* Rental CSS ----------------------------------------------------- */
 #Mars-rental-anchor,
 #Moon-rental-anchor,
@@ -964,6 +976,7 @@ input[type="date"] {
   padding: 15px;
   position: absolute;
   top: 0;
+  font-size: 2em;
 }
 .slide-img {
   width: 100%;
@@ -1366,6 +1379,22 @@ input[type="date"] {
   outline: none;
   outline-offset: none;
   transform: none;
+}
+
+.form-container .btn:focus {
+  background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  filter: none;
+  outline: none;
+  outline-offset: none;
+  transform: none;
+
 }
 
 /* Stylez le bouton pour annuler */
