@@ -13,8 +13,7 @@ Ant
 - passer les pages dans w3c
 
 Max
-- anchor sur rental
-- passer les pages dans w3c
-
 - contenu de rental
 - changer couleur accent
+
+- passer les pages dans w3c
