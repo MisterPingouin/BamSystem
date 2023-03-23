@@ -421,23 +421,77 @@ div.planet-nav-item a img:hover {
 
 
 
+.main-travel {
+  padding-top: 15px;
+}
+
+
 .travel-pack{
   width: 100%;
+  padding: 25px;
 }
 
 .travel-img {
   width: 100%;
   height: auto;
+  border-radius: 5px;
 }
 
 
 .travel-txt {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: baseline;
   text-align: center;
+  padding: 15px;
 }
 
+
+.planet-pres-txt {
+  margin: 110px;
+}
+
+.travel-titleGroup {
+  text-align: justify;
+  padding-bottom: 15px;
+  margin-right: 60px;
+}
+
+.travel-title {
+  padding-bottom: 10px;
+}
+
+.travel-info {
+  width: 90%;
+}
+
+.travel-name, .travel-duration {
+  text-align: left;
+  padding-bottom: 10px;
+}
+
+.bookTrip {
+  display: block;
+
+  font-family: var(--font1);
+  font-size: clamp(5pt, 4vw, 30pt);
+  border-style: solid;
+  border-radius: 100px;
+  background-color: var(--accent);
+  font-weight: bolder;
+  margin-left: auto;
+  width: 150px;
+  color: var(--darker);
+}
+
+.bookTrip:hover {
+  background-color: var(--darker);
+  color: var(--accent);
+  border-style: solid;
+}
+
+@media screen and (min-width: 768px) {
+=======
 #mars-pack-anchor,
 #moon-pack-anchor,
 #mercury-pack-anchor,
@@ -448,7 +502,6 @@ top: calc((var(--navHeight) + 42px)*-1);
 visibility: hidden;
 }
 
-@media screen and (min-width: 768px) {
 
   .travel-pack {
     /* padding-top: calc(var(--navHeight) + 42px); */
@@ -458,6 +511,7 @@ visibility: hidden;
     height: calc((100vw / 16 * 6));
     background-color: transparent;
   }
+
 
   .travel-img {
     position: absolute;
@@ -546,6 +600,22 @@ visibility: hidden;
     transform-origin: center;
   }
 
+/*
+.bookTrip {
+  width: min(200px, 60%);
+  /* height: 50px; */
+  font-family: var(--font1);
+  font-size: clamp(5pt, 4vw, 30pt);
+  border-style: solid;
+  border-radius: 100px;
+  margin: 30px 0 0 0;
+  text-align: center;
+  padding: 0.5em;
+  background-color: var(--accent);
+  font-weight: bolder;
+  transition: var(--transiFast);
+}
+
   .bookTrip:hover {
     background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
     outline: 2px solid white;
@@ -556,6 +626,7 @@ visibility: hidden;
     border: 3px solid var(--accent);
     color: white;
   }
+*/
 
   .bookTrip:active {
     background: white;
@@ -616,6 +687,7 @@ visibility: hidden;
 .image {
   height: 1em;
   width: 1em;
+
 }
 
 .address {
