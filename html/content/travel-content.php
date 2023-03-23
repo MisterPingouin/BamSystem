@@ -13,7 +13,8 @@ $moonTravel = [
     'moon',
     'Nasa\'s Autonomous',
     '5 days',
-    'The notorious Autonomous machine comes from the minds of Nasa. This spacecraft will launch your ass from 0 to the moon before you have time ot sneeze on the Moon.'
+    'The notorious Autonomous machine comes from the minds of Nasa. This spacecraft will launch your ass from 0 to the moon before you have time ot sneeze on the Moon.',
+    'the Moon'
 ];
 
 $mercuryTravel = [
@@ -35,11 +36,13 @@ $venusTravel = [
 function travelPres(array $planetSelected) {
     $travelId = $planetSelected[1];
     $travelImg = $planetSelected[0];
-    $travelTitle = strtoupper($planetSelected[1]);
+    $travelTitle = isset($planetSelected[5]) ? strtoupper($planetSelected[5]) : strtoupper($planetSelected[1]);
     $travelShip = $planetSelected[2];
     $travelDuration = $planetSelected[3];
     $travelDescription = $planetSelected[4];
-    $travelTitleUc = ucfirst($planetSelected[1]);
+    
+    $travelTitleUc = isset($planetSelected[5]) ? $planetSelected[5] : ucfirst($planetSelected[1]); 
+    // $travelTitleUc = ucfirst($planetSelected[1]);
     
     include 'html/content/travel-pres-content.php';
 };
