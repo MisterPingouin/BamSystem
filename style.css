@@ -491,16 +491,15 @@ div.planet-nav-item a img:hover {
 }
 
 @media screen and (min-width: 768px) {
-=======
-#mars-pack-anchor,
-#moon-pack-anchor,
-#mercury-pack-anchor,
-#venus-pack-anchor {
-display: block;
-position: relative;
-top: calc((var(--navHeight) + 42px)*-1);
-visibility: hidden;
-}
+  #mars-pack-anchor,
+  #moon-pack-anchor,
+  #mercury-pack-anchor,
+  #venus-pack-anchor {
+    display: block;
+    position: relative;
+    top: calc((var(--navHeight) + 42px)*-1);
+    visibility: hidden;
+  }
 
 
   .travel-pack {
@@ -603,7 +602,6 @@ visibility: hidden;
 /*
 .bookTrip {
   width: min(200px, 60%);
-  /* height: 50px; */
   font-family: var(--font1);
   font-size: clamp(5pt, 4vw, 30pt);
   border-style: solid;
