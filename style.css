@@ -613,7 +613,6 @@ visibility: hidden;
     cursor: pointer;
   }
 
-
   .bookTrip:active {
     background: white;
     transform: scale(85%);
