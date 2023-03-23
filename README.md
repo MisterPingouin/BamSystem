@@ -1,29 +1,23 @@
 
 Ben
-- Mettre titre index pour remplir padding degueu de scroll
-- padding de scroll travel
-- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
 - back to top button a la couleur de l'accent
-- supprimer anim hover travel
-- footer sur travel probleme fixé en bas
-Ant
-- mettre les js au propre
-- (optionel) style bouton pillule a modifier
-- mise en page booking
-- (optionel) design booking
+- + footer sur travel probleme fixé en bas
+- logo mail
+- + responsive rental
+- passer les pages dans w3c
 
-- mise en page booking validation
-- style poppup rental
+Ant
+- + nouvelle font pour titre
+- + Titre pareil sur toutes les pages
+- + style poppup rental
 - (optionel) nav et/ou planetnav bouton actif reste souligné
+- + Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
+- passer les pages dans w3c
 
 Max
-- cohérence graphique booking et rental
-- Rental: garder le planet nav pour aller vers pack de véhicule sur planete cliquée
-- logo mail
-- index soucis glow
-- index opacité bar accent
-- index taille titre plus petit
+
+- cohérence graphique rental
+- contenu de rental
 - changer couleur accent
 
-- contenu de rental
 - passer les pages dans w3c

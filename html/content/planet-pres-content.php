@@ -2,6 +2,7 @@
 
 echo ("
 <section id='$planetPresId' class='planet-pres'>
+    <div id='$planetPresId-anchor'></div>
     <div class='decoLine'>
         <span class='round'></span>
         <span class='line'></span>
@@ -14,7 +15,7 @@ echo ("
             <span class='rectangle'></span>
         </div>    
         <p>$planetPresDescription</p>
-        <button id='planet-pres-to-travel' href='travel.php#$planetPresName-pack'><a href='travel.php#$planetPresName-pack'>Go to $planetPresTitle!</a></button>
+        <a href='travel.php#$planetPresName-pack' class='planet-pres-to-travel'>Go to $planetPresTitle!</a>
     </div>
         <img class='planet-pres-img' src='/assets/planets/sd/$planetPresName-sd.png' alt='planet $planetPresName' loading='lazy'>    
 </section>
