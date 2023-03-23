@@ -275,15 +275,15 @@ div.planet-nav-item a img:hover {
 
 /* --------------------------index ------------------------------ */
 
-/* #planet-mars-scroll,
-#planet-moon-scroll,
-#planet-mercury-scroll,
-#planet-venus-scroll {
+#planet-mars-anchor,
+#planet-moon-anchor,
+#planet-mercury-anchor,
+#planet-venus-anchor {
   display: block;
   position: relative;
   top: calc((var(--navHeight) + 42px)*-1);
   visibility: hidden;
-} */
+}
 
 .main-index {
   display: grid;
@@ -291,7 +291,7 @@ div.planet-nav-item a img:hover {
 }
 
 .planet-pres {
-  padding-top: calc(var(--navHeight) + 42px);
+  /* padding-top: calc(var(--navHeight) + 42px); */
   /*margin: auto;*/
   position: relative;
   display: flex;
@@ -310,7 +310,7 @@ div.planet-nav-item a img:hover {
   left: 10vw;
   top: clamp(100px, calc(100vw * 0.5 * 0.7), 200px);
   width: max(100%, 960px);
-  /*filter: var(--lightDropShadow);*/
+  filter: var(--lightDropShadow);
   clip: auto;
   margin-bottom: calc(100vh - var(--navHeight));
 }
@@ -356,7 +356,7 @@ div.planet-nav-item a img:hover {
 
 .planet-pres-title h1 {
   margin-left: clamp(10px, 10vw, 150px);
-  font-size: min(clamp(40pt, 30vw, 200pt), 20vw);
+  font-size: min(clamp(30pt, 20vw, 150pt), 15vw);
   font-family: var(--font2);
   color: var(--accent);
 }
@@ -366,6 +366,7 @@ div.planet-nav-item a img:hover {
   width: 50%;
   height: min(clamp(10pt, 10vw, 50pt), 20vw);
   margin-left: 50px;
+  opacity: 50%;
 }
 
 .planet-pres > div > p {
@@ -373,40 +374,44 @@ div.planet-nav-item a img:hover {
   margin-left: clamp(10px, 10vw, 150px);
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
+  margin-bottom: 100px;
 }
 
-#planet-pres-to-travel {
+.planet-pres-to-travel {
   margin-left: clamp(10px, 10vw, 150px);
-  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
-  border: none;
-  border-radius: 100px;
-  background-color: var(--accent);
   margin-top: 100px;
   padding: 30px;
-  transition: var(--transiFast);
-}
 
-#planet-pres-to-travel a {
+  font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
+  font-weight: 900;
   color: var(--darker);
+  
+  border: 3px solid white;
+  outline: 4px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, white 100%);
+  
+  transition: var(--transiSuperFast);
+  transform-origin: center;
 }
 
-#planet-pres-to-travel:hover a {
-  color: var(--dark);
+.planet-pres-to-travel:hover {
+  background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+  border: 3px solid var(--accent);
+  outline: 2px solid white;
+  outline-offset: 30px;
+  color: white;
+  filter: drop-shadow(0 0px 50px white);;
+  
+  transform: scale(90%);
+  cursor: pointer;
 }
 
-#planet-pres-to-travel:hover {
-  background-color: var(--darker);
-}
-
-#planet-pres-to-travel:active {
-  background-color: var(--accent);
-}
-
-#planet-pres-to-travel:hover a {
-  color: var(--accent);
-}
-
-#planet-pres-to-travel a:active {
+.planet-pres-to-travel:active {
+  background: white;
+  transform: scale(85%);
+  filter: drop-shadow(0 0px 20px white);
   color: var(--darker);
 }
 
@@ -415,7 +420,6 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-/* #mars-pack-scroll,
 
 .travel-pack{
   width: 100%;
@@ -434,138 +438,142 @@ div.planet-nav-item a img:hover {
   text-align: center;
 }
 
-
-
-
-
-
-
-
-
-
+#mars-pack-anchor,
+#moon-pack-anchor,
+#mercury-pack-anchor,
+#venus-pack-anchor {
+display: block;
+position: relative;
+top: calc((var(--navHeight) + 42px)*-1);
+visibility: hidden;
+}
 
 @media screen and (min-width: 768px) {
-#mars-pack-scroll,
 
-#moon-pack-scroll,
-#mercury-pack-scroll,
-#venus-pack-scroll {
-  display: block;
-  position: relative;
-  top: calc((var(--navHeight) + 42px)*-1);
-  visibility: hidden;
-} */
+  .travel-pack {
+    /* padding-top: calc(var(--navHeight) + 42px); */
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    height: calc((100vw / 16 * 6));
+    background-color: transparent;
+  }
 
-.travel-pack {
-  padding-top: calc(var(--navHeight) + 42px);
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  height: calc((100vw / 16 * 6));
-  /* width: 100%; */
-  background-color: transparent;
+  .travel-img {
+    position: absolute;
+    transition: var(--transiFast);
+    width: 100vw;
+    aspect-ratio: 16 / 6;
+    object-fit: cover;
+    justify-content: center;
+    overflow: hidden;
+    z-index: -1;
+  }
+
+  .travel-title {
+    font-family: var(--font2);
+    font-size: clamp(10pt, 8vw, 100pt);
+    color: var(--accent);
+  }
+
+  .travel-txt {
+    /* padding-top: calc((var(--navHeight) + 42px)); */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 50px;
+    z-index: 1;
+    /* width: clamp(100px, 70vw, 800px); */
+    margin: auto;
+  }
+
+  .travel-titleGroup {
+    text-align: right;
+    margin-left: auto;
+  }
+
+  .travel-info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .travel-name {
+    font-family: var(--font2);
+    font-size: clamp(10pt, 10vw, 70pt);
+    color: white;
+  }
+
+  .travel-duration {
+    color: white;
+    text-justify: distribute;
+    font-family: var(--font1);
+    padding-top: 10px;
+  }
+
+  .travel-name:after {
+    content: "";
+    display: block;
+    margin: auto;
+    height: 3px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+  }
+
+  .travel-name:hover:after {
+    width: 100%;
+    background: white;
+  }
+
+  .bookTrip {
+    font-family: var(--font1);
+    font-size: clamp(5pt, 4vw, 20pt);
+    text-align: center;
+
+    border: 3px solid white;
+    outline: 4px solid var(--accent);
+    outline-offset: 5px;
+    border-radius: 50px;
+    background: linear-gradient(135deg, var(--accent) 0%, white 100%);
+    color: var(--darker);
+
+    width: auto;
+    margin: 30px 0 0 0;
+    padding: 15px 25px;
+    font-weight: bolder;
+    transition: var(--transiSuperFast);
+    transform-origin: center;
+  }
+
+  .bookTrip:hover {
+    background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+    outline: 2px solid white;
+    outline-offset: 30px;
+    transform: scale(90%);
+    cursor: pointer;
+    filter: drop-shadow(0 0px 50px white);;
+    border: 3px solid var(--accent);
+    color: white;
+  }
+
+  .bookTrip:active {
+    background: white;
+    transform: scale(85%);
+    filter: drop-shadow(0 0px 20px white);
+    color: var(--darker);
+  }
+
+  .travel-description {
+    font-family: var(--font1);
+    width: 60%;
+    float: right;
+    font-size: clamp(7pt, 5vw, 10pt);
+    color: white;
+  }
 }
 
-.travel-img {
-  position: absolute;
-  transition: var(--transiFast);
-  width: 100vw;
-  aspect-ratio: 16 / 6;
-  object-fit: cover;
-  justify-content: center;
-  overflow: hidden;
-  z-index: -1;
-}
 
-.travel-title {
-  font-family: var(--font2);
-  font-size: clamp(10pt, 8vw, 100pt);
-  color: var(--accent);
-}
-
-.travel-txt {
-  /* padding-top: calc((var(--navHeight) + 42px)); */
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 50px;
-  z-index: 1;
-  /* width: clamp(100px, 70vw, 800px); */
-  margin: auto;
-}
-
-.travel-titleGroup {
-  text-align: right;
-  margin-left: auto;
-}
-
-.travel-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-}
-
-.travel-name {
-  font-family: var(--font2);
-  font-size: clamp(10pt, 10vw, 70pt);
-  color: white;
-}
-
-.travel-duration {
-  color: white;
-  text-justify: distribute;
-  font-family: var(--font1);
-  padding-top: 10px;
-}
-
-.travel-name:after {
-  content: "";
-  display: block;
-  margin: auto;
-  height: 3px;
-  width: 0;
-  background: transparent;
-  transition: width 0.5s ease, background-color 0.5s ease;
-}
-
-.travel-name:hover:after {
-  width: 100%;
-  background: white;
-}
-
-.bookTrip {
-  width: min(200px, 60%);
-  /* height: 50px; */
-  font-family: var(--font1);
-  font-size: clamp(5pt, 4vw, 30pt);
-  border: none;
-  border-radius: 100px;
-  margin: 30px 0 0 0;
-  text-align: center;
-  padding: 0.5em;
-  background-color: var(--accent);
-  color: var(--darker);
-  font-weight: bolder;
-  transition: var(--transiFast);
-}
-
-.bookTrip:hover {
-  background-color: var(--darker);
-  color: var(--accent);
-}
-
-.bookTrip:active {
-  background-color: white;
-}
-
-.travel-description {
-  font-family: var(--font1);
-  width: 60%;
-  float: right;
-  font-size: clamp(7pt, 5vw, 10pt);
-  color: white;
-}
-}
 /*.travel-pack:hover .travel-img {
   transform: scale(1.2);
   transition-timing-function: cubic-bezier(0, 0, 0.58, 1);
@@ -970,27 +978,38 @@ input[type="date"] {
   font-size: 1.5em;
   color: var(--darker);
 
-  background-color: var(--accent);
-  filter: var(--accentDropShadow);
-  border: 1px solid var(--accent);
-  border-radius: 30px;
+  border: 3px solid white;
+  outline: 4px solid var(--accent);
+  outline-offset: 5px;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--accent) 0%, white 100%);
+  color: var(--darker);
 
-  transition: var(--transiSuperFast);
+  width: auto;
+  margin: 30px 0 0 0;
   padding: 10px 20px;
-  width: fit-content;
+  font-weight: bolder;
+  transition: var(--transiSuperFast);
+  transform-origin: center;
 }
 
 .pack button:hover,
 .pack button:focus {
-  color: var(--light);
-  background: var(--dark);
-  opacity: 0.9;
+  background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
+  outline: 2px solid white;
+  outline-offset: 15px;
+  transform: scale(90%);
+  cursor: pointer;
+  filter: drop-shadow(0 0px 50px white);;
+  border: 3px solid var(--accent);
+  color: white;
 }
 
 .pack button:active {
-  color: black;
-  background-color: white;
-  transform: scale(90%);
+  background: white;
+  transform: scale(85%);
+  filter: drop-shadow(0 0px 20px white);
+  color: var(--darker);
 }
 
 .btclogo {
@@ -1073,7 +1092,7 @@ input[type="date"] {
   display: none;
   position: fixed;
   transform: translateY(-100%);
-  transition: transform 0.3s ease-in-out;
+  transition: transform 0.2s ease-in-out;
 }
 
 .planets-nav2.menu2 {
@@ -1091,7 +1110,7 @@ input[type="date"] {
   justify-content: center;
   align-items: center;
   background-color: var(--darker);
-  transition: top 1s ease-in-out;
+  transition: top 0.2s ease-in-out;
   z-index: 4;
   border-top: solid var(--accent) 1px;
 }

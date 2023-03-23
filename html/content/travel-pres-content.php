@@ -3,6 +3,7 @@
 
 echo ("
 <section id='$travelId-pack' class='travel-pack' href='booking.php'>
+        <div id='$travelId-pack-anchor'></div>
         <img class ='travel-img' src='$travelImg' alt='Spaceship Image'>
         <div class='decoLine'>
             <span class='round'></span>
@@ -18,7 +19,7 @@ echo ("
                 <h2 class='travel-name'>$travelShip</h2>
                 <h3 class='travel-duration'>Duration: $travelDuration</h3>
                 
-                <a class='bookTrip' href='booking.php';'>Get to </br> $travelTitleUc!</a>
+                <a class='bookTrip' href='booking.php';'>Get to $travelTitleUc!</a>
             </div>
         </div>
 </section>

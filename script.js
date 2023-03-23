@@ -25,7 +25,7 @@ window.addEventListener("scroll", function () {
   var distanceY = window.pageYOffset || document.documentElement.scrollTop;
   var nav = document.querySelector(".planets-nav2");
 
-  if (distanceY > 200) {
+  if (distanceY > 30) {
     nav.classList.add("menu2");
   } else {
     nav.classList.remove("menu2");
@@ -36,7 +36,7 @@ window.addEventListener("scroll", function () {
   var distanceY = window.pageYOffset || document.documentElement.scrollTop;
   var nav = document.querySelector(".planets-nav2");
 
-  if (distanceY > 200) {
+  if (distanceY > 30) {
     nav.classList.add("is-visible");
   } else {
     nav.classList.remove("is-visible");

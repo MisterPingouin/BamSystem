@@ -5,10 +5,10 @@
 
 $pageTitle = 'Travel';
 
-$link1 = "#mars-pack";
-$link2 = "#moon-pack";
-$link3 = "#mercury-pack";
-$link4 = "#venus-pack";
+$link1 = "#mars-pack-anchor";
+$link2 = "#moon-pack-anchor";
+$link3 = "#mercury-pack-anchor";
+$link4 = "#venus-pack-anchor";
 
     require 'html/shared/head.php';
     echo "<body class='darkerBg'>";
