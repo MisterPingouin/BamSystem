@@ -770,7 +770,7 @@ div.planet-nav-item a img:hover {
 }
 
 .image {
-  height: 1em;
+  height: 0.8em;
   width: 1em;
 
 }
@@ -807,6 +807,10 @@ footer {
   .menu {
     height: 60%;
     width: 60%;
+  }
+
+  footer {
+    font-size: 80%;
   }
 }
 
@@ -1400,8 +1404,9 @@ input[type="date"] {
 }
 
 .form-container h2 {
-  padding-bottom: 5px;
+  padding-bottom: 10px 0px 15px 0px;
   color: var(--dark);
+  margin-bottom: 10px;
 }
 /* Largeur complète pour les champs de saisie */
 .form-container input[type="text"],
@@ -1431,7 +1436,25 @@ input[type="date"] {
   margin-bottom: 10px;
   opacity: 0.8;
   filter: none;
+  outline: none;
+  margin-top: 0px;
 }
+
+.form-container .btn:hover {
+  background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+  opacity: 0.8;
+  filter: none;
+  outline: none;
+  outline-offset: none;
+  transform: none;
+}
+
 /* Stylez le bouton pour annuler */
 .form-container .cancel {
   background-color: var(--light);
@@ -1444,23 +1467,33 @@ input[type="date"] {
   margin: 0;
   padding: 0;
   font-size: 0.7rem;
+  outline: none;
+  outline-offset: none;
+  border-radius: none;
+  background: none;
+}
+
+.form-container .cancel:hover {
+  background-color: var(--light);
+  color: var(--dark);
+  cursor: pointer;
+  border: none;
+  float: right;
+  height: 4px;
+  width: 4px;
+  margin: 0;
+  padding: 0;
+  font-size: 0.7rem;
+  outline: none;
+  outline-offset: none;
+  border-radius: none;
+  background: none;
 }
 .form-container .cancel:not(.no-hover):hover {
   color: var(--dark);
   background-color: var(--light);
 }
 
-.pageNameD {
-  position: absolute;
-  z-index: 3;
-  width: 100%;
-  background-color: var(--darker);
-}
-
-.pageName {
-  font-size: 60px;
-  text-align: center;
-}
 @media screen and (min-width: 768px) {
   .pageName {
     font-size: 80px;
