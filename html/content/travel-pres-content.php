@@ -5,9 +5,9 @@ echo ("
 <div id='$travelId-pack-anchor'></div>
 <section id='$travelId-pack' class='travel-pack' href='booking.php'>
         <img class ='travel-img' src='$travelImg' alt='Spaceship Image'>
-        <div class='decoLine'>
+        <div class='decoLine' id='tLine'>
             <span class='round'></span>
-            <span class='line'></span>
+            <span class='line' id='ttline'></span>
             <span class='round'></span>
         </div>
         <div class='travel-txt'>
