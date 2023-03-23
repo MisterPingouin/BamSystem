@@ -416,17 +416,17 @@ div.planet-nav-item a img:hover {
 /* -----------------------debut travel by max------------------------------------------------------------ */
 
 
-.travel-pack {
+
 
 .main-travel {
   padding-top: 15px;
 }
 
 
-/*.travel-pack{
+.travel-pack{
   width: 100%;
   padding: 25px;
-}*/
+}
 
 .travel-img {
   width: 100%;
@@ -570,10 +570,6 @@ div.planet-nav-item a img:hover {
     transition: width 0.5s ease, background-color 0.5s ease;
   }
 
-*/
-    background-color: transparent;
-  }
-
 
   .travel-img {
     position: absolute;
@@ -641,7 +637,7 @@ div.planet-nav-item a img:hover {
     width: 100%;
     background: white;
   }
-/*
+
 
   .bookTrip {
     width: min(200px, 60%);
@@ -666,7 +662,7 @@ div.planet-nav-item a img:hover {
 
   .bookTrip:active {
     background-color: white;
-*/
+  }
 
   .bookTrip {
     font-family: var(--font1);
@@ -702,6 +698,7 @@ div.planet-nav-item a img:hover {
   font-weight: bolder;
   transition: var(--transiFast);
 }
+*/
 
   .bookTrip:hover {
     background: linear-gradient(135deg, var(--darker) 0%, var(--accent) 100%);;
@@ -713,7 +710,7 @@ div.planet-nav-item a img:hover {
     border: 3px solid var(--accent);
     color: white;
   }
-*/
+
 
   .bookTrip:active {
     background: white;
