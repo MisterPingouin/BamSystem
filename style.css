@@ -130,8 +130,9 @@ nav a {
 
 .menu a object {
   filter: var(--flight);
-  width: 30%;
-  height: 30%;
+  width: 30px;
+  height: 30px;
+  margin-right: 15px;
 }
 
 nav > ul {
@@ -331,6 +332,14 @@ div.planet-nav-item a img:hover {
   filter: var(--lightDropShadow);
   clip: auto;
   margin-bottom: calc(100vh - var(--navHeight));
+  transition: var(--transiSlow);
+}
+
+.planet-pres:hover .planet-pres-img {
+  transform: rotate(-20deg) scale(110%);
+  filter: var(--accentDropShadow);
+  /* transform: scale(110%); */
+
 }
 
 .decoLine {
