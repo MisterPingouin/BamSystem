@@ -9,7 +9,7 @@ $link2 = '#planet-moon-anchor';
 $link3 = '#planet-mercury-anchor';
 $link4 = '#planet-venus-anchor';
 
-$page_title = 'Our Destination';
+$page_title = 'Our Destinations';
 $subtitle = 'Choose your destination, and discover the planet made for you.';
 $page_title_class = '';
 
