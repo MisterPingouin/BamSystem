@@ -407,7 +407,7 @@ div.planet-nav-item a img:hover {
   font-size: min(clamp(10pt, 5vw, 20pt), 5vw);
   width: 50vw;
   margin-bottom: 100px;
-  margin-top: 20%;
+  margin-top: 7%;
 }
 
 .planet-pres-to-travel {
@@ -464,6 +464,7 @@ div.planet-nav-item a img:hover {
 
 .travel-pack{
   width: 95%;
+  height: fit-content;
   padding: 25px;
   border: 2px solid var(--accent);
   border-radius: 20px;
@@ -511,20 +512,6 @@ div.planet-nav-item a img:hover {
   text-align: left;
   padding-bottom: 10px;
 }
-
-/* .bookTrip {
-  display: block;
-
-  font-family: var(--font1);
-  font-size: clamp(5pt, 4vw, 30pt);
-  border-style: solid;
-  border-radius: 100px;
-  background-color: var(--accent);
-  font-weight: bolder;
-  margin-left: auto;
-  width: 150px;
-  color: var(--darker);
-} */
 
   .bookTrip {
     display: block;
@@ -580,42 +567,10 @@ visibility: hidden;
 
 @media screen and (min-width: 768px) {
 
-#mars-pack-anchor,
-#moon-pack-anchor,
-#mercury-pack-anchor,
-#venus-pack-anchor {
-display: block;
-position: relative;
-top: calc((var(--navHeight) + 42px)*-1);
-visibility: hidden;
-}
-
-/*
-  .travel-pack {
-    position: relative;
-    height: calc((100vw / 16 * 6));
-    background-color: transparent;
-    border: none;
-  }
-*/
-/*
-  .travel-img {
-    position: absolute;
-    left: 0;
-    transition: var(--transiFast);
-    width: 100%;
-    aspect-ratio: 16 / 6;
-    object-fit: cover;
-    justify-content: center;
-    overflow: hidden;
-    z-index: -1;
-  }
-*/
-
 .travel-pack{
   display: flex;
   align-items: center;
-  height: 90vh;
+  height: fit-content;
   width: 95%;
 }
   .travel-img {
@@ -869,7 +824,8 @@ form {
   display: flex;
   justify-content: center;
   color: var(--light);
-  /* margin-top: 80px; */
+  margin-top: 110px;
+  margin-bottom: 225px;
   font-family: var(--font1);
   height: calc(100vh - var(--navHeight)*2 - 200px);
   align-items: center;
