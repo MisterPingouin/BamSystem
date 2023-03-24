@@ -869,7 +869,8 @@ form {
   display: flex;
   justify-content: center;
   color: var(--light);
-  /* margin-top: 80px; */
+  margin-top: 110px; 
+  margin-bottom: 225px;
   font-family: var(--font1);
   height: calc(100vh - var(--navHeight)*2 - 200px);
   align-items: center;
